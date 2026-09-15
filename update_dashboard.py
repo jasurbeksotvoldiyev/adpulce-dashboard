@@ -193,12 +193,12 @@ def fetch_period(accounts, date_preset, token):
     return {"spend": round(total_spend, 2), "leads": total_leads, "cpm": round(cpm, 2), "ctr": round(ctr, 2)}
 
 
-def fetch_campaigns(accounts, token, top_n=4):
+def fetch_campaigns(accounts, token, top_n=6, date_preset="today"):
     items = []
     total_count = 0
     for acc in accounts:
         r = api_get(f"{acc}/insights", {
-            "date_preset": "last_7d",
+            "date_preset": date_preset,
             "level": "campaign",
             "fields": "campaign_id,campaign_name,spend,actions,impressions,reach",
             "filtering": json.dumps([{"field": "spend", "operator": "GREATER_THAN", "value": 0}]),
@@ -263,6 +263,39 @@ def render_history_js(history, keep_days=30):
         parts = []
         for client_key, v in entries.items():
             parts.append("%s:{spend:%s, leads:%s}" % (js_str(client_key), v["spend"], v["leads"]))
+        lines.append(f"  {js_str(k)}: {{" + ", ".join(parts) + "},")
+    lines.append("};")
+    return "\n".join(lines)
+
+
+def render_campaign_history_js(history, keep_days=30):
+    days = history.get("campaigns", {})
+    keys = sorted(days.keys(), reverse=True)[:keep_days]
+    lines = ["const CAMPAIGN_HISTORY = {"]
+    for k in keys:
+        lines.append(f"  {js_str(k)}: {{")
+        for client_key, items in days[k].items():
+            item_strs = []
+            for it in items:
+                item_strs.append(
+                    "{name:%s, spend:%s, leads:%s, impressions:%s, reach:%s, budget:%s}" % (
+                        js_str(it["name"]), it["spend"], it["leads"], it["impressions"], it["reach"], it["budget"]
+                    )
+                )
+            lines.append(f"    {js_str(client_key)}: [" + ", ".join(item_strs) + "],")
+        lines.append("  },")
+    lines.append("};")
+    return "\n".join(lines)
+
+
+def render_budget_history_js(history, keep_days=30):
+    days = history.get("budget", {})
+    keys = sorted(days.keys(), reverse=True)[:keep_days]
+    lines = ["const BUDGET_HISTORY = {"]
+    for k in keys:
+        parts = []
+        for client_key, v in days[k].items():
+            parts.append("%s:{balance:%s}" % (js_str(client_key), v["balance"]))
         lines.append(f"  {js_str(k)}: {{" + ", ".join(parts) + "},")
     lines.append("};")
     return "\n".join(lines)
@@ -407,6 +440,7 @@ def main():
                 "sourceLabel": f"Manba: Facebook Marketing API, avtomatik yangilandi ({today_str})",
                 "extra": inactive_note,
             }
+            history.setdefault("campaigns", {}).setdefault(today_key, {})[key] = camp_items
         except RuntimeError as e:
             print(f"   Kampaniyalarni olishda xatolik: {e}")
             campaigns_by_key[key] = []
@@ -420,6 +454,7 @@ def main():
                 "balance": balance,
                 "threshold": extras["threshold"], "payDate": extras["payDate"], "dailyLimit": extras["dailyLimit"],
             })
+            history.setdefault("budget", {}).setdefault(today_key, {})[key] = {"balance": balance}
         except RuntimeError as e:
             print(f"   Balansni olishda xatolik: {e}")
             extras = existing_budget_extras.get(key, {"threshold": 50, "payDate": "noma'lum", "dailyLimit": 0})
@@ -430,6 +465,8 @@ def main():
 
     html = replace_block(html, "META", f"const DATA_META = {{ updatedAt: {js_str(today_str)}, todayKey: {js_str(today_key)} }};")
     html = replace_block(html, "HISTORY", render_history_js(history))
+    html = replace_block(html, "CAMPAIGN_HISTORY", render_campaign_history_js(history))
+    html = replace_block(html, "BUDGET_HISTORY", render_budget_history_js(history))
     html = replace_block(html, "CLIENTS", render_clients_js(client_rows))
     html = replace_block(html, "CAMPAIGNS", render_campaigns_js(campaigns_by_key, campaigns_meta))
     html = replace_block(html, "BUDGET", render_budget_js(budget_rows))
@@ -439,9 +476,11 @@ def main():
     SITE_HTML_PATH.write_text(html, encoding="utf-8")
 
     # Tarixni 60 kundan ortiq saqlamaymiz (fayl shishib ketmasin)
-    all_days = sorted(history["days"].keys(), reverse=True)
-    for old_day in all_days[60:]:
-        del history["days"][old_day]
+    for section in ("days", "campaigns", "budget"):
+        bucket = history.get(section, {})
+        old_keys = sorted(bucket.keys(), reverse=True)[60:]
+        for old_day in old_keys:
+            del bucket[old_day]
     save_history(history)
 
     print(f"\nTayyor! index.html yangilandi ({today_str}). Brauzerda F5 bosing.")

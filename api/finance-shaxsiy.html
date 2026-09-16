@@ -109,6 +109,11 @@
   }
   .del-btn:hover{color:var(--red);border-color:var(--red);}
 
+  .month-summary{font-size:12.5px;color:var(--text-dim);margin-bottom:16px;line-height:1.8;}
+  .month-summary b.green{color:var(--green);}
+  .month-summary b.red{color:var(--red);}
+  .empty-note{color:var(--text-dim2);font-size:13px;}
+
   @media (max-width:760px){
     .stat-grid{grid-template-columns:1fr;}
     thead{display:none;}
@@ -178,15 +183,10 @@
     </form>
   </div>
 
+  <div class="block-sub" style="margin:-8px 0 10px 4px;">Umumiy (barcha davr)</div>
   <div class="stat-grid" id="shaxsiy-stats"></div>
-  <div class="block">
-    <h2>Barcha yozuvlar</h2>
-    <div class="block-sub">Eng yangi yozuv tepada</div>
-    <table>
-      <thead><tr><th>Sana</th><th>Turi</th><th>Kategoriya</th><th>Izoh</th><th>Summa</th><th></th></tr></thead>
-      <tbody id="shaxsiy-table"></tbody>
-    </table>
-  </div>
+
+  <div id="months-container"></div>
 
 </div>
 
@@ -250,26 +250,54 @@ function renderStats(totals){
   el.innerHTML = html;
 }
 
+const MONTH_NAMES = ['Yanvar','Fevral','Mart','Aprel','May','Iyun','Iyul','Avgust','Sentabr','Oktabr','Noyabr','Dekabr'];
+function monthKey(dateStr){ return (dateStr||'').slice(0,7); }
+function monthLabel(key){
+  const [y,m] = key.split('-');
+  return `${MONTH_NAMES[parseInt(m,10)-1] || m} ${y}`;
+}
+
 function renderPersonal(){
   const items = PERSONAL.map(e=>({amount:e.amount, currency:e.currency, sign: e.type==='income' ? 1 : -1}));
   renderStats(groupTotals(items));
 
-  const tbody = document.getElementById('shaxsiy-table');
-  const sorted = [...PERSONAL].sort((a,b)=> b.date.localeCompare(a.date));
-  if(sorted.length === 0){
-    tbody.innerHTML = '<tr class="empty-row"><td colspan="6">Hali yozuv yo\'q — yuqoridagi formadan qo\'shing</td></tr>';
+  const container = document.getElementById('months-container');
+  if(PERSONAL.length === 0){
+    container.innerHTML = '<div class="block"><div class="empty-note">Hali yozuv yo\'q — yuqoridagi formadan qo\'shing</div></div>';
     return;
   }
-  tbody.innerHTML = sorted.map(e=>{
-    const isIncome = e.type === 'income';
-    return `<tr>
-      <td data-label="Sana">${e.date}</td>
-      <td data-label="Turi">${isIncome ? 'Kirim' : 'Chiqim'}</td>
-      <td data-label="Kategoriya">${e.category||''}</td>
-      <td data-label="Izoh">${e.desc||''}</td>
-      <td class="num ${isIncome?'green':'red'}" data-label="Summa">${isIncome?'+':'-'}${fmt(e.amount, e.currency)}</td>
-      <td data-label=""><button class="del-btn" data-id="${e.id}" title="O'chirish">×</button></td>
-    </tr>`;
+
+  const byMonth = {};
+  PERSONAL.forEach(e=>{ (byMonth[monthKey(e.date)] = byMonth[monthKey(e.date)] || []).push(e); });
+  const months = Object.keys(byMonth).sort((a,b)=> b.localeCompare(a));
+
+  container.innerHTML = months.map(mk=>{
+    const entries = byMonth[mk].slice().sort((a,b)=> b.date.localeCompare(a.date));
+    const monthItems = entries.map(e=>({amount:e.amount, currency:e.currency, sign: e.type==='income' ? 1 : -1}));
+    const totals = groupTotals(monthItems);
+    const summary = Object.keys(totals).map(cur=>{
+      const t = totals[cur]; const bal = t.income - t.expense;
+      return `${cur}: daromad <b class="green">${fmt(t.income,cur)}</b>, xarajat <b class="red">${fmt(t.expense,cur)}</b>, balans <b class="${bal>=0?'green':'red'}">${fmt(bal,cur)}</b>`;
+    }).join(' &nbsp;·&nbsp; ');
+    const rows = entries.map(e=>{
+      const isIncome = e.type === 'income';
+      return `<tr>
+        <td data-label="Sana">${e.date}</td>
+        <td data-label="Turi">${isIncome ? 'Kirim' : 'Chiqim'}</td>
+        <td data-label="Kategoriya">${e.category||''}</td>
+        <td data-label="Izoh">${e.desc||''}</td>
+        <td class="num ${isIncome?'green':'red'}" data-label="Summa">${isIncome?'+':'-'}${fmt(e.amount, e.currency)}</td>
+        <td data-label=""><button class="del-btn" data-id="${e.id}" title="O'chirish">×</button></td>
+      </tr>`;
+    }).join('');
+    return `<div class="block">
+      <h2>${monthLabel(mk)}</h2>
+      <div class="month-summary">${summary}</div>
+      <table>
+        <thead><tr><th>Sana</th><th>Turi</th><th>Kategoriya</th><th>Izoh</th><th>Summa</th><th></th></tr></thead>
+        <tbody>${rows}</tbody>
+      </table>
+    </div>`;
   }).join('');
 }
 
@@ -295,7 +323,7 @@ document.getElementById('personal-form').addEventListener('submit', (ev)=>{
 });
 
 // --- o'chirish ---
-document.getElementById('shaxsiy-table').addEventListener('click', (ev)=>{
+document.getElementById('months-container').addEventListener('click', (ev)=>{
   const btn = ev.target.closest('.del-btn');
   if(!btn) return;
   PERSONAL = PERSONAL.filter(e=>e.id !== btn.dataset.id);

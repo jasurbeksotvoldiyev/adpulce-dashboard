@@ -3,15 +3,15 @@
 // (Environment Variables) saqlanadi — kodning ichida hech qanday parol yo'q.
 //
 // Yo'l (URL) bo'yicha turli sahifalar turli login/parol bilan himoyalanadi —
-// masalan /shaxsiy butunlay boshqa login/parol talab qiladi, asosiy dashboard
-// paroli bilan ochilmaydi.
+// masalan /jasurbekfinance butunlay boshqa login/parol talab qiladi, asosiy
+// dashboard paroli bilan ochilmaydi.
 
 const fs = require('fs');
 const path = require('path');
 
 const ROUTES = [
   {
-    prefix: '/shaxsiy',
+    prefix: '/jasurbekfinance',
     file: 'finance-shaxsiy.html',
     userEnv: 'SHAXSIY_AUTH_USER',
     passEnv: 'SHAXSIY_AUTH_PASS',

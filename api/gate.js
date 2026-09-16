@@ -2,9 +2,9 @@
 // Bu fayl Vercel'da ishlaydi. Login/parol Vercel muhit o'zgaruvchilarida
 // (Environment Variables) saqlanadi — kodning ichida hech qanday parol yo'q.
 //
-// Yo'l (URL) bo'yicha turli sahifalar turli login/parol bilan himoyalanadi —
-// masalan /jasurbekfinance butunlay boshqa login/parol talab qiladi, asosiy
-// dashboard paroli bilan ochilmaydi.
+// Yo'l (URL) bo'yicha turli sahifalar turli login/parol bilan himoyalanadi.
+// /jasurbekfinance parolsiz ochiladi — himoyasi faqat link hech qayerda
+// e'lon qilinmaganiga (topib bo'lmasligiga) tayanadi.
 
 const fs = require('fs');
 const path = require('path');
@@ -13,9 +13,7 @@ const ROUTES = [
   {
     prefix: '/jasurbekfinance',
     file: 'finance-shaxsiy.html',
-    userEnv: 'SHAXSIY_AUTH_USER',
-    passEnv: 'SHAXSIY_AUTH_PASS',
-    realm: 'Shaxsiy moliya',
+    noAuth: true,
   },
 ];
 const DEFAULT_ROUTE = {
@@ -28,6 +26,18 @@ const DEFAULT_ROUTE = {
 module.exports = (req, res) => {
   const urlPath = (req.url || '/').split('?')[0];
   const route = ROUTES.find(r => urlPath === r.prefix || urlPath.startsWith(r.prefix + '/')) || DEFAULT_ROUTE;
+
+  if (route.noAuth) {
+    try {
+      const html = fs.readFileSync(path.join(__dirname, route.file), 'utf8');
+      res.setHeader('Content-Type', 'text/html; charset=utf-8');
+      res.setHeader('Cache-Control', 'no-store');
+      res.status(200).send(html);
+    } catch (err) {
+      res.status(500).send('Sahifa fayli topilmadi: ' + err.message);
+    }
+    return;
+  }
 
   const user = process.env[route.userEnv];
   const pass = process.env[route.passEnv];

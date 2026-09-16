@@ -3,8 +3,8 @@
 // (Environment Variables) saqlanadi — kodning ichida hech qanday parol yo'q.
 //
 // Yo'l (URL) bo'yicha turli sahifalar turli login/parol bilan himoyalanadi.
-// /jasurbekfinance parolsiz ochiladi — himoyasi faqat link hech qayerda
-// e'lon qilinmaganiga (topib bo'lmasligiga) tayanadi.
+// /jasurbekfinance va /agentstvo parolsiz ochiladi — himoyasi faqat link
+// hech qayerda e'lon qilinmaganiga (topib bo'lmasligiga) tayanadi.
 
 const fs = require('fs');
 const path = require('path');
@@ -13,6 +13,11 @@ const ROUTES = [
   {
     prefix: '/jasurbekfinance',
     file: 'finance-shaxsiy.html',
+    noAuth: true,
+  },
+  {
+    prefix: '/agentstvo',
+    file: 'finance-agentstvo.html',
     noAuth: true,
   },
 ];

@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Moliya — Agentstvo</title>
+<style>
+  :root{
+    --bg:#0b0b0f;
+    --bg-soft:#111116;
+    --card:#1a1a22;
+    --card-2:#20202a;
+    --border:rgba(255,255,255,.08);
+    --text:#f5f5f7;
+    --text-dim:#9898a3;
+    --text-dim2:#6e6e78;
+    --accent:#6d5ce8;
+    --accent-2:#8d7cf5;
+    --accent-soft:rgba(109,92,232,.16);
+    --green:#32d74b;
+    --green-soft:rgba(50,215,75,.14);
+    --red:#ff453a;
+    --red-soft:rgba(255,69,58,.14);
+    --amber:#ff9f0a;
+    --amber-soft:rgba(255,159,10,.14);
+    --radius-lg:22px;
+    --radius-md:16px;
+    --radius-sm:10px;
+    --shadow:0 10px 30px rgba(0,0,0,.35);
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:radial-gradient(circle at 15% 0%, #15121f 0%, var(--bg) 45%);
+    color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    padding:0 20px 60px;
+  }
+  .wrap{max-width:1080px;margin:0 auto;}
+
+  header{display:flex;align-items:center;gap:14px;padding:32px 0 22px;flex-wrap:wrap;}
+  .brand{display:flex;flex-direction:column;gap:2px;margin-right:auto;}
+  .brand h1{margin:0;font-size:22px;font-weight:700;letter-spacing:-.02em;}
+  .brand span{font-size:13px;color:var(--text-dim);}
+  .link-row{display:flex;gap:8px;flex-wrap:wrap;}
+  .back-link{font-size:12.5px;color:var(--text-dim);text-decoration:none;background:var(--card);border:1px solid var(--border);padding:8px 16px;border-radius:999px;}
+  .back-link:hover{color:var(--text);}
+
+  .backup-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:22px;}
+  .backup-btn{
+    appearance:none;border:1px solid var(--border);background:var(--card);color:var(--text-dim);
+    padding:8px 14px;border-radius:999px;font-size:12.5px;font-weight:600;cursor:pointer;
+  }
+  .backup-btn:hover{color:var(--text);border-color:rgba(255,255,255,.18);}
+  #import-input{display:none;}
+
+  .howto{
+    background:var(--accent-soft);border:1px solid rgba(109,92,232,.35);color:var(--text);
+    font-size:13px;line-height:1.6;padding:14px 18px;border-radius:var(--radius-sm);margin-bottom:20px;
+  }
+  .howto b{color:var(--accent-2);}
+
+  .stat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:20px;}
+  .stat-card{
+    background:var(--card);border:1px solid var(--border);border-radius:var(--radius-lg);
+    padding:20px 22px;box-shadow:var(--shadow);
+  }
+  .stat-card .label{font-size:13px;color:var(--text-dim);font-weight:600;margin-bottom:10px;}
+  .stat-card .value{font-size:26px;font-weight:750;letter-spacing:-.02em;}
+  .stat-card .value.green{color:var(--green);}
+  .stat-card .value.red{color:var(--red);}
+
+  .block{background:var(--card);border:1px solid var(--border);border-radius:var(--radius-lg);padding:22px;margin-bottom:18px;box-shadow:var(--shadow);}
+  .block h2{margin:0 0 4px;font-size:16px;font-weight:750;}
+  .block .block-sub{font-size:12.5px;color:var(--text-dim2);margin-bottom:18px;}
+
+  /* forma */
+  .entry-form{display:grid;grid-template-columns:130px 110px 1fr 1fr 130px 90px auto;gap:10px;align-items:end;margin-bottom:4px;}
+  .entry-form label{display:block;font-size:11px;color:var(--text-dim2);font-weight:600;text-transform:uppercase;letter-spacing:.03em;margin-bottom:6px;}
+  .entry-form input, .entry-form select{
+    width:100%;background:var(--card-2);border:1px solid var(--border);color:var(--text);
+    padding:10px 11px;border-radius:var(--radius-sm);font-size:13.5px;font-family:inherit;
+  }
+  .entry-form input:focus, .entry-form select:focus{outline:none;border-color:var(--accent);}
+  .add-btn{
+    appearance:none;border:none;background:var(--accent);color:#fff;font-weight:700;font-size:13.5px;
+    padding:10px 18px;border-radius:var(--radius-sm);cursor:pointer;white-space:nowrap;
+  }
+  .add-btn:hover{background:var(--accent-2);}
+  @media (max-width:900px){
+    .entry-form{grid-template-columns:1fr 1fr;}
+    .add-btn{grid-column:1/-1;}
+  }
+
+  table{width:100%;border-collapse:collapse;font-size:14px;}
+  thead th{
+    text-align:left;font-size:11.5px;text-transform:uppercase;letter-spacing:.04em;
+    color:var(--text-dim2);font-weight:700;padding:0 10px 10px;border-bottom:1px solid var(--border);
+  }
+  tbody td{padding:13px 10px;border-bottom:1px solid var(--border);vertical-align:middle;}
+  tbody tr:last-child td{border-bottom:none;}
+  td.num{font-variant-numeric:tabular-nums;font-weight:600;white-space:nowrap;}
+  td.num.green{color:var(--green);}
+  td.num.red{color:var(--red);}
+  .empty-row td{color:var(--text-dim2);text-align:center;padding:24px 10px;}
+  .del-btn{
+    appearance:none;border:1px solid var(--border);background:var(--card-2);color:var(--text-dim2);
+    width:26px;height:26px;border-radius:50%;cursor:pointer;font-size:14px;line-height:1;
+  }
+  .del-btn:hover{color:var(--red);border-color:var(--red);}
+
+  .note-link{
+    background:var(--card-2);border:1px solid var(--border);border-radius:var(--radius-sm);
+    padding:12px 16px;font-size:12.5px;color:var(--text-dim);margin-top:4px;
+  }
+  .note-link a{color:var(--accent-2);}
+
+  /* foyda taqsimoti */
+  .split-cur{margin-bottom:18px;}
+  .split-cur:last-child{margin-bottom:0;}
+  .split-cur-title{font-size:13px;color:var(--text-dim);font-weight:600;margin-bottom:10px;}
+  .split-cur-title b{font-weight:750;}
+  .split-empty{color:var(--text-dim2);font-size:13px;padding:10px 0;}
+  .split-loss{color:var(--red);font-size:12.5px;margin-top:8px;}
+
+  .month-summary{font-size:12.5px;color:var(--text-dim);margin-bottom:16px;line-height:1.8;}
+  .month-summary b.green{color:var(--green);}
+  .month-summary b.red{color:var(--red);}
+  .month-split{margin:16px 0;padding:14px 16px;background:var(--card-2);border-radius:var(--radius-sm);}
+  .month-split-title{font-size:12px;color:var(--text-dim2);font-weight:700;text-transform:uppercase;letter-spacing:.03em;margin-bottom:10px;}
+  .empty-note{color:var(--text-dim2);font-size:13px;}
+
+  @media (max-width:760px){
+    .stat-grid{grid-template-columns:1fr;}
+    thead{display:none;}
+    table, tbody, tr, td{display:block;width:100%;}
+    tbody tr{border-bottom:1px solid var(--border);padding:12px 0;}
+    tbody td{border-bottom:none;padding:4px 0;display:flex;justify-content:space-between;align-items:center;gap:10px;}
+    tbody td:before{content:attr(data-label);font-size:11px;color:var(--text-dim2);font-weight:600;text-transform:uppercase;letter-spacing:.03em;}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="brand">
+      <h1>Moliya — Agentstvo</h1>
+      <span>Mijozlardan to'lovlar, xarajatlar va foyda taqsimoti</span>
+    </div>
+    <div class="link-row">
+      <a class="back-link" href="index.html">← Dashboardga qaytish</a>
+    </div>
+  </header>
+
+  <div class="backup-row">
+    <button class="backup-btn" id="export-btn">⬇ Zaxira nusxa yuklab olish</button>
+    <button class="backup-btn" id="import-btn">⬆ Zaxiradan tiklash</button>
+    <input type="file" id="import-input" accept="application/json">
+  </div>
+
+  <div class="howto">
+    <b>Bu yerda:</b> mijozdan tushgan to'lovlar va agentstvo xarajatlarini qo'shasiz. Bu summalar —
+    agentstvoning o'z daromadi/xarajati, <b>mijozning reklama byudjeti emas</b> (u alohida hisoblanadi, pastga qarang).
+    Ma'lumot shu brauzerda avtomatik saqlanadi — vaqti-vaqti bilan zaxira nusxa oling.
+  </div>
+
+  <div class="block">
+    <h2>Yangi yozuv qo'shish</h2>
+    <form class="entry-form" id="agency-form">
+      <div>
+        <label>Sana</label>
+        <input type="date" id="a-date" required>
+      </div>
+      <div>
+        <label>Turi</label>
+        <select id="a-type">
+          <option value="income">Kirim (mijozdan)</option>
+          <option value="expense">Xarajat</option>
+        </select>
+      </div>
+      <div>
+        <label id="a-name-label">Mijoz nomi</label>
+        <input type="text" id="a-name" placeholder="Booking, Intouch...">
+      </div>
+      <div>
+        <label>Izoh</label>
+        <input type="text" id="a-desc" placeholder="Ixtiyoriy">
+      </div>
+      <div>
+        <label>Summa</label>
+        <input type="number" id="a-amount" min="0" step="0.01" required placeholder="0">
+      </div>
+      <div>
+        <label>Valyuta</label>
+        <select id="a-currency">
+          <option value="USD">USD</option>
+          <option value="UZS">UZS</option>
+        </select>
+      </div>
+      <button type="submit" class="add-btn">+ Qo'shish</button>
+    </form>
+  </div>
+
+  <div class="block-sub" style="margin:-8px 0 10px 4px;">Umumiy (barcha davr)</div>
+  <div class="stat-grid" id="agentstvo-stats"></div>
+
+  <div class="block">
+    <h2>Foyda taqsimoti — umumiy</h2>
+    <div class="block-sub">Barcha davr balansidan: Jasur 30%, Kamoliddin 60%, Ehson 5%, Zaxira 5%</div>
+    <div id="split-content"></div>
+  </div>
+
+  <div id="months-container"></div>
+
+  <div class="note-link">
+    Mijozlarning joriy reklama xarajati va balansi — bu agentstvo puli emas, mijozning o'z reklama byudjeti.
+    To'liq holatni asosiy dashboarddagi <a href="index.html">Byudjet bo'limidan</a> ko'ring.
+  </div>
+
+</div>
+
+<script>
+/* ===================================================================
+   Ma'lumot brauzerning localStorage'ida saqlanadi (shu kompyuter/brauzer).
+   =================================================================== */
+const KEYS = {
+  agencyIncome: 'finance_agency_income_v1',
+  agencyExpense: 'finance_agency_expense_v1',
+};
+
+function loadArr(key){
+  try{ const v = JSON.parse(localStorage.getItem(key)); return Array.isArray(v) ? v : []; }
+  catch(e){ return []; }
+}
+function saveArr(key, arr){ localStorage.setItem(key, JSON.stringify(arr)); }
+function genId(){ return Date.now().toString(36) + Math.random().toString(36).slice(2,7); }
+
+let AGENCY_INCOME = loadArr(KEYS.agencyIncome);
+let AGENCY_EXPENSE = loadArr(KEYS.agencyExpense);
+
+/* Agentstvo foydasi shu nisbatda taqsimlanadi (jami 100% bo'lishi kerak) */
+const PROFIT_SHARES = [
+  {name:'Jasur',      pct:30},
+  {name:'Kamoliddin', pct:60},
+  {name:'Ehson',      pct:5},
+  {name:'Zaxira',     pct:5},
+];
+
+function fmt(amount, currency){
+  const n = Number(amount) || 0;
+  if(currency === 'USD') return '$' + n.toLocaleString('en-US', {minimumFractionDigits:2, maximumFractionDigits:2});
+  return n.toLocaleString('uz-UZ') + " so'm";
+}
+
+function groupTotals(items){
+  const totals = {};
+  items.forEach(it=>{
+    const cur = it.currency || 'UZS';
+    totals[cur] = totals[cur] || {income:0, expense:0};
+    if(it.sign > 0) totals[cur].income += Number(it.amount)||0;
+    else totals[cur].expense += Number(it.amount)||0;
+  });
+  return totals;
+}
+
+function renderStats(totals){
+  const el = document.getElementById('agentstvo-stats');
+  const currencies = Object.keys(totals);
+  if(currencies.length === 0){
+    el.innerHTML = '<div class="stat-card"><div class="label">Ma\'lumot yo\'q</div><div class="value" style="font-size:15px;color:var(--text-dim2);">Hali yozuv qo\'shilmagan</div></div>';
+    return;
+  }
+  let html = '';
+  currencies.forEach(cur=>{
+    const t = totals[cur];
+    const balance = t.income - t.expense;
+    html += `
+      <div class="stat-card">
+        <div class="label">Jami daromad (${cur})</div>
+        <div class="value green">${fmt(t.income, cur)}</div>
+      </div>
+      <div class="stat-card">
+        <div class="label">Jami xarajat (${cur})</div>
+        <div class="value red">${fmt(t.expense, cur)}</div>
+      </div>
+      <div class="stat-card">
+        <div class="label">Balans (${cur})</div>
+        <div class="value ${balance>=0?'green':'red'}">${fmt(balance, cur)}</div>
+      </div>`;
+  });
+  el.innerHTML = html;
+}
+
+function renderSplit(totals){
+  const el = document.getElementById('split-content');
+  const currencies = Object.keys(totals);
+  if(currencies.length === 0){
+    el.innerHTML = '<div class="split-empty">Hali ma\'lumot yo\'q — daromad/xarajat qo\'shilgach shu yerda avtomatik hisoblanadi</div>';
+    return;
+  }
+  el.innerHTML = currencies.map(cur=>{
+    const balance = totals[cur].income - totals[cur].expense;
+    const rows = PROFIT_SHARES.map(s=>{
+      const amt = balance > 0 ? balance * s.pct / 100 : 0;
+      return `<tr><td data-label="Kim">${s.name}</td><td data-label="Ulush">${s.pct}%</td><td class="num green" data-label="Summa">${fmt(amt, cur)}</td></tr>`;
+    }).join('');
+    const lossNote = balance <= 0 ? '<div class="split-loss">Bu valyutada hozircha foyda yo\'q — taqsimlanadigan summa 0.</div>' : '';
+    return `<div class="split-cur">
+      <div class="split-cur-title">${cur} — jami foyda: <b style="color:${balance>=0?'var(--green)':'var(--red)'}">${fmt(balance, cur)}</b></div>
+      <table><thead><tr><th>Kim</th><th>Ulush</th><th>Summa</th></tr></thead><tbody>${rows}</tbody></table>
+      ${lossNote}
+    </div>`;
+  }).join('');
+}
+
+const MONTH_NAMES = ['Yanvar','Fevral','Mart','Aprel','May','Iyun','Iyul','Avgust','Sentabr','Oktabr','Noyabr','Dekabr'];
+function monthKey(dateStr){ return (dateStr||'').slice(0,7); }
+function monthLabel(key){
+  const [y,m] = key.split('-');
+  return `${MONTH_NAMES[parseInt(m,10)-1] || m} ${y}`;
+}
+
+function splitRowsHtml(balance, cur){
+  return PROFIT_SHARES.map(s=>{
+    const amt = balance > 0 ? balance * s.pct / 100 : 0;
+    return `<tr><td data-label="Kim">${s.name}</td><td data-label="Ulush">${s.pct}%</td><td class="num green" data-label="Summa">${fmt(amt, cur)}</td></tr>`;
+  }).join('');
+}
+
+function renderTable(){
+  const merged = [
+    ...AGENCY_INCOME.map(e=>({...e, kind:'income'})),
+    ...AGENCY_EXPENSE.map(e=>({...e, kind:'expense'})),
+  ];
+
+  const container = document.getElementById('months-container');
+  if(merged.length === 0){
+    container.innerHTML = '<div class="block"><div class="empty-note">Hali yozuv yo\'q — yuqoridagi formadan qo\'shing</div></div>';
+    return;
+  }
+
+  const byMonth = {};
+  merged.forEach(e=>{ (byMonth[monthKey(e.date)] = byMonth[monthKey(e.date)] || []).push(e); });
+  const months = Object.keys(byMonth).sort((a,b)=> b.localeCompare(a));
+
+  container.innerHTML = months.map(mk=>{
+    const entries = byMonth[mk].slice().sort((a,b)=> b.date.localeCompare(a.date));
+    const monthItems = entries.map(e=>({amount:e.amount, currency:e.currency, sign: e.kind==='income' ? 1 : -1}));
+    const totals = groupTotals(monthItems);
+    const currencies = Object.keys(totals);
+
+    const summary = currencies.map(cur=>{
+      const t = totals[cur]; const bal = t.income - t.expense;
+      return `${cur}: daromad <b class="green">${fmt(t.income,cur)}</b>, xarajat <b class="red">${fmt(t.expense,cur)}</b>, balans <b class="${bal>=0?'green':'red'}">${fmt(bal,cur)}</b>`;
+    }).join(' &nbsp;·&nbsp; ');
+
+    const splitHtml = currencies.map(cur=>{
+      const bal = totals[cur].income - totals[cur].expense;
+      return `<div class="split-cur">
+        <div class="split-cur-title">${cur} — bu oy foydasi: <b style="color:${bal>=0?'var(--green)':'var(--red)'}">${fmt(bal, cur)}</b></div>
+        <table><thead><tr><th>Kim</th><th>Ulush</th><th>Summa</th></tr></thead><tbody>${splitRowsHtml(bal, cur)}</tbody></table>
+      </div>`;
+    }).join('');
+
+    const rows = entries.map(e=>{
+      const isIncome = e.kind === 'income';
+      return `<tr>
+        <td data-label="Sana">${e.date}</td>
+        <td data-label="Turi">${isIncome ? 'Kirim' : 'Chiqim'}</td>
+        <td data-label="Mijoz / Kategoriya">${isIncome ? (e.client||'') : (e.category||'')}</td>
+        <td data-label="Izoh">${e.desc||''}</td>
+        <td class="num ${isIncome?'green':'red'}" data-label="Summa">${isIncome?'+':'-'}${fmt(e.amount, e.currency)}</td>
+        <td data-label=""><button class="del-btn" data-kind="${isIncome?'agencyIncome':'agencyExpense'}" data-id="${e.id}" title="O'chirish">×</button></td>
+      </tr>`;
+    }).join('');
+
+    return `<div class="block">
+      <h2>${monthLabel(mk)}</h2>
+      <div class="month-summary">${summary}</div>
+      <div class="month-split">
+        <div class="month-split-title">Bu oy foyda taqsimoti</div>
+        ${splitHtml}
+      </div>
+      <table>
+        <thead><tr><th>Sana</th><th>Turi</th><th>Mijoz / Kategoriya</th><th>Izoh</th><th>Summa</th><th></th></tr></thead>
+        <tbody>${rows}</tbody>
+      </table>
+    </div>`;
+  }).join('');
+}
+
+function renderAll(){
+  const items = [
+    ...AGENCY_INCOME.map(e=>({amount:e.amount, currency:e.currency, sign:1})),
+    ...AGENCY_EXPENSE.map(e=>({amount:e.amount, currency:e.currency, sign:-1})),
+  ];
+  const totals = groupTotals(items);
+  renderStats(totals);
+  renderSplit(totals);
+  renderTable();
+}
+
+// --- forma ---
+document.getElementById('a-type').addEventListener('change', (ev)=>{
+  document.getElementById('a-name-label').textContent = ev.target.value === 'income' ? 'Mijoz nomi' : 'Kategoriya';
+  document.getElementById('a-name').placeholder = ev.target.value === 'income' ? 'Booking, Intouch...' : 'Obuna, ish haqi...';
+});
+
+document.getElementById('agency-form').addEventListener('submit', (ev)=>{
+  ev.preventDefault();
+  const amount = parseFloat(document.getElementById('a-amount').value);
+  if(!amount || amount <= 0) return;
+  const date = document.getElementById('a-date').value || new Date().toISOString().slice(0,10);
+  const desc = document.getElementById('a-desc').value.trim();
+  const currency = document.getElementById('a-currency').value;
+  const name = document.getElementById('a-name').value.trim();
+  if(document.getElementById('a-type').value === 'income'){
+    AGENCY_INCOME.push({id:genId(), date, client:name, desc, amount, currency});
+    saveArr(KEYS.agencyIncome, AGENCY_INCOME);
+  } else {
+    AGENCY_EXPENSE.push({id:genId(), date, category:name, desc, amount, currency});
+    saveArr(KEYS.agencyExpense, AGENCY_EXPENSE);
+  }
+  document.getElementById('a-name').value = '';
+  document.getElementById('a-desc').value = '';
+  document.getElementById('a-amount').value = '';
+  renderAll();
+});
+
+// --- o'chirish ---
+document.getElementById('months-container').addEventListener('click', (ev)=>{
+  const btn = ev.target.closest('.del-btn');
+  if(!btn) return;
+  if(btn.dataset.kind === 'agencyIncome'){
+    AGENCY_INCOME = AGENCY_INCOME.filter(e=>e.id !== btn.dataset.id);
+    saveArr(KEYS.agencyIncome, AGENCY_INCOME);
+  } else {
+    AGENCY_EXPENSE = AGENCY_EXPENSE.filter(e=>e.id !== btn.dataset.id);
+    saveArr(KEYS.agencyExpense, AGENCY_EXPENSE);
+  }
+  renderAll();
+});
+
+// --- zaxira: eksport / import ---
+document.getElementById('export-btn').addEventListener('click', ()=>{
+  const backup = { agencyIncome: AGENCY_INCOME, agencyExpense: AGENCY_EXPENSE, exportedAt: new Date().toISOString() };
+  const blob = new Blob([JSON.stringify(backup, null, 2)], {type:'application/json'});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = `agentstvo-moliya-zaxira-${new Date().toISOString().slice(0,10)}.json`;
+  document.body.appendChild(a);
+  a.click();
+  a.remove();
+  URL.revokeObjectURL(url);
+});
+
+document.getElementById('import-btn').addEventListener('click', ()=>{
+  document.getElementById('import-input').click();
+});
+document.getElementById('import-input').addEventListener('change', (ev)=>{
+  const file = ev.target.files[0];
+  if(!file) return;
+  const reader = new FileReader();
+  reader.onload = () => {
+    try{
+      const data = JSON.parse(reader.result);
+      if(!confirm("Zaxiradan tiklansa, hozirgi ma'lumotlar ustidan yoziladi. Davom etasizmi?")) return;
+      AGENCY_INCOME = Array.isArray(data.agencyIncome) ? data.agencyIncome : [];
+      AGENCY_EXPENSE = Array.isArray(data.agencyExpense) ? data.agencyExpense : [];
+      saveArr(KEYS.agencyIncome, AGENCY_INCOME);
+      saveArr(KEYS.agencyExpense, AGENCY_EXPENSE);
+      renderAll();
+    }catch(e){
+      alert("Fayl noto'g'ri formatda: " + e.message);
+    }
+  };
+  reader.readAsText(file);
+  ev.target.value = '';
+});
+
+// --- sana inputiga bugungi kunni default qilib qo'yish ---
+document.getElementById('a-date').value = new Date().toISOString().slice(0,10);
+
+renderAll();
+</script>
+</body>
+</html>

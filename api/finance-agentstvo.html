@@ -130,6 +130,11 @@
   .month-split-title{font-size:12px;color:var(--text-dim2);font-weight:700;text-transform:uppercase;letter-spacing:.03em;margin-bottom:10px;}
   .empty-note{color:var(--text-dim2);font-size:13px;}
 
+  .sync-badge{display:inline-block;font-size:12px;font-weight:600;padding:6px 12px;border-radius:999px;}
+  .sync-badge.loading{background:var(--card-2);color:var(--text-dim2);}
+  .sync-badge.ok{background:var(--green-soft);color:var(--green);}
+  .sync-badge.off{background:var(--amber-soft);color:var(--amber);}
+
   @media (max-width:760px){
     .stat-grid{grid-template-columns:1fr;}
     thead{display:none;}
@@ -152,6 +157,8 @@
       <a class="back-link" href="index.html">← Dashboardga qaytish</a>
     </div>
   </header>
+
+  <div id="sync-badge" style="margin-bottom:14px;"></div>
 
   <div class="backup-row">
     <button class="backup-btn" id="export-btn">⬇ Zaxira nusxa yuklab olish</button>
@@ -222,12 +229,15 @@
 
 <script>
 /* ===================================================================
-   Ma'lumot brauzerning localStorage'ida saqlanadi (shu kompyuter/brauzer).
+   Ma'lumot bulutda (server/Redis) saqlanadi — barcha kompyuterlardan bir
+   xil ko'rinadi. localStorage faqat tezkor lokal nusxa/offline zaxira
+   sifatida ishlatiladi.
    =================================================================== */
 const KEYS = {
   agencyIncome: 'finance_agency_income_v1',
   agencyExpense: 'finance_agency_expense_v1',
 };
+const API_URL = '/api/agentstvo-data';
 
 function loadArr(key){
   try{ const v = JSON.parse(localStorage.getItem(key)); return Array.isArray(v) ? v : []; }
@@ -238,6 +248,53 @@ function genId(){ return Date.now().toString(36) + Math.random().toString(36).sl
 
 let AGENCY_INCOME = loadArr(KEYS.agencyIncome);
 let AGENCY_EXPENSE = loadArr(KEYS.agencyExpense);
+let SYNC_STATUS = 'loading'; // loading | synced | offline | error
+
+async function syncToServer(){
+  try{
+    const r = await fetch(API_URL, {
+      method: 'POST',
+      headers: {'Content-Type':'application/json'},
+      body: JSON.stringify({agencyIncome: AGENCY_INCOME, agencyExpense: AGENCY_EXPENSE}),
+    });
+    if(!r.ok) throw new Error('save failed');
+    SYNC_STATUS = 'synced';
+  }catch(e){
+    SYNC_STATUS = 'offline';
+  }
+  renderSyncBadge();
+}
+
+async function loadFromServer(){
+  try{
+    const r = await fetch(API_URL);
+    if(!r.ok) throw new Error('load failed');
+    const data = await r.json();
+    if(data && Array.isArray(data.agencyIncome) && Array.isArray(data.agencyExpense)){
+      AGENCY_INCOME = data.agencyIncome;
+      AGENCY_EXPENSE = data.agencyExpense;
+      saveArr(KEYS.agencyIncome, AGENCY_INCOME);
+      saveArr(KEYS.agencyExpense, AGENCY_EXPENSE);
+    } else if(AGENCY_INCOME.length || AGENCY_EXPENSE.length){
+      // Server bo'sh, lekin shu brauzerda eski (localStorage) ma'lumot bor —
+      // birinchi marta serverga yuklab qo'yamiz.
+      await syncToServer();
+    }
+    SYNC_STATUS = 'synced';
+  }catch(e){
+    SYNC_STATUS = 'offline';
+  }
+  renderAll();
+  renderSyncBadge();
+}
+
+function renderSyncBadge(){
+  const el = document.getElementById('sync-badge');
+  if(!el) return;
+  if(SYNC_STATUS === 'loading') el.innerHTML = '<span class="sync-badge loading">⏳ Yuklanmoqda...</span>';
+  else if(SYNC_STATUS === 'synced') el.innerHTML = '<span class="sync-badge ok">☁️ Bulutga ulangan — barcha kompyuterda bir xil</span>';
+  else el.innerHTML = '<span class="sync-badge off">⚠️ Bulutga ulanmadi — faqat shu brauzerda saqlanmoqda</span>';
+}
 
 /* Agentstvo foydasi shu nisbatda taqsimlanadi (jami 100% bo'lishi kerak) */
 const PROFIT_SHARES = [
@@ -426,6 +483,7 @@ document.getElementById('agency-form').addEventListener('submit', (ev)=>{
   document.getElementById('a-desc').value = '';
   document.getElementById('a-amount').value = '';
   renderAll();
+  syncToServer();
 });
 
 // --- o'chirish ---
@@ -440,6 +498,7 @@ document.getElementById('months-container').addEventListener('click', (ev)=>{
     saveArr(KEYS.agencyExpense, AGENCY_EXPENSE);
   }
   renderAll();
+  syncToServer();
 });
 
 // --- zaxira: eksport / import ---
@@ -472,6 +531,7 @@ document.getElementById('import-input').addEventListener('change', (ev)=>{
       saveArr(KEYS.agencyIncome, AGENCY_INCOME);
       saveArr(KEYS.agencyExpense, AGENCY_EXPENSE);
       renderAll();
+      syncToServer();
     }catch(e){
       alert("Fayl noto'g'ri formatda: " + e.message);
     }
@@ -484,6 +544,8 @@ document.getElementById('import-input').addEventListener('change', (ev)=>{
 document.getElementById('a-date').value = new Date().toISOString().slice(0,10);
 
 renderAll();
+renderSyncBadge();
+loadFromServer();
 </script>
 </body>
 </html>

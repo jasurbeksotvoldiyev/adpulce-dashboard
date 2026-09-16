@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Moliya — Shaxsiy</title>
+<style>
+  :root{
+    --bg:#0b0b0f;
+    --bg-soft:#111116;
+    --card:#1a1a22;
+    --card-2:#20202a;
+    --border:rgba(255,255,255,.08);
+    --text:#f5f5f7;
+    --text-dim:#9898a3;
+    --text-dim2:#6e6e78;
+    --accent:#6d5ce8;
+    --accent-2:#8d7cf5;
+    --accent-soft:rgba(109,92,232,.16);
+    --green:#32d74b;
+    --green-soft:rgba(50,215,75,.14);
+    --red:#ff453a;
+    --red-soft:rgba(255,69,58,.14);
+    --amber:#ff9f0a;
+    --amber-soft:rgba(255,159,10,.14);
+    --radius-lg:22px;
+    --radius-md:16px;
+    --radius-sm:10px;
+    --shadow:0 10px 30px rgba(0,0,0,.35);
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:radial-gradient(circle at 15% 0%, #15121f 0%, var(--bg) 45%);
+    color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    padding:0 20px 60px;
+  }
+  .wrap{max-width:1080px;margin:0 auto;}
+
+  header{display:flex;align-items:center;gap:14px;padding:32px 0 22px;flex-wrap:wrap;}
+  .brand{display:flex;flex-direction:column;gap:2px;margin-right:auto;}
+  .brand h1{margin:0;font-size:22px;font-weight:700;letter-spacing:-.02em;}
+  .brand span{font-size:13px;color:var(--text-dim);}
+  .link-row{display:flex;gap:8px;flex-wrap:wrap;}
+  .back-link{font-size:12.5px;color:var(--text-dim);text-decoration:none;background:var(--card);border:1px solid var(--border);padding:8px 16px;border-radius:999px;}
+  .back-link:hover{color:var(--text);}
+
+  .backup-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:22px;}
+  .backup-btn{
+    appearance:none;border:1px solid var(--border);background:var(--card);color:var(--text-dim);
+    padding:8px 14px;border-radius:999px;font-size:12.5px;font-weight:600;cursor:pointer;
+  }
+  .backup-btn:hover{color:var(--text);border-color:rgba(255,255,255,.18);}
+  #import-input{display:none;}
+
+  .howto{
+    background:var(--accent-soft);border:1px solid rgba(109,92,232,.35);color:var(--text);
+    font-size:13px;line-height:1.6;padding:14px 18px;border-radius:var(--radius-sm);margin-bottom:20px;
+  }
+  .howto b{color:var(--accent-2);}
+
+  .stat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:20px;}
+  .stat-card{
+    background:var(--card);border:1px solid var(--border);border-radius:var(--radius-lg);
+    padding:20px 22px;box-shadow:var(--shadow);
+  }
+  .stat-card .label{font-size:13px;color:var(--text-dim);font-weight:600;margin-bottom:10px;}
+  .stat-card .value{font-size:26px;font-weight:750;letter-spacing:-.02em;}
+  .stat-card .value.green{color:var(--green);}
+  .stat-card .value.red{color:var(--red);}
+
+  .block{background:var(--card);border:1px solid var(--border);border-radius:var(--radius-lg);padding:22px;margin-bottom:18px;box-shadow:var(--shadow);}
+  .block h2{margin:0 0 4px;font-size:16px;font-weight:750;}
+  .block .block-sub{font-size:12.5px;color:var(--text-dim2);margin-bottom:18px;}
+
+  /* forma */
+  .entry-form{display:grid;grid-template-columns:130px 110px 1fr 1fr 130px 90px auto;gap:10px;align-items:end;margin-bottom:4px;}
+  .entry-form label{display:block;font-size:11px;color:var(--text-dim2);font-weight:600;text-transform:uppercase;letter-spacing:.03em;margin-bottom:6px;}
+  .entry-form input, .entry-form select{
+    width:100%;background:var(--card-2);border:1px solid var(--border);color:var(--text);
+    padding:10px 11px;border-radius:var(--radius-sm);font-size:13.5px;font-family:inherit;
+  }
+  .entry-form input:focus, .entry-form select:focus{outline:none;border-color:var(--accent);}
+  .add-btn{
+    appearance:none;border:none;background:var(--accent);color:#fff;font-weight:700;font-size:13.5px;
+    padding:10px 18px;border-radius:var(--radius-sm);cursor:pointer;white-space:nowrap;
+  }
+  .add-btn:hover{background:var(--accent-2);}
+  @media (max-width:900px){
+    .entry-form{grid-template-columns:1fr 1fr;}
+    .add-btn{grid-column:1/-1;}
+  }
+
+  table{width:100%;border-collapse:collapse;font-size:14px;}
+  thead th{
+    text-align:left;font-size:11.5px;text-transform:uppercase;letter-spacing:.04em;
+    color:var(--text-dim2);font-weight:700;padding:0 10px 10px;border-bottom:1px solid var(--border);
+  }
+  tbody td{padding:13px 10px;border-bottom:1px solid var(--border);vertical-align:middle;}
+  tbody tr:last-child td{border-bottom:none;}
+  td.num{font-variant-numeric:tabular-nums;font-weight:600;white-space:nowrap;}
+  td.num.green{color:var(--green);}
+  td.num.red{color:var(--red);}
+  .empty-row td{color:var(--text-dim2);text-align:center;padding:24px 10px;}
+  .del-btn{
+    appearance:none;border:1px solid var(--border);background:var(--card-2);color:var(--text-dim2);
+    width:26px;height:26px;border-radius:50%;cursor:pointer;font-size:14px;line-height:1;
+  }
+  .del-btn:hover{color:var(--red);border-color:var(--red);}
+
+  @media (max-width:760px){
+    .stat-grid{grid-template-columns:1fr;}
+    thead{display:none;}
+    table, tbody, tr, td{display:block;width:100%;}
+    tbody tr{border-bottom:1px solid var(--border);padding:12px 0;}
+    tbody td{border-bottom:none;padding:4px 0;display:flex;justify-content:space-between;align-items:center;gap:10px;}
+    tbody td:before{content:attr(data-label);font-size:11px;color:var(--text-dim2);font-weight:600;text-transform:uppercase;letter-spacing:.03em;}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="brand">
+      <h1>Moliya — Shaxsiy</h1>
+      <span>Sizning shaxsiy daromad va xarajatlaringiz</span>
+    </div>
+  </header>
+
+  <div class="backup-row">
+    <button class="backup-btn" id="export-btn">⬇ Zaxira nusxa yuklab olish</button>
+    <button class="backup-btn" id="import-btn">⬆ Zaxiradan tiklash</button>
+    <input type="file" id="import-input" accept="application/json">
+  </div>
+
+  <div class="howto">
+    <b>Bu yerda:</b> shaxsiy daromad/xarajatingizni pastdagi forma orqali qo'shasiz. Ma'lumot shu brauzerda
+    (kompyuteringizda) avtomatik saqlanadi. Vaqti-vaqti bilan yuqoridagi <b>"Zaxira nusxa yuklab olish"</b>
+    tugmasini bosib, ma'lumotni fayl sifatida saqlab qo'ying.
+  </div>
+
+  <div class="block">
+    <h2>Yangi yozuv qo'shish</h2>
+    <form class="entry-form" id="personal-form">
+      <div>
+        <label>Sana</label>
+        <input type="date" id="p-date" required>
+      </div>
+      <div>
+        <label>Turi</label>
+        <select id="p-type">
+          <option value="income">Kirim</option>
+          <option value="expense">Chiqim</option>
+        </select>
+      </div>
+      <div>
+        <label>Kategoriya</label>
+        <input type="text" id="p-category" placeholder="Ish haqi, Oziq-ovqat...">
+      </div>
+      <div>
+        <label>Izoh</label>
+        <input type="text" id="p-desc" placeholder="Ixtiyoriy">
+      </div>
+      <div>
+        <label>Summa</label>
+        <input type="number" id="p-amount" min="0" step="0.01" required placeholder="0">
+      </div>
+      <div>
+        <label>Valyuta</label>
+        <select id="p-currency">
+          <option value="UZS">UZS</option>
+          <option value="USD">USD</option>
+        </select>
+      </div>
+      <button type="submit" class="add-btn">+ Qo'shish</button>
+    </form>
+  </div>
+
+  <div class="stat-grid" id="shaxsiy-stats"></div>
+  <div class="block">
+    <h2>Barcha yozuvlar</h2>
+    <div class="block-sub">Eng yangi yozuv tepada</div>
+    <table>
+      <thead><tr><th>Sana</th><th>Turi</th><th>Kategoriya</th><th>Izoh</th><th>Summa</th><th></th></tr></thead>
+      <tbody id="shaxsiy-table"></tbody>
+    </table>
+  </div>
+
+</div>
+
+<script>
+/* ===================================================================
+   Ma'lumot brauzerning localStorage'ida saqlanadi (shu kompyuter/brauzer).
+   =================================================================== */
+const KEYS = { personal: 'finance_personal_v1' };
+
+function loadArr(key){
+  try{ const v = JSON.parse(localStorage.getItem(key)); return Array.isArray(v) ? v : []; }
+  catch(e){ return []; }
+}
+function saveArr(key, arr){ localStorage.setItem(key, JSON.stringify(arr)); }
+function genId(){ return Date.now().toString(36) + Math.random().toString(36).slice(2,7); }
+
+let PERSONAL = loadArr(KEYS.personal);
+
+function fmt(amount, currency){
+  const n = Number(amount) || 0;
+  if(currency === 'USD') return '$' + n.toLocaleString('en-US', {minimumFractionDigits:2, maximumFractionDigits:2});
+  return n.toLocaleString('uz-UZ') + " so'm";
+}
+
+function groupTotals(items){
+  const totals = {};
+  items.forEach(it=>{
+    const cur = it.currency || 'UZS';
+    totals[cur] = totals[cur] || {income:0, expense:0};
+    if(it.sign > 0) totals[cur].income += Number(it.amount)||0;
+    else totals[cur].expense += Number(it.amount)||0;
+  });
+  return totals;
+}
+
+function renderStats(totals){
+  const el = document.getElementById('shaxsiy-stats');
+  const currencies = Object.keys(totals);
+  if(currencies.length === 0){
+    el.innerHTML = '<div class="stat-card"><div class="label">Ma\'lumot yo\'q</div><div class="value" style="font-size:15px;color:var(--text-dim2);">Hali yozuv qo\'shilmagan</div></div>';
+    return;
+  }
+  let html = '';
+  currencies.forEach(cur=>{
+    const t = totals[cur];
+    const balance = t.income - t.expense;
+    html += `
+      <div class="stat-card">
+        <div class="label">Jami daromad (${cur})</div>
+        <div class="value green">${fmt(t.income, cur)}</div>
+      </div>
+      <div class="stat-card">
+        <div class="label">Jami xarajat (${cur})</div>
+        <div class="value red">${fmt(t.expense, cur)}</div>
+      </div>
+      <div class="stat-card">
+        <div class="label">Balans (${cur})</div>
+        <div class="value ${balance>=0?'green':'red'}">${fmt(balance, cur)}</div>
+      </div>`;
+  });
+  el.innerHTML = html;
+}
+
+function renderPersonal(){
+  const items = PERSONAL.map(e=>({amount:e.amount, currency:e.currency, sign: e.type==='income' ? 1 : -1}));
+  renderStats(groupTotals(items));
+
+  const tbody = document.getElementById('shaxsiy-table');
+  const sorted = [...PERSONAL].sort((a,b)=> b.date.localeCompare(a.date));
+  if(sorted.length === 0){
+    tbody.innerHTML = '<tr class="empty-row"><td colspan="6">Hali yozuv yo\'q — yuqoridagi formadan qo\'shing</td></tr>';
+    return;
+  }
+  tbody.innerHTML = sorted.map(e=>{
+    const isIncome = e.type === 'income';
+    return `<tr>
+      <td data-label="Sana">${e.date}</td>
+      <td data-label="Turi">${isIncome ? 'Kirim' : 'Chiqim'}</td>
+      <td data-label="Kategoriya">${e.category||''}</td>
+      <td data-label="Izoh">${e.desc||''}</td>
+      <td class="num ${isIncome?'green':'red'}" data-label="Summa">${isIncome?'+':'-'}${fmt(e.amount, e.currency)}</td>
+      <td data-label=""><button class="del-btn" data-id="${e.id}" title="O'chirish">×</button></td>
+    </tr>`;
+  }).join('');
+}
+
+// --- forma ---
+document.getElementById('personal-form').addEventListener('submit', (ev)=>{
+  ev.preventDefault();
+  const amount = parseFloat(document.getElementById('p-amount').value);
+  if(!amount || amount <= 0) return;
+  PERSONAL.push({
+    id: genId(),
+    date: document.getElementById('p-date').value || new Date().toISOString().slice(0,10),
+    type: document.getElementById('p-type').value,
+    category: document.getElementById('p-category').value.trim(),
+    desc: document.getElementById('p-desc').value.trim(),
+    amount: amount,
+    currency: document.getElementById('p-currency').value,
+  });
+  saveArr(KEYS.personal, PERSONAL);
+  document.getElementById('p-category').value = '';
+  document.getElementById('p-desc').value = '';
+  document.getElementById('p-amount').value = '';
+  renderPersonal();
+});
+
+// --- o'chirish ---
+document.getElementById('shaxsiy-table').addEventListener('click', (ev)=>{
+  const btn = ev.target.closest('.del-btn');
+  if(!btn) return;
+  PERSONAL = PERSONAL.filter(e=>e.id !== btn.dataset.id);
+  saveArr(KEYS.personal, PERSONAL);
+  renderPersonal();
+});
+
+// --- zaxira: eksport / import ---
+document.getElementById('export-btn').addEventListener('click', ()=>{
+  const backup = { personal: PERSONAL, exportedAt: new Date().toISOString() };
+  const blob = new Blob([JSON.stringify(backup, null, 2)], {type:'application/json'});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = `shaxsiy-moliya-zaxira-${new Date().toISOString().slice(0,10)}.json`;
+  document.body.appendChild(a);
+  a.click();
+  a.remove();
+  URL.revokeObjectURL(url);
+});
+
+document.getElementById('import-btn').addEventListener('click', ()=>{
+  document.getElementById('import-input').click();
+});
+document.getElementById('import-input').addEventListener('change', (ev)=>{
+  const file = ev.target.files[0];
+  if(!file) return;
+  const reader = new FileReader();
+  reader.onload = () => {
+    try{
+      const data = JSON.parse(reader.result);
+      if(!confirm("Zaxiradan tiklansa, hozirgi ma'lumotlar ustidan yoziladi. Davom etasizmi?")) return;
+      PERSONAL = Array.isArray(data.personal) ? data.personal : [];
+      saveArr(KEYS.personal, PERSONAL);
+      renderPersonal();
+    }catch(e){
+      alert("Fayl noto'g'ri formatda: " + e.message);
+    }
+  };
+  reader.readAsText(file);
+  ev.target.value = '';
+});
+
+// --- sana inputiga bugungi kunni default qilib qo'yish ---
+document.getElementById('p-date').value = new Date().toISOString().slice(0,10);
+
+renderPersonal();
+</script>
+</body>
+</html>

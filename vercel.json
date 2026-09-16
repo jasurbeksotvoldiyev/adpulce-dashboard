@@ -1,7 +1,7 @@
 {
   "functions": {
     "api/gate.js": {
-      "includeFiles": "api/dashboard.html"
+      "includeFiles": "api/*.html"
     }
   },
   "rewrites": [

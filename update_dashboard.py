@@ -498,7 +498,7 @@ def sync_to_github(today_str):
         print("\n(GitHub ulanmagan — sayt hali faqat lokal. 'origin' remote sozlanganda avtomatik yuboriladi.)")
         return
 
-    run(["git", "add", "index.html", "api/dashboard.html", "vercel.json", "api/gate.js", "update_dashboard.py"])
+    run(["git", "add", "index.html", "api/dashboard.html", "history.json", "vercel.json", "api/gate.js", "update_dashboard.py"])
     commit = run(["git", "commit", "-m", f"Avtomatik yangilanish: {today_str}"])
     if commit.returncode != 0 and "nothing to commit" not in (commit.stdout + commit.stderr):
         print("GitHub'ga saqlashda xatolik (commit):", commit.stderr.strip())

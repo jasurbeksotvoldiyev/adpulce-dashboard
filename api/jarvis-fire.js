@@ -34,6 +34,7 @@ module.exports = async (req, res) => {
       headers: {
         Authorization: `Bearer ${fireToken}`,
         'Content-Type': 'application/json',
+        'anthropic-version': '2023-06-01',
       },
       body: JSON.stringify({}),
     });

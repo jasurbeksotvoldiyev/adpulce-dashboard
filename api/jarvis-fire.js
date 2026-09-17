@@ -10,14 +10,28 @@
 //                         (bu Claude tokeni emas, past darajali himoya)
 
 module.exports = async (req, res) => {
-  if (req.method !== 'POST') {
-    res.status(405).json({ error: 'Method not allowed' });
-    return;
-  }
-
   const secret = req.query.secret || req.headers['x-relay-secret'];
   if (!process.env.JARVIS_RELAY_SECRET || secret !== process.env.JARVIS_RELAY_SECRET) {
     res.status(401).json({ error: 'Unauthorized' });
+    return;
+  }
+
+  // SendSeven webhook tasdiqlash so'rovi ("challenge"): kelgan qiymatni aynan
+  // shu ko'rinishda qaytarib yuboramiz, hech qanday Jarvis'ni ishga tushirmasdan.
+  const bodyChallenge = req.body && typeof req.body === 'object' ? req.body.challenge : undefined;
+  const challenge = bodyChallenge || req.query.challenge;
+  if (challenge) {
+    res.status(200).json({ challenge });
+    return;
+  }
+
+  if (req.method === 'GET') {
+    res.status(200).json({ ok: true });
+    return;
+  }
+
+  if (req.method !== 'POST') {
+    res.status(405).json({ error: 'Method not allowed' });
     return;
   }
 

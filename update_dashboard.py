@@ -22,8 +22,12 @@ import sys
 import urllib.error
 import urllib.parse
 import urllib.request
-from datetime import datetime
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
+
+# Asia/Tashkent DST qilmaydi, shuning uchun doimiy UTC+5 offset yetarli
+# (zoneinfo/tzdata cloud muhitida mavjud bo'lmasligi mumkin).
+TASHKENT_TZ = timezone(timedelta(hours=5))
 
 BASE_DIR = Path(__file__).resolve().parent
 ENV_PATH = BASE_DIR / ".env"
@@ -403,7 +407,7 @@ def main():
     campaigns_meta = {}
     budget_rows = []
 
-    now = datetime.now()
+    now = datetime.now(TASHKENT_TZ)
     today_str = now.strftime("%d-%m-%Y %H:%M")
     today_key = now.strftime("%Y-%m-%d")
     history = load_history()

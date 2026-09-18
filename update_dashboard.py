@@ -45,6 +45,7 @@ CLIENTS_CONFIG = [
     {"key": "intouch",    "name": "Intouch",            "kpi": 4,    "accounts": ["act_7372692399429664", "act_1434361421045010"]},
     {"key": "mastermock", "name": "Master Mock",        "kpi": None, "accounts": ["act_1820788456001171"]},
     {"key": "maydon",     "name": "Maydon Ta'lim",      "kpi": 2,    "accounts": ["act_2161468034191195"]},
+    {"key": "mercury",    "name": "Mercury Vec Consulting", "kpi": None, "accounts": ["act_777971871341543"]},
     {"key": "sayyohvisa", "name": "Sayyoh VISA",        "kpi": 1,    "accounts": ["act_1263636038863945"]},
     {"key": "superkit",   "name": "Super Kitobxon",     "kpi": 2,    "accounts": ["act_584751316698691"]},
     {"key": "sweetkids",  "name": "Sweet Kids",         "kpi": 1.5,  "accounts": ["act_824386570538579"]},

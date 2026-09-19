@@ -509,7 +509,7 @@ def sync_to_github(today_str):
         print("GitHub'ga saqlashda xatolik (commit):", commit.stderr.strip())
         return
 
-    push = run(["git", "push", "origin", "HEAD"])
+    push = run(["git", "push", "origin", "HEAD:main"])
     if push.returncode != 0:
         print("GitHub'ga yuborishda xatolik (push):", push.stderr.strip())
     else:

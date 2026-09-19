@@ -248,7 +248,7 @@
         "leads": 1
       },
       "intouch": {
-        "spend": 9.17,
+        "spend": 9.32,
         "leads": 2
       },
       "mastermock": {
@@ -261,7 +261,7 @@
       },
       "mercury": {
         "spend": 0.74,
-        "leads": 4
+        "leads": 5
       },
       "sayyohvisa": {
         "spend": 0.23,
@@ -746,7 +746,7 @@
           "spend": 1.65,
           "leads": 1,
           "impressions": 1067,
-          "reach": 870,
+          "reach": 892,
           "budget": 0
         }
       ],
@@ -763,25 +763,25 @@
       "intouch": [
         {
           "name": "KN  | Lead | CBO | 45$ | 13.09.2026",
-          "spend": 3.96,
+          "spend": 4.05,
           "leads": 1,
-          "impressions": 2190,
+          "impressions": 2254,
           "reach": 1995,
           "budget": 45.0
         },
         {
           "name": "KN  | Lead | CBO | 35$ | 13.09.2026",
-          "spend": 3.6,
+          "spend": 3.64,
           "leads": 1,
-          "impressions": 1073,
-          "reach": 931,
+          "impressions": 1089,
+          "reach": 971,
           "budget": 35.0
         },
         {
           "name": "JS | Traffic | CBO | 10$ | 13.08.2026",
-          "spend": 1.61,
+          "spend": 1.63,
           "leads": 0,
-          "impressions": 727,
+          "impressions": 738,
           "reach": 671,
           "budget": 10.0
         }
@@ -801,7 +801,7 @@
           "spend": 1.68,
           "leads": 0,
           "impressions": 302,
-          "reach": 263,
+          "reach": 283,
           "budget": 10.0
         },
         {
@@ -833,7 +833,7 @@
         {
           "name": "BR - LEAD -VISA - CBO - 6.6$ - 17.07.2026",
           "spend": 0.74,
-          "leads": 4,
+          "leads": 5,
           "impressions": 307,
           "reach": 280,
           "budget": 6.6

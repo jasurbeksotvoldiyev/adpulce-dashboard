@@ -283,6 +283,56 @@
         "spend": 0,
         "leads": 0
       }
+    },
+    "2026-09-20": {
+      "adpulce": {
+        "spend": 0.0,
+        "leads": 0
+      },
+      "access": {
+        "spend": 0.0,
+        "leads": 0
+      },
+      "booking": {
+        "spend": 0.0,
+        "leads": 0
+      },
+      "intouch": {
+        "spend": 0.0,
+        "leads": 0
+      },
+      "mastermock": {
+        "spend": 0.0,
+        "leads": 0
+      },
+      "maydon": {
+        "spend": 0.0,
+        "leads": 0
+      },
+      "mercury": {
+        "spend": 0.0,
+        "leads": 0
+      },
+      "sayyohvisa": {
+        "spend": 0.0,
+        "leads": 0
+      },
+      "superkit": {
+        "spend": 0,
+        "leads": 0
+      },
+      "sweetkids": {
+        "spend": 0.0,
+        "leads": 0
+      },
+      "zimzimuz": {
+        "spend": 0,
+        "leads": 0
+      },
+      "zimzimtr": {
+        "spend": 0,
+        "leads": 0
+      }
     }
   },
   "campaigns": {
@@ -862,6 +912,17 @@
       ],
       "zimzimuz": [],
       "zimzimtr": []
+    },
+    "2026-09-20": {
+      "adpulce": [],
+      "access": [],
+      "booking": [],
+      "intouch": [],
+      "mastermock": [],
+      "maydon": [],
+      "mercury": [],
+      "sayyohvisa": [],
+      "sweetkids": []
     }
   },
   "budget": {

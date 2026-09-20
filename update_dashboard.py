@@ -55,6 +55,9 @@ CLIENTS_CONFIG = [
     {"key": "sweetkids",  "name": "Sweet Kids",         "kpi": 2,  "accounts": ["act_824386570538579"]},
     {"key": "zimzimuz",   "name": "Zim Zim Uzbekiston", "kpi": 3,    "accounts": ["act_901347765351013"]},
     {"key": "zimzimtr",   "name": "Zim Zim Turkiya",    "kpi": 5,    "accounts": ["act_1558878449074756"]},
+    {"key": "madaniy",    "name": "Madaniy",            "kpi": 3,    "accounts": ["act_1102057662332741"]},
+    {"key": "azizbek",    "name": "Azizbek Dubayyo",    "kpi": 3,    "accounts": ["act_1076450191513140"]},
+    {"key": "sweetkids2", "name": "Sweet Kids (2-akkaunt)", "kpi": 3, "accounts": ["act_576151608099653"]},
 ]
 
 # Qaysi mijozlarning "chegara" (threshold) qiymati haqiqiy skrinshotdan tasdiqlangan.

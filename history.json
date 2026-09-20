@@ -345,6 +345,68 @@
         "spend": 0.0,
         "leads": 0
       }
+    },
+    "2026-09-21": {
+      "adpulce": {
+        "spend": 0,
+        "leads": 0
+      },
+      "access": {
+        "spend": 0,
+        "leads": 0
+      },
+      "booking": {
+        "spend": 0,
+        "leads": 0
+      },
+      "intouch": {
+        "spend": 0.45,
+        "leads": 0
+      },
+      "mastermock": {
+        "spend": 0,
+        "leads": 0
+      },
+      "maydon": {
+        "spend": 0,
+        "leads": 0
+      },
+      "mercury": {
+        "spend": 0,
+        "leads": 0
+      },
+      "sayyohvisa": {
+        "spend": 0,
+        "leads": 0
+      },
+      "superkit": {
+        "spend": 0.0,
+        "leads": 0
+      },
+      "sweetkids": {
+        "spend": 0,
+        "leads": 0
+      },
+      "zimzimuz": {
+        "spend": 0,
+        "leads": 0
+      },
+      "zimzimtr": {
+        "spend": 0,
+        "leads": 0
+      },
+      "madaniy": {
+        "spend": 0,
+        "leads": 0
+      },
+      "azizbek": {
+        "spend": 0,
+        "leads": 0
+      },
+      "sweetkids2": {
+        "spend": 0,
+        "leads": 0
+      }
     }
   },
   "campaigns": {
@@ -1047,6 +1109,32 @@
         }
       ],
       "superkit": [],
+      "zimzimuz": [],
+      "zimzimtr": [],
+      "madaniy": [],
+      "azizbek": [],
+      "sweetkids2": []
+    },
+    "2026-09-21": {
+      "adpulce": [],
+      "access": [],
+      "booking": [],
+      "intouch": [
+        {
+          "name": "KN  | Lead | CBO | 45$ | 13.09.2026",
+          "spend": 0.45,
+          "leads": 0,
+          "impressions": 98,
+          "reach": 16,
+          "budget": 45.0
+        }
+      ],
+      "mastermock": [],
+      "maydon": [],
+      "mercury": [],
+      "sayyohvisa": [],
+      "superkit": [],
+      "sweetkids": [],
       "zimzimuz": [],
       "zimzimtr": [],
       "madaniy": [],

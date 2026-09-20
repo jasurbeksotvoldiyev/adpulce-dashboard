@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Loyihalar — Sozlamalar</title>
+<style>
+  :root{
+    --bg:#0b0b0f; --bg-soft:#111116; --card:#1a1a22; --card-2:#20202a;
+    --border:rgba(255,255,255,.08); --text:#f5f5f7; --text-dim:#9898a3; --text-dim2:#6e6e78;
+    --accent:#6d5ce8; --accent-2:#8d7cf5; --accent-soft:rgba(109,92,232,.16);
+    --green:#32d74b; --green-soft:rgba(50,215,75,.14);
+    --red:#ff453a; --red-soft:rgba(255,69,58,.14);
+    --amber:#ff9f0a; --amber-soft:rgba(255,159,10,.14);
+    --radius-lg:22px; --radius-md:16px; --radius-sm:10px;
+    --shadow:0 10px 30px rgba(0,0,0,.35);
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0; background:radial-gradient(circle at 15% 0%, #15121f 0%, var(--bg) 45%);
+    color:var(--text); font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    padding:0 20px 60px;
+  }
+  .wrap{max-width:1080px;margin:0 auto;}
+  header{display:flex;align-items:center;gap:14px;padding:32px 0 22px;flex-wrap:wrap;}
+  .brand{display:flex;flex-direction:column;gap:2px;margin-right:auto;}
+  .brand h1{margin:0;font-size:22px;font-weight:700;letter-spacing:-.02em;}
+  .brand span{font-size:13px;color:var(--text-dim);}
+  .back-link{font-size:12.5px;color:var(--text-dim);text-decoration:none;background:var(--card);border:1px solid var(--border);padding:8px 16px;border-radius:999px;}
+  .back-link:hover{color:var(--text);}
+
+  .howto{
+    background:var(--accent-soft);border:1px solid rgba(109,92,232,.35);color:var(--text);
+    font-size:13px;line-height:1.6;padding:14px 18px;border-radius:var(--radius-sm);margin-bottom:20px;
+  }
+  .howto b{color:var(--accent-2);}
+
+  .block{background:var(--card);border:1px solid var(--border);border-radius:var(--radius-lg);padding:22px;margin-bottom:18px;box-shadow:var(--shadow);}
+  .block h2{margin:0 0 4px;font-size:16px;font-weight:750;}
+  .block .block-sub{font-size:12.5px;color:var(--text-dim2);margin-bottom:18px;}
+
+  .entry-form{display:grid;grid-template-columns:1.3fr 1fr 110px 90px auto;gap:10px;align-items:end;margin-bottom:4px;}
+  .entry-form label{display:block;font-size:11px;color:var(--text-dim2);font-weight:600;text-transform:uppercase;letter-spacing:.03em;margin-bottom:6px;}
+  .entry-form input, .entry-form select{
+    width:100%;background:var(--card-2);border:1px solid var(--border);color:var(--text);
+    padding:10px 11px;border-radius:var(--radius-sm);font-size:13.5px;font-family:inherit;
+  }
+  .entry-form input:focus, .entry-form select:focus{outline:none;border-color:var(--accent);}
+  .add-btn{
+    appearance:none;border:none;background:var(--accent);color:#fff;font-weight:700;font-size:13.5px;
+    padding:10px 18px;border-radius:var(--radius-sm);cursor:pointer;white-space:nowrap;
+  }
+  .add-btn:hover{background:var(--accent-2);}
+  @media (max-width:900px){
+    .entry-form{grid-template-columns:1fr 1fr;}
+    .add-btn{grid-column:1/-1;}
+  }
+
+  table{width:100%;border-collapse:collapse;font-size:14px;}
+  thead th{
+    text-align:left;font-size:11.5px;text-transform:uppercase;letter-spacing:.04em;
+    color:var(--text-dim2);font-weight:700;padding:0 10px 10px;border-bottom:1px solid var(--border);
+  }
+  tbody td{padding:13px 10px;border-bottom:1px solid var(--border);vertical-align:middle;}
+  tbody tr:last-child td{border-bottom:none;}
+  .empty-note{color:var(--text-dim2);font-size:13px;padding:6px 0;}
+  .del-btn{
+    appearance:none;border:1px solid var(--border);background:var(--card-2);color:var(--text-dim2);
+    width:26px;height:26px;border-radius:50%;cursor:pointer;font-size:14px;line-height:1;
+  }
+  .del-btn:hover{color:var(--red);border-color:var(--red);}
+  .code-pill{
+    display:inline-block;background:var(--card-2);border:1px solid var(--border);border-radius:999px;
+    padding:3px 10px;font-family:ui-monospace,Menlo,monospace;font-size:12.5px;color:var(--accent-2);
+  }
+  .link-badge{font-size:11.5px;font-weight:600;padding:3px 9px;border-radius:999px;}
+  .link-badge.on{background:var(--green-soft);color:var(--green);}
+  .link-badge.off{background:var(--amber-soft);color:var(--amber);}
+
+  .sync-badge{display:inline-block;font-size:12px;font-weight:600;padding:6px 12px;border-radius:999px;}
+  .sync-badge.loading{background:var(--card-2);color:var(--text-dim2);}
+  .sync-badge.ok{background:var(--green-soft);color:var(--green);}
+  .sync-badge.off{background:var(--amber-soft);color:var(--amber);}
+
+  @media (max-width:760px){
+    thead{display:none;}
+    table, tbody, tr, td{display:block;width:100%;}
+    tbody tr{border-bottom:1px solid var(--border);padding:12px 0;}
+    tbody td{border-bottom:none;padding:4px 0;display:flex;justify-content:space-between;align-items:center;gap:10px;}
+    tbody td:before{content:attr(data-label);font-size:11px;color:var(--text-dim2);font-weight:600;text-transform:uppercase;letter-spacing:.03em;}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="brand">
+      <h1>Loyihalar — Sozlamalar</h1>
+      <span>Bot 1/2/3 uchun loyihalar, FB akkaunt va KPI ro'yxati</span>
+    </div>
+    <a class="back-link" href="index.html">← Dashboardga qaytish</a>
+  </header>
+
+  <div id="sync-badge" style="margin-bottom:14px;"></div>
+
+  <div class="howto">
+    <b>Bu yerda:</b> har bir loyiha (klient) uchun Facebook Ads akkaunt ID, maqsadli lead narxi (KPI) va valyutani
+    kiritasiz. <b>Klient kodi</b> avtomatik yaratiladi — uni klientga bering, u shu kodni klient botiga (Bot 2) yuborib
+    o'z loyihasini bir marta bog'laydi. FB akkaunt ID'ni Facebook Ads Manager'dagi hisob raqamidan oling
+    (masalan <span class="code-pill">1234567890123</span>, "act_" qo'shish shart emas).
+  </div>
+
+  <div class="block">
+    <h2>Yangi loyiha qo'shish</h2>
+    <form class="entry-form" id="project-form">
+      <div>
+        <label>Loyiha nomi</label>
+        <input type="text" id="p-name" placeholder="Booking, Intouch..." required>
+      </div>
+      <div>
+        <label>FB akkaunt ID</label>
+        <input type="text" id="p-fb" placeholder="1234567890123" required>
+      </div>
+      <div>
+        <label>KPI (lead narxi)</label>
+        <input type="number" id="p-kpi" min="0" step="0.01" placeholder="0" required>
+      </div>
+      <div>
+        <label>Valyuta</label>
+        <select id="p-currency">
+          <option value="USD">USD</option>
+          <option value="UZS">UZS</option>
+        </select>
+      </div>
+      <button type="submit" class="add-btn">+ Qo'shish</button>
+    </form>
+  </div>
+
+  <div class="block">
+    <h2>Loyihalar ro'yxati</h2>
+    <div class="block-sub">Bot 1/2/3 shu ro'yxatdan foydalanadi</div>
+    <table id="projects-table">
+      <thead><tr><th>Loyiha</th><th>FB akkaunt</th><th>KPI</th><th>Klient kodi</th><th>Bog'langan</th><th></th></tr></thead>
+      <tbody id="projects-tbody"></tbody>
+    </table>
+    <div id="empty-note" class="empty-note" style="display:none;">Hali loyiha qo'shilmagan — yuqoridagi formadan qo'shing</div>
+  </div>
+
+</div>
+
+<script>
+const API_URL = '/api/projects-data';
+let PROJECTS = [];
+let SYNC_STATUS = 'loading';
+
+function genId(){ return Date.now().toString(36) + Math.random().toString(36).slice(2,7); }
+function genClientCode(){
+  const chars = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
+  let out = '';
+  for(let i=0;i<6;i++) out += chars[Math.floor(Math.random()*chars.length)];
+  return out;
+}
+
+function renderSyncBadge(){
+  const el = document.getElementById('sync-badge');
+  if(SYNC_STATUS === 'loading') el.innerHTML = '<span class="sync-badge loading">⏳ Yuklanmoqda...</span>';
+  else if(SYNC_STATUS === 'synced') el.innerHTML = '<span class="sync-badge ok">☁️ Bulutga ulangan</span>';
+  else el.innerHTML = '<span class="sync-badge off">⚠️ Bulutga ulanmadi — o\'zgarish saqlanmasligi mumkin</span>';
+}
+
+async function loadProjects(){
+  try{
+    const r = await fetch(API_URL);
+    if(!r.ok) throw new Error('load failed');
+    PROJECTS = await r.json();
+    if(!Array.isArray(PROJECTS)) PROJECTS = [];
+    SYNC_STATUS = 'synced';
+  }catch(e){
+    PROJECTS = [];
+    SYNC_STATUS = 'offline';
+  }
+  renderTable();
+  renderSyncBadge();
+}
+
+async function saveProjects(){
+  try{
+    const r = await fetch(API_URL, {
+      method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(PROJECTS),
+    });
+    if(!r.ok) throw new Error('save failed');
+    SYNC_STATUS = 'synced';
+  }catch(e){
+    SYNC_STATUS = 'offline';
+  }
+  renderSyncBadge();
+}
+
+function renderTable(){
+  const tbody = document.getElementById('projects-tbody');
+  const emptyNote = document.getElementById('empty-note');
+  if(PROJECTS.length === 0){
+    tbody.innerHTML = '';
+    emptyNote.style.display = 'block';
+    return;
+  }
+  emptyNote.style.display = 'none';
+  tbody.innerHTML = PROJECTS.map(p=>{
+    const linked = !!p.clientChatId;
+    return `<tr>
+      <td data-label="Loyiha">${p.name}</td>
+      <td data-label="FB akkaunt">${p.fbAccountId}</td>
+      <td data-label="KPI">${p.kpiLeadPrice} ${p.currency}</td>
+      <td data-label="Klient kodi"><span class="code-pill">${p.clientCode}</span></td>
+      <td data-label="Bog'langan"><span class="link-badge ${linked?'on':'off'}">${linked?"✓ Bog'langan":"Kutilmoqda"}</span></td>
+      <td data-label=""><button class="del-btn" data-id="${p.id}" title="O'chirish">×</button></td>
+    </tr>`;
+  }).join('');
+}
+
+document.getElementById('project-form').addEventListener('submit', (ev)=>{
+  ev.preventDefault();
+  const name = document.getElementById('p-name').value.trim();
+  const fbAccountId = document.getElementById('p-fb').value.trim().replace(/^act_/, '');
+  const kpiLeadPrice = parseFloat(document.getElementById('p-kpi').value);
+  const currency = document.getElementById('p-currency').value;
+  if(!name || !fbAccountId || !kpiLeadPrice) return;
+  PROJECTS.push({
+    id: genId(), name, fbAccountId, kpiLeadPrice, currency,
+    clientCode: genClientCode(), clientChatId: null,
+  });
+  document.getElementById('project-form').reset();
+  renderTable();
+  saveProjects();
+});
+
+document.getElementById('projects-tbody').addEventListener('click', (ev)=>{
+  const btn = ev.target.closest('.del-btn');
+  if(!btn) return;
+  if(!confirm("Bu loyihani o'chirishga aminmisiz?")) return;
+  PROJECTS = PROJECTS.filter(p=>p.id !== btn.dataset.id);
+  renderTable();
+  saveProjects();
+});
+
+loadProjects();
+</script>
+</body>
+</html>

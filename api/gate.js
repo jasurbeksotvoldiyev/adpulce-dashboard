@@ -20,6 +20,11 @@ const ROUTES = [
     file: 'finance-agentstvo.html',
     noAuth: true,
   },
+  {
+    prefix: '/loyihalar',
+    file: 'projects-admin.html',
+    noAuth: true,
+  },
 ];
 const DEFAULT_ROUTE = {
   file: 'dashboard.html',

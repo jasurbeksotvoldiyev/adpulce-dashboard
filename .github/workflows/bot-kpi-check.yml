@@ -1,0 +1,14 @@
+name: Bot 1 — KPI tezkor tekshiruvi
+
+on:
+  schedule:
+    - cron: '*/15 * * * *'
+  workflow_dispatch: {}
+
+jobs:
+  trigger:
+    runs-on: ubuntu-latest
+    steps:
+      - name: KPI holatini tekshirish
+        run: |
+          curl -sf "https://adpulce-dashboard.vercel.app/api/bot-team-kpi-check?secret=${{ secrets.CRON_SECRET }}"

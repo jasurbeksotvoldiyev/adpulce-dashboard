@@ -1,0 +1,14 @@
+name: Bot 3 — kunlik reklama tahlili (23:59 Toshkent)
+
+on:
+  schedule:
+    - cron: '59 18 * * *'
+  workflow_dispatch: {}
+
+jobs:
+  trigger:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Kunlik tahlilni chaqirish
+        run: |
+          curl -sf "https://adpulce-dashboard.vercel.app/api/bot-ads-daily-report?secret=${{ secrets.CRON_SECRET }}"

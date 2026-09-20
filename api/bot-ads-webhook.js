@@ -47,20 +47,21 @@ module.exports = async (req, res) => {
   const body = typeof req.body === 'string' ? JSON.parse(req.body) : req.body;
   const message = body && body.message;
 
-  res.status(200).json({ ok: true });
-
-  if (!message || !message.text || !botToken) return;
+  if (!message || !message.text || !botToken) {
+    res.status(200).json({ ok: true });
+    return;
+  }
 
   const chatId = message.chat.id;
   const fromId = String(message.from.id);
   const text = message.text.trim();
 
-  if (!getAllowedIds().includes(fromId)) {
-    await sendMessage(botToken, chatId, "Kechirasiz, bu bot faqat jamoa a'zolari uchun.").catch(() => {});
-    return;
-  }
-
   try {
+    if (!getAllowedIds().includes(fromId)) {
+      await sendMessage(botToken, chatId, "Kechirasiz, bu bot faqat jamoa a'zolari uchun.");
+      return;
+    }
+
     if (text === '/start') {
       await sendMessage(botToken, chatId, "Salom! Men AdPulce reklama maslahatchisiman. Kreativlar, auditoriya yoki byudjet bo'yicha savolingizni yozing.");
       return;
@@ -84,5 +85,9 @@ Qisqa, amaliy va o'zbek tilida javob ber. Agar aniq raqamli ma'lumot yo'q bo'lsa
     await sendMessage(botToken, chatId, answer || "Kechirasiz, javob topa olmadim.");
   } catch (err) {
     await sendMessage(botToken, chatId, 'Xato yuz berdi: ' + err.message).catch(() => {});
+  } finally {
+    // Javob so'nggida yuboriladi — aks holda Vercel funksiyani vaqtidan oldin
+    // to'xtatib qo'yishi va Telegram'ga xabar yetib bormasligi mumkin edi.
+    res.status(200).json({ ok: true });
   }
 };

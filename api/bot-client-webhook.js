@@ -32,11 +32,11 @@ module.exports = async (req, res) => {
   const botToken = process.env.CLIENT_BOT_TOKEN;
   const body = typeof req.body === 'string' ? JSON.parse(req.body) : req.body;
   const message = body && body.message;
-  console.log('DEBUG bot-client-webhook', { hasBotToken: !!botToken, bodyType: typeof req.body, hasMessage: !!message, text: message && message.text });
 
-  res.status(200).json({ ok: true });
-
-  if (!message || !message.text || !botToken) return;
+  if (!message || !message.text || !botToken) {
+    res.status(200).json({ ok: true });
+    return;
+  }
 
   const chatId = message.chat.id;
   const text = message.text.trim();
@@ -105,6 +105,10 @@ Qisqa, tushunarli va o'zbek tilida javob ber.`,
     await sendMessage(botToken, chatId, answer || "Kechirasiz, javob topa olmadim.");
   } catch (err) {
     await sendMessage(botToken, chatId, 'Xato yuz berdi: ' + err.message).catch(() => {});
+  } finally {
+    // Javob so'nggida yuboriladi — aks holda Vercel funksiyani vaqtidan oldin
+    // to'xtatib qo'yishi va Telegram'ga xabar yetib bormasligi mumkin edi.
+    res.status(200).json({ ok: true });
   }
 };
 

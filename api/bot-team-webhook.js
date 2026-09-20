@@ -30,21 +30,21 @@ module.exports = async (req, res) => {
   const body = typeof req.body === 'string' ? JSON.parse(req.body) : req.body;
   const message = body && body.message;
 
-  // Telegram'ga darhol 200 qaytaramiz — javobni asinxron yuboramiz
-  res.status(200).json({ ok: true });
-
-  if (!message || !message.text || !botToken) return;
+  if (!message || !message.text || !botToken) {
+    res.status(200).json({ ok: true });
+    return;
+  }
 
   const chatId = message.chat.id;
   const fromId = String(message.from.id);
   const text = message.text.trim();
 
-  if (!getAllowedIds().includes(fromId)) {
-    await sendMessage(botToken, chatId, "Kechirasiz, bu bot faqat jamoa a'zolari uchun.").catch(() => {});
-    return;
-  }
-
   try {
+    if (!getAllowedIds().includes(fromId)) {
+      await sendMessage(botToken, chatId, "Kechirasiz, bu bot faqat jamoa a'zolari uchun.");
+      return;
+    }
+
     if (text === '/start') {
       await sendMessage(botToken, chatId, "Salom! Men AdPulce jamoa botiman.\n\n/hisobot — joriy holatni ko'rish\nYoki loyihalar haqida savol bering.");
       return;
@@ -74,5 +74,9 @@ Qisqa, aniq va o'zbek tilida javob ber.`,
     await sendMessage(botToken, chatId, answer || "Kechirasiz, javob topa olmadim.");
   } catch (err) {
     await sendMessage(botToken, chatId, 'Xato yuz berdi: ' + err.message).catch(() => {});
+  } finally {
+    // Javob so'nggida yuboriladi — aks holda Vercel funksiyani vaqtidan oldin
+    // to'xtatib qo'yishi va Telegram'ga xabar yetib bormasligi mumkin edi.
+    res.status(200).json({ ok: true });
   }
 };

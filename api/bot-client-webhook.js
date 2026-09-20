@@ -193,7 +193,8 @@ Qisqa, tushunarli va o'zbek tilida javob ber.`,
     });
     await sendMessage(botToken, chatId, answer || "Kechirasiz, javob topa olmadim.");
   } catch (err) {
-    await sendMessage(botToken, chatId, 'Xato yuz berdi: ' + err.message).catch(() => {});
+    const text = err.unavailable ? `Kechirasiz, ${err.message}.` : 'Xato yuz berdi: ' + err.message;
+    await sendMessage(botToken, chatId, text).catch(() => {});
   } finally {
     // Javob so'nggida yuboriladi — aks holda Vercel funksiyani vaqtidan oldin
     // to'xtatib qo'yishi va Telegram'ga xabar yetib bormasligi mumkin edi.

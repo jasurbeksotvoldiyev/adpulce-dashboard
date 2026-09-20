@@ -17,6 +17,64 @@ function esc(s) {
   return String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 }
 
+function teamIds() {
+  return (process.env.TEAM_ALLOWED_IDS || '').split(',').map(s => s.trim()).filter(Boolean);
+}
+
+// Guruh buyruqlari. Guruhni faqat agentlik xodimlari (TEAM_ALLOWED_IDS) ulay oladi —
+// aks holda kod nomi ma'lum bo'lgani uchun begona guruh boshqa klient hisobotini olib qo'yishi mumkin edi.
+async function handleGroup(botToken, message) {
+  const chatId = message.chat.id;
+  const text = message.text.trim().replace(/^(\/[A-Za-z_]+)@\w+/, '$1');
+  const [cmd, arg] = text.split(/\s+/);
+  const isTeam = teamIds().includes(String(message.from && message.from.id));
+  const projects = await getProjects();
+  const mine = projects.filter(p => String(p.groupChatId) === String(chatId));
+
+  if (cmd === '/start' || cmd === '/ulash') {
+    if (!arg) {
+      await sendMessage(botToken, chatId, "Salom! Bu guruhni loyihaga ulash uchun agentlik xodimi <code>/ulash KOD</code> deb yozsin (masalan /ulash BOOKING). Ulangach har kuni 23:59 da shu loyiha bo'yicha kunlik hisobot yuboraman.");
+      return;
+    }
+    if (!isTeam) {
+      await sendMessage(botToken, chatId, "Guruhni faqat agentlik xodimlari ulay oladi.");
+      return;
+    }
+    const project = findByCode(projects, arg);
+    if (!project) {
+      await sendMessage(botToken, chatId, "Bunday kod topilmadi. Kodni tekshiring.");
+      return;
+    }
+    project.groupChatId = chatId;
+    project.groupTitle = message.chat.title || String(chatId);
+    await saveProjects(projects);
+    await sendMessage(botToken, chatId, `✅ Bu guruh <b>${esc(project.name)}</b> loyihasiga ulandi.\n\nHar kuni soat 23:59 da shu loyiha bo'yicha kunlik hisobot yuboraman. Hozirgi holatni bilish uchun /bugun yoki /kecha deb yozing.`);
+    return;
+  }
+
+  if (cmd === '/uzish') {
+    if (!isTeam) return;
+    const target = arg ? findByCode(projects, arg) : null;
+    const list = target ? [target] : mine;
+    list.forEach(p => { if (String(p.groupChatId) === String(chatId)) { p.groupChatId = null; p.groupTitle = null; } });
+    await saveProjects(projects);
+    await sendMessage(botToken, chatId, "Guruh loyihadan uzildi.");
+    return;
+  }
+
+  if (cmd === '/bugun' || cmd === '/kecha' || cmd === '/hisobot') {
+    if (!mine.length) {
+      await sendMessage(botToken, chatId, "Bu guruh hali loyihaga ulanmagan. Agentlik xodimi /ulash KOD deb yozsin.");
+      return;
+    }
+    const preset = cmd === '/kecha' ? 'yesterday' : 'today';
+    for (const p of mine) {
+      const stats = await getProjectStats(p, preset);
+      await sendMessage(botToken, chatId, formatClientStats(p, stats, preset === 'yesterday' ? 'Kecha' : 'Bugun'));
+    }
+  }
+}
+
 async function notifyTeam(text) {
   const token = process.env.TEAM_BOT_TOKEN;
   if (!token) return;
@@ -53,6 +111,11 @@ module.exports = async (req, res) => {
   const text = message.text.trim();
 
   try {
+    if (message.chat.type === 'group' || message.chat.type === 'supergroup') {
+      await handleGroup(botToken, message);
+      return;
+    }
+
     const projects = await getProjects();
     const linked = findByChatId(projects, chatId);
 

@@ -228,7 +228,9 @@ function renderTable(){
       <td data-label="Klient kodi"><span class="code-pill">${p.clientCode}</span></td>
       <td data-label="Bog'langan">${linked
         ? `<span class="link-badge on">✓ ${esc(p.clientLabel || "Bog'langan")}</span> <button class="unlink-btn" data-id="${p.id}">Uzish</button>`
-        : '<span class="link-badge off">Kutilmoqda</span>'}</td>
+        : '<span class="link-badge off">Kutilmoqda</span>'}${p.groupChatId
+        ? `<br><span class="link-badge on">👥 ${esc(p.groupTitle || 'Guruh')}</span> <button class="unlink-btn" data-id="${p.id}" data-kind="group">Uzish</button>`
+        : ''}</td>
       <td data-label=""><button class="del-btn" data-id="${p.id}" title="O'chirish">×</button></td>
     </tr>`;
   }).join('');
@@ -256,7 +258,8 @@ document.getElementById('projects-tbody').addEventListener('click', (ev)=>{
   if(unlink){
     if(!confirm("Klient bog'lanishini uzasizmi? U kodni qaytadan yuborib bog'lanishi kerak bo'ladi.")) return;
     const p = PROJECTS.find(x=>x.id === unlink.dataset.id);
-    if(p){ p.clientChatId = null; p.clientLabel = null; }
+    if(p && unlink.dataset.kind === 'group'){ p.groupChatId = null; p.groupTitle = null; }
+    else if(p){ p.clientChatId = null; p.clientLabel = null; }
     renderTable();
     saveProjects();
     return;

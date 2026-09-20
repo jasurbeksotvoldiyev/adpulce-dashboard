@@ -32,6 +32,7 @@ module.exports = async (req, res) => {
   const botToken = process.env.CLIENT_BOT_TOKEN;
   const body = typeof req.body === 'string' ? JSON.parse(req.body) : req.body;
   const message = body && body.message;
+  console.log('DEBUG bot-client-webhook', { hasBotToken: !!botToken, bodyType: typeof req.body, hasMessage: !!message, text: message && message.text });
 
   res.status(200).json({ ok: true });
 

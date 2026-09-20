@@ -39,7 +39,7 @@
   .block h2{margin:0 0 4px;font-size:16px;font-weight:750;}
   .block .block-sub{font-size:12.5px;color:var(--text-dim2);margin-bottom:18px;}
 
-  .entry-form{display:grid;grid-template-columns:1.3fr 1fr 110px 90px auto;gap:10px;align-items:end;margin-bottom:4px;}
+  .entry-form{display:grid;grid-template-columns:1.3fr 1fr 110px 90px 130px auto;gap:10px;align-items:end;margin-bottom:4px;}
   .entry-form label{display:block;font-size:11px;color:var(--text-dim2);font-weight:600;text-transform:uppercase;letter-spacing:.03em;margin-bottom:6px;}
   .entry-form input, .entry-form select{
     width:100%;background:var(--card-2);border:1px solid var(--border);color:var(--text);
@@ -133,6 +133,10 @@
           <option value="UZS">UZS</option>
         </select>
       </div>
+      <div>
+        <label>Dashboard kaliti</label>
+        <input type="text" id="p-key" placeholder="booking">
+      </div>
       <button type="submit" class="add-btn">+ Qo'shish</button>
     </form>
   </div>
@@ -141,7 +145,7 @@
     <h2>Loyihalar ro'yxati</h2>
     <div class="block-sub">Bot 1/2/3 shu ro'yxatdan foydalanadi</div>
     <table id="projects-table">
-      <thead><tr><th>Loyiha</th><th>FB akkaunt</th><th>KPI</th><th>Klient kodi</th><th>Bog'langan</th><th></th></tr></thead>
+      <thead><tr><th>Loyiha</th><th>FB akkaunt</th><th>Dashboard kaliti</th><th>KPI</th><th>Klient kodi</th><th>Bog'langan</th><th></th></tr></thead>
       <tbody id="projects-tbody"></tbody>
     </table>
     <div id="empty-note" class="empty-note" style="display:none;">Hali loyiha qo'shilmagan — yuqoridagi formadan qo'shing</div>
@@ -211,6 +215,7 @@ function renderTable(){
     return `<tr>
       <td data-label="Loyiha">${p.name}</td>
       <td data-label="FB akkaunt">${p.fbAccountId}</td>
+      <td data-label="Dashboard kaliti">${p.historyKey || '—'}</td>
       <td data-label="KPI">${p.kpiLeadPrice} ${p.currency}</td>
       <td data-label="Klient kodi"><span class="code-pill">${p.clientCode}</span></td>
       <td data-label="Bog'langan"><span class="link-badge ${linked?'on':'off'}">${linked?"✓ Bog'langan":"Kutilmoqda"}</span></td>
@@ -225,9 +230,10 @@ document.getElementById('project-form').addEventListener('submit', (ev)=>{
   const fbAccountId = document.getElementById('p-fb').value.trim().replace(/^act_/, '');
   const kpiLeadPrice = parseFloat(document.getElementById('p-kpi').value);
   const currency = document.getElementById('p-currency').value;
+  const historyKey = document.getElementById('p-key').value.trim();
   if(!name || !fbAccountId || !kpiLeadPrice) return;
   PROJECTS.push({
-    id: genId(), name, fbAccountId, kpiLeadPrice, currency,
+    id: genId(), name, fbAccountId, historyKey, kpiLeadPrice, currency,
     clientCode: genClientCode(), clientChatId: null,
   });
   document.getElementById('project-form').reset();

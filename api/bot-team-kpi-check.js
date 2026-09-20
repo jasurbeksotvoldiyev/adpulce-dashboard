@@ -47,7 +47,7 @@ module.exports = async (req, res) => {
       const alreadyAlertedToday = state[key] && state[key].date === day;
 
       if (r.overKpi && !alreadyAlertedToday) {
-        const text = `🔴 <b>KPI ogohlantirish</b>\n\n<b>${r.project.name}</b> loyihasining lead narxi KPI'dan oshib ketdi!\n\nLead narxi: ${fmtMoney(r.stats.cpl, r.project.currency)}\nKPI: ${fmtMoney(r.project.kpiLeadPrice, r.project.currency)}`;
+        const text = `🔴 <b>KPI ogohlantirish</b>\n\n<b>${r.project.name}</b> loyihasining lead narxi KPI'dan oshib ketdi!\n\nLead narxi: ${r.stats.cpl !== null ? fmtMoney(r.stats.cpl, r.project.currency) : `lead yo'q (sarf ${fmtMoney(r.stats.spend, r.project.currency)})`}\nKPI: ${fmtMoney(r.project.kpiLeadPrice, r.project.currency)}`;
         for (const chatId of ids) {
           await sendMessage(botToken, chatId, text).catch(() => {});
         }

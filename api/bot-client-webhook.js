@@ -5,7 +5,7 @@
 const { sendMessage } = require('../lib/telegram');
 const { askClaude } = require('../lib/claude');
 const { getProjects, saveProjects } = require('../lib/projects');
-const { getLeadStats } = require('../lib/fb-ads');
+const { getProjectStats } = require('../lib/history');
 const { fmtMoney } = require('../lib/report');
 
 function findByCode(projects, code) {
@@ -77,19 +77,19 @@ module.exports = async (req, res) => {
     // qanday?" kabi to'liq savollar pastdagi Claude'ga tushishi uchun aniq moslik kerak) ---
     const normalized = text.toLowerCase().trim().replace(/[?!.,]+$/, '');
     if (normalized === 'kecha') {
-      const stats = await getLeadStats(linked.fbAccountId, 'yesterday');
+      const stats = await getProjectStats(linked, 'yesterday');
       await sendMessage(botToken, chatId, formatClientStats(linked, stats, 'Kecha'));
       return;
     }
     if (normalized === 'bugun') {
-      const stats = await getLeadStats(linked.fbAccountId, 'today');
+      const stats = await getProjectStats(linked, 'today');
       await sendMessage(botToken, chatId, formatClientStats(linked, stats, 'Bugun'));
       return;
     }
 
     // --- erkin savol — faqat shu klientning o'z loyihasi konteksti bilan ---
-    const todayStats = await getLeadStats(linked.fbAccountId, 'today').catch(() => null);
-    const yesterdayStats = await getLeadStats(linked.fbAccountId, 'yesterday').catch(() => null);
+    const todayStats = await getProjectStats(linked, 'today').catch(() => null);
+    const yesterdayStats = await getProjectStats(linked, 'yesterday').catch(() => null);
     const context = `Loyiha: ${linked.name}
 Bugun: ${todayStats ? `leadlar=${todayStats.leads}, sarf=${todayStats.spend}, lead narxi=${todayStats.cpl ?? '—'}` : "ma'lumot yo'q"}
 Kecha: ${yesterdayStats ? `leadlar=${yesterdayStats.leads}, sarf=${yesterdayStats.spend}, lead narxi=${yesterdayStats.cpl ?? '—'}` : "ma'lumot yo'q"}

@@ -6,7 +6,7 @@
 const { sendMessage } = require('../lib/telegram');
 const { askClaude } = require('../lib/claude');
 const { getProjects } = require('../lib/projects');
-const { getProjectCampaigns } = require('../lib/history');
+const { getProjectCreatives } = require('../lib/history');
 const { getKnowledgeBase } = require('../lib/knowledge');
 
 function getAllowedIds() {
@@ -21,7 +21,7 @@ async function buildContext() {
   const lines = [];
   for (const p of projects) {
     try {
-      const ads = await getProjectCampaigns(p, 'today');
+      const { items: ads } = await getProjectCreatives(p);
       const adLines = ads.map(a => `  - ${a.adName}: sarf=${a.spend} ${p.currency}, lead=${a.leads}, narxi=${a.cpl ?? '—'}`).join('\n') || '  (bugun ma\'lumot yo\'q)';
       lines.push(`${p.name} (KPI: ${p.kpiLeadPrice} ${p.currency}):\n${adLines}`);
     } catch (err) {

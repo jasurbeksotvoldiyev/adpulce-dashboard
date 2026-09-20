@@ -1,0 +1,14 @@
+name: Bot 2 — klient guruhlariga kunlik hisobot (23:59 Toshkent)
+
+on:
+  schedule:
+    - cron: '59 18 * * *'
+  workflow_dispatch: {}
+
+jobs:
+  trigger:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Klient guruhlariga hisobot yuborish
+        run: |
+          curl -sf "https://adpulce-dashboard.vercel.app/api/bot-client-daily-report?secret=${{ secrets.CRON_SECRET }}"

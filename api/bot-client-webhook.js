@@ -2,11 +2,11 @@
 // bog'laydi, shundan keyin istalgan vaqtda yozib o'z loyihasi bo'yicha bugungi/
 // kechagi lead narxini so'rashi mumkin. Har klient FAQAT o'zining loyihasini ko'radi.
 
-const { sendMessage } = require('./lib/telegram');
-const { askClaude } = require('./lib/claude');
-const { getProjects, saveProjects } = require('./lib/projects');
-const { getLeadStats } = require('./lib/fb-ads');
-const { fmtMoney } = require('./lib/report');
+const { sendMessage } = require('../lib/telegram');
+const { askClaude } = require('../lib/claude');
+const { getProjects, saveProjects } = require('../lib/projects');
+const { getLeadStats } = require('../lib/fb-ads');
+const { fmtMoney } = require('../lib/report');
 
 function findByCode(projects, code) {
   const norm = (code || '').trim().toUpperCase();

@@ -3,11 +3,11 @@
 // Javob berishda joriy kunlik kreativ statistikasi + (mavjud bo'lsa) video
 // darslardan tayyorlangan bilim bazasi ishlatiladi.
 
-const { sendMessage } = require('./lib/telegram');
-const { askClaude } = require('./lib/claude');
-const { getProjects } = require('./lib/projects');
-const { getCreativeStats } = require('./lib/fb-ads');
-const { getKnowledgeBase } = require('./lib/knowledge');
+const { sendMessage } = require('../lib/telegram');
+const { askClaude } = require('../lib/claude');
+const { getProjects } = require('../lib/projects');
+const { getCreativeStats } = require('../lib/fb-ads');
+const { getKnowledgeBase } = require('../lib/knowledge');
 
 function getAllowedIds() {
   return (process.env.TEAM_ALLOWED_IDS || '')

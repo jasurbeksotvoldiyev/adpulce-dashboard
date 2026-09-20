@@ -4,9 +4,9 @@
 // Spam bo'lmasligi uchun: har loyiha uchun kuniga faqat BIR MARTA — "KPI'dan
 // birinchi marta oshgan" paytda — xabar yuboriladi. Ertasi kuni holat tozalanadi.
 
-const { sendMessage } = require('./lib/telegram');
-const { collectProjectStats, fmtMoney } = require('./lib/report');
-const { getJSON, setJSON } = require('./lib/kv');
+const { sendMessage } = require('../lib/telegram');
+const { collectProjectStats, fmtMoney } = require('../lib/report');
+const { getJSON, setJSON } = require('../lib/kv');
 
 const ALERT_STATE_KEY = 'kpi_alert_state_v1';
 

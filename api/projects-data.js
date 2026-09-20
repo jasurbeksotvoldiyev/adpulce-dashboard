@@ -1,6 +1,6 @@
 // Loyihalar ro'yxatini bulutda (KV) saqlash/o'qish — projects-admin.html shu orqali ishlaydi.
 
-const { getProjects, saveProjects } = require('./lib/projects');
+const { getProjects, saveProjects } = require('../lib/projects');
 
 module.exports = async (req, res) => {
   try {

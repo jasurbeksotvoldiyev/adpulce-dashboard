@@ -2,9 +2,9 @@
 // xizmati shu endpointni GET bilan chaqiradi:
 //   https://.../api/bot-ads-daily-report?secret=CRON_SECRET
 
-const { sendMessage } = require('./lib/telegram');
-const { getProjects } = require('./lib/projects');
-const { analyzeProject, buildAnalysisText, buildAdviceText } = require('./lib/ads-analysis');
+const { sendMessage } = require('../lib/telegram');
+const { getProjects } = require('../lib/projects');
+const { analyzeProject, buildAnalysisText, buildAdviceText } = require('../lib/ads-analysis');
 
 function getAllowedIds() {
   return (process.env.TEAM_ALLOWED_IDS || '')

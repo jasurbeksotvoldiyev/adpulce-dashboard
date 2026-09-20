@@ -2,9 +2,9 @@
 // (Jasurbek, Kamoliddin, Baxrom) savol-javob qila oladi. /hisobot buyrug'i darhol
 // joriy holatni chiqaradi, boshqa har qanday matn Claude'ga yuboriladi.
 
-const { sendMessage } = require('./lib/telegram');
-const { askClaude } = require('./lib/claude');
-const { collectProjectStats, buildTeamReportText } = require('./lib/report');
+const { sendMessage } = require('../lib/telegram');
+const { askClaude } = require('../lib/claude');
+const { collectProjectStats, buildTeamReportText } = require('../lib/report');
 
 function getAllowedIds() {
   return (process.env.TEAM_ALLOWED_IDS || '')

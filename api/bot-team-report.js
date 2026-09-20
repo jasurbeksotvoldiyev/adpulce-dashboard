@@ -2,8 +2,8 @@
 // (cron-job.org yoki mavjud avtomatlashtiruv) shu endpointni GET bilan chaqiradi:
 //   https://.../api/bot-team-report?secret=CRON_SECRET
 
-const { sendMessage } = require('./lib/telegram');
-const { collectProjectStats, buildTeamReportText } = require('./lib/report');
+const { sendMessage } = require('../lib/telegram');
+const { collectProjectStats, buildTeamReportText } = require('../lib/report');
 
 function getAllowedIds() {
   return (process.env.TEAM_ALLOWED_IDS || '')

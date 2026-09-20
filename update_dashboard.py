@@ -43,16 +43,16 @@ API_VERSION = "v21.0"
 # Yangi mijoz qo'shilsa yoki kabinet ID o'zgarsa, shu yerni tahrirlang.
 # ---------------------------------------------------------------------------
 CLIENTS_CONFIG = [
-    {"key": "adpulce",    "name": "AdPulce",            "kpi": 3,    "accounts": ["act_1917933155489560"]},
-    {"key": "access",     "name": "Access",             "kpi": 4,    "accounts": ["act_1242499587861857"]},
-    {"key": "booking",    "name": "Booking",            "kpi": 1,    "accounts": ["act_1637870214201055"]},
+    {"key": "adpulce",    "name": "AdPulce",            "kpi": 5,    "accounts": ["act_1917933155489560"]},
+    {"key": "access",     "name": "Access",             "kpi": 2,    "accounts": ["act_1242499587861857"]},
+    {"key": "booking",    "name": "Booking",            "kpi": 1.5,    "accounts": ["act_1637870214201055"]},
     {"key": "intouch",    "name": "Intouch",            "kpi": 4,    "accounts": ["act_7372692399429664", "act_1434361421045010"]},
     {"key": "mastermock", "name": "Master Mock",        "kpi": None, "accounts": ["act_1820788456001171"]},
     {"key": "maydon",     "name": "Maydon Ta'lim",      "kpi": 2,    "accounts": ["act_2161468034191195"]},
-    {"key": "mercury",    "name": "Mercury Vec Consulting", "kpi": None, "accounts": ["act_777971871341543"]},
+    {"key": "mercury",    "name": "Mercury Vec Consulting", "kpi": 0.5, "accounts": ["act_777971871341543"]},
     {"key": "sayyohvisa", "name": "Sayyoh VISA",        "kpi": 1,    "accounts": ["act_1263636038863945"]},
     {"key": "superkit",   "name": "Super Kitobxon",     "kpi": 2,    "accounts": ["act_584751316698691"]},
-    {"key": "sweetkids",  "name": "Sweet Kids",         "kpi": 1.5,  "accounts": ["act_824386570538579"]},
+    {"key": "sweetkids",  "name": "Sweet Kids",         "kpi": 2,  "accounts": ["act_824386570538579"]},
     {"key": "zimzimuz",   "name": "Zim Zim Uzbekiston", "kpi": 3,    "accounts": ["act_901347765351013"]},
     {"key": "zimzimtr",   "name": "Zim Zim Turkiya",    "kpi": 5,    "accounts": ["act_1558878449074756"]},
 ]

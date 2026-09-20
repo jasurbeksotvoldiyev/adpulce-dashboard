@@ -1,25 +1,25 @@
 {
   "date": "2026-09-20",
-  "generatedAt": "2026-09-20T19:14:15.875021+05:00",
+  "generatedAt": "2026-09-20T23:25:56+05:00",
   "ads": {
     "adpulce": [],
     "access": [
       {
         "name": "E viza 1",
         "campaign": "BT | Lead | ABO  | 10$ | 15.09.2026",
-        "spend": 6.7,
-        "leads": 2
+        "spend": 10.46,
+        "leads": 4
       },
       {
         "name": "Kasbiy ta'lim",
         "campaign": "BT | Lead | ABO  | 10$ | 15.09.2026",
-        "spend": 2.24,
+        "spend": 2.38,
         "leads": 0
       },
       {
         "name": "Kasbiy ta'lim — 2",
         "campaign": "BT | Lead | ABO  | 10$ | 15.09.2026",
-        "spend": 0.37,
+        "spend": 0.38,
         "leads": 0
       },
       {
@@ -33,25 +33,25 @@
       {
         "name": "11 - Xitoyga indidual 1250$",
         "campaign": "TB | AdPulce | Lead | ABO 20$ | 15.09.2026",
-        "spend": 9.09,
+        "spend": 10.86,
         "leads": 1
       },
       {
         "name": "10 - Shirilanka  yangi yil",
         "campaign": "TB | AdPulce | Lead | ABO 20$ | 15.09.2026",
-        "spend": 8.38,
-        "leads": 9
+        "spend": 10.44,
+        "leads": 10
       },
       {
         "name": "9",
         "campaign": "TB | AdPulce | Lead | ABO 20$ | 15.09.2026",
-        "spend": 2.45,
+        "spend": 2.55,
         "leads": 0
       },
       {
         "name": "2",
         "campaign": "TB | AdPulce | Lead | ABO 20$ | 15.09.2026",
-        "spend": 2.43,
+        "spend": 2.54,
         "leads": 2
       },
       {
@@ -59,37 +59,43 @@
         "campaign": "TB | AdPulce | Lead | ABO 20$ | 15.09.2026",
         "spend": 0.34,
         "leads": 0
+      },
+      {
+        "name": "8",
+        "campaign": "TB | AdPulce | Lead | ABO 20$ | 15.09.2026",
+        "spend": 0.1,
+        "leads": 0
       }
     ],
     "intouch": [
       {
         "name": "4",
         "campaign": "KN  | Lead | CBO | 35$ | 13.09.2026",
-        "spend": 30.57,
+        "spend": 38.77,
+        "leads": 8
+      },
+      {
+        "name": "Reels - 11",
+        "campaign": "KN  | Lead | CBO | 45$ | 13.09.2026",
+        "spend": 28.41,
         "leads": 7
       },
       {
         "name": "Reels - 11",
         "campaign": "KN  | Lead | CBO | 45$ | 13.09.2026",
-        "spend": 18.21,
-        "leads": 3
-      },
-      {
-        "name": "Reels - 11",
-        "campaign": "KN  | Lead | CBO | 45$ | 13.09.2026",
-        "spend": 11.13,
-        "leads": 0
+        "spend": 17.33,
+        "leads": 4
       },
       {
         "name": "ustoz",
         "campaign": "JS | Traffic | CBO | 10$ | 13.08.2026",
-        "spend": 9.49,
+        "spend": 12.08,
         "leads": 0
       },
       {
         "name": "3",
         "campaign": "KN  | Lead | CBO | 35$ | 13.09.2026",
-        "spend": 1.19,
+        "spend": 4.63,
         "leads": 0
       },
       {
@@ -134,79 +140,85 @@
       {
         "name": "8",
         "campaign": "JS | Offline | CBO |  20$ | 26.08.2026",
-        "spend": 11.67,
-        "leads": 3
-      },
-      {
-        "name": "Ayollar",
-        "campaign": "JS | Offline | CBO |  15$ | 14.09.2026",
-        "spend": 6.91,
-        "leads": 1
+        "spend": 16.11,
+        "leads": 4
       },
       {
         "name": "1",
         "campaign": "JS | Offline | Ingiliz tili | CBO | 10$ | 10.08.2026",
-        "spend": 6.41,
-        "leads": 1
+        "spend": 10.07,
+        "leads": 2
       },
       {
         "name": "1",
         "campaign": "JS | Online | ABO |  7$ | 08.08.2026",
-        "spend": 4.93,
-        "leads": 10
+        "spend": 9.08,
+        "leads": 18
+      },
+      {
+        "name": "Ayollar",
+        "campaign": "JS | Offline | CBO |  15$ | 14.09.2026",
+        "spend": 8.02,
+        "leads": 1
       },
       {
         "name": "5",
         "campaign": "JS | Offline | CBO |  20$ | 26.08.2026",
-        "spend": 2.64,
+        "spend": 3.97,
         "leads": 0
       },
       {
         "name": "Oila",
         "campaign": "JS | Offline | CBO |  15$ | 14.09.2026",
-        "spend": 2.12,
+        "spend": 3.87,
         "leads": 1
       },
       {
         "name": "Ayollar",
         "campaign": "JS | Offline | CBO |  15$ | 14.09.2026",
-        "spend": 1.98,
+        "spend": 3.46,
         "leads": 1
       },
       {
-        "name": "IELTS olish qiyin deb o‘ylaysizmi? 🤔",
-        "campaign": "JS | Traffic | ABO| $5 | 27.08.2026",
-        "spend": 0.82,
-        "leads": 0
+        "name": "4",
+        "campaign": "JS | Offline | CBO |  20$ | 26.08.2026",
+        "spend": 3.34,
+        "leads": 2
+      },
+      {
+        "name": "6",
+        "campaign": "JS | Offline | CBO |  20$ | 26.08.2026",
+        "spend": 3.02,
+        "leads": 3
       },
       {
         "name": "Bitiruvchimizdan samimiy fikr 💙",
         "campaign": "JS | Traffic | ABO| $5 | 27.08.2026",
-        "spend": 0.76,
+        "spend": 1.13,
         "leads": 0
       },
       {
         "name": "Buvijonimizning samimiy fikrlari ❤️",
         "campaign": "JS | Traffic | ABO| $5 | 27.08.2026",
-        "spend": 0.76,
+        "spend": 1.1,
         "leads": 0
       },
       {
         "name": "📖 Arab tilini o‘rganayotgan o‘quvchimizning fikrlari.",
         "campaign": "JS | Traffic | ABO| $5 | 27.08.2026",
-        "spend": 0.71,
+        "spend": 1.1,
+        "leads": 0
+      },
+      {
+        "name": "IELTS olish qiyin deb o‘ylaysizmi? 🤔",
+        "campaign": "JS | Traffic | ABO| $5 | 27.08.2026",
+        "spend": 1.09,
         "leads": 0
       },
       {
         "name": "6",
-        "campaign": "JS | Offline | CBO |  20$ | 26.08.2026",
-        "spend": 0.6,
-        "leads": 1
-      },
-      {
-        "name": "6",
         "campaign": "JS | Offline | Ingiliz tili | CBO | 10$ | 10.08.2026",
-        "spend": 0.35,
+        "spend": 0.61,
         "leads": 0
       },
       {
@@ -228,9 +240,9 @@
         "leads": 0
       },
       {
-        "name": "4",
-        "campaign": "JS | Offline | CBO |  20$ | 26.08.2026",
-        "spend": 0.03,
+        "name": "Bolalar",
+        "campaign": "JS | Offline | CBO |  15$ | 14.09.2026",
+        "spend": 0.05,
         "leads": 0
       },
       {
@@ -238,33 +250,33 @@
         "campaign": "JS | Offline | CBO |  15$ | 14.09.2026",
         "spend": 0.02,
         "leads": 0
-      },
-      {
-        "name": "Bolalar",
-        "campaign": "JS | Offline | CBO |  15$ | 14.09.2026",
-        "spend": 0.01,
-        "leads": 0
       }
     ],
     "mercury": [
       {
         "name": "41davlat",
         "campaign": "BR - LEAD -VISA - CBO - 6.6$ - 17.07.2026",
-        "spend": 4.8,
-        "leads": 11
+        "spend": 7.96,
+        "leads": 22
       }
     ],
     "sayyohvisa": [
       {
         "name": "5 yillik viza",
         "campaign": "BT   | CBO  $10 | Leads  | 07.08.2026",
-        "spend": 1.86,
-        "leads": 5
+        "spend": 2.25,
+        "leads": 6
       },
       {
         "name": "Elchixona",
         "campaign": "BT   | CBO  $10 | Leads  | 07.08.2026",
         "spend": 0.03,
+        "leads": 0
+      },
+      {
+        "name": "Biznes uchrashuv",
+        "campaign": "BT   | CBO  $10 | Leads  | 07.08.2026",
+        "spend": 0.01,
         "leads": 0
       }
     ],
@@ -273,13 +285,13 @@
       {
         "name": "2",
         "campaign": "JS | Lead | CBO 10$ | 09.09.2026",
-        "spend": 4.94,
-        "leads": 3
+        "spend": 7.48,
+        "leads": 5
       },
       {
         "name": "2",
         "campaign": "JS | Lead | CBO 10$ | 09.09.2026",
-        "spend": 1.29,
+        "spend": 1.7,
         "leads": 0
       },
       {
@@ -293,17 +305,21 @@
         "campaign": "JS | Lead | CBO 10$ | 09.09.2026",
         "spend": 0.05,
         "leads": 1
+      },
+      {
+        "name": "1",
+        "campaign": "JS | Lead | CBO 10$ | 09.09.2026",
+        "spend": 0.01,
+        "leads": 0
       }
     ],
-    "zimzimuz": null,
-    "zimzimtr": null,
+    "zimzimuz": [],
+    "zimzimtr": [],
     "madaniy": [],
     "azizbek": [],
     "sweetkids2": []
   },
   "errors": {
-    "superkit": "Ads MCP ushbu akkaunt uchun yoqilmagan (is_ads_mcp_enabled=false, act_584751316698691)",
-    "zimzimuz": "Akkaunt so'rov uchun mavjud emas (is_queryable=false, not_queryable_reason=Unknown error, act_901347765351013)",
-    "zimzimtr": "Akkaunt so'rov uchun mavjud emas (is_queryable=false, not_queryable_reason=Unknown error, act_1558878449074756)"
+    "superkit": "Ads MCP ushbu akkaunt uchun hali yoqilmagan (bosqichma-bosqich joriy etilmoqda), ma'lumot olinmadi."
   }
 }

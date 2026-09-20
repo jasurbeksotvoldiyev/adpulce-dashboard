@@ -13,6 +13,17 @@ function findByCode(projects, code) {
   return projects.find(p => p.clientCode === norm);
 }
 
+function esc(s) {
+  return String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+}
+
+async function notifyTeam(text) {
+  const token = process.env.TEAM_BOT_TOKEN;
+  if (!token) return;
+  const ids = (process.env.TEAM_ALLOWED_IDS || '').split(',').map(s => s.trim()).filter(Boolean);
+  for (const id of ids) await sendMessage(token, id, text).catch(() => {});
+}
+
 function findByChatId(projects, chatId) {
   return projects.find(p => String(p.clientChatId) === String(chatId));
 }
@@ -62,9 +73,24 @@ module.exports = async (req, res) => {
         await sendMessage(botToken, chatId, "Bunday kod topilmadi. Kodni to'g'ri kiritganingizga ishonch hosil qiling yoki agentligingizga murojaat qiling.");
         return;
       }
+      // Kod loyiha nomidan olingani uchun oson topiladi — shuning uchun bitta loyiha faqat
+      // BIR hisobga bog'lanadi va bog'lanish haqida jamoaga xabar boradi.
+      if (project.clientChatId && String(project.clientChatId) !== String(chatId)) {
+        await sendMessage(botToken, chatId, "Bu loyiha allaqachon boshqa hisobga bog'langan. Agentligingizga murojaat qiling.");
+        return;
+      }
+      if (linked && linked.id !== project.id) {
+        await sendMessage(botToken, chatId, `Siz allaqachon <b>${esc(linked.name)}</b> loyihasiga bog'langansiz.`);
+        return;
+      }
+      const firstTime = !project.clientChatId;
+      const from = message.from || {};
+      const label = [from.first_name, from.last_name].filter(Boolean).join(' ') + (from.username ? ` (@${from.username})` : '');
       project.clientChatId = chatId;
+      project.clientLabel = label.trim() || String(chatId);
       await saveProjects(projects);
-      await sendMessage(botToken, chatId, `✅ Loyihangiz bog'landi: <b>${project.name}</b>\n\nEndi istalgan vaqtda "bugun" yoki "kecha" deb yozib lead narxini bilib olishingiz mumkin, yoki savolingizni yozing.`);
+      await sendMessage(botToken, chatId, `✅ Loyihangiz bog'landi: <b>${esc(project.name)}</b>\n\nEndi istalgan vaqtda "bugun" yoki "kecha" deb yozib lead narxini bilib olishingiz mumkin, yoki savolingizni yozing.`);
+      if (firstTime) await notifyTeam(`🔗 <b>Klient bog'landi</b>\n\nLoyiha: <b>${esc(project.name)}</b>\nHisob: ${esc(project.clientLabel)}\n\nAgar bu siz kutgan klient bo'lmasa, /loyihalar sahifasidan "Uzish" tugmasini bosing.`);
       return;
     }
 

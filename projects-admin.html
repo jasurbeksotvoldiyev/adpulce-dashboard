@@ -73,6 +73,8 @@
     display:inline-block;background:var(--card-2);border:1px solid var(--border);border-radius:999px;
     padding:3px 10px;font-family:ui-monospace,Menlo,monospace;font-size:12.5px;color:var(--accent-2);
   }
+  .unlink-btn{appearance:none;border:1px solid var(--border);background:var(--card-2);color:var(--text-dim);border-radius:999px;padding:2px 9px;font-size:11px;cursor:pointer;}
+  .unlink-btn:hover{color:var(--red);border-color:var(--red);}
   .link-badge{font-size:11.5px;font-weight:600;padding:3px 9px;border-radius:999px;}
   .link-badge.on{background:var(--green-soft);color:var(--green);}
   .link-badge.off{background:var(--amber-soft);color:var(--amber);}
@@ -106,8 +108,8 @@
 
   <div class="howto">
     <b>Bu yerda:</b> har bir loyiha (klient) uchun Facebook Ads akkaunt ID, maqsadli lead narxi (KPI) va valyutani
-    kiritasiz. <b>Klient kodi</b> avtomatik yaratiladi — uni klientga bering, u shu kodni klient botiga (Bot 2) yuborib
-    o'z loyihasini bir marta bog'laydi. FB akkaunt ID'ni Facebook Ads Manager'dagi hisob raqamidan oling
+    kiritasiz. <b>Klient kodi</b> loyiha nomidan hosil bo'ladi (masalan <span class="code-pill">BOOKING</span>) — klientga <span class="code-pill">t.me/AdPulce_bot?start=KOD</span> havolasini bering, u bossa o'z loyihasi bir marta bog'lanadi.
+    Kod faqat bitta klientga bog'lanadi; xato bog'langan bo'lsa "Uzish" tugmasi bilan bo'shatasiz. FB akkaunt ID'ni Facebook Ads Manager'dagi hisob raqamidan oling
     (masalan <span class="code-pill">1234567890123</span>, "act_" qo'shish shart emas).
   </div>
 
@@ -159,6 +161,12 @@ let PROJECTS = [];
 let SYNC_STATUS = 'loading';
 
 function genId(){ return Date.now().toString(36) + Math.random().toString(36).slice(2,7); }
+function esc(s){ return String(s == null ? '' : s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+// Klient kodi loyiha nomidan olinadi (masalan BOOKING) — t.me/AdPulce_bot?start=BOOKING
+function codeFromName(key, name){
+  const c = String(key || name || '').toUpperCase().replace(/[^A-Z0-9]/g, '');
+  return c || genClientCode();
+}
 function genClientCode(){
   const chars = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
   let out = '';
@@ -218,7 +226,9 @@ function renderTable(){
       <td data-label="Dashboard kaliti">${p.historyKey || '—'}</td>
       <td data-label="KPI">${p.kpiLeadPrice} ${p.currency}</td>
       <td data-label="Klient kodi"><span class="code-pill">${p.clientCode}</span></td>
-      <td data-label="Bog'langan"><span class="link-badge ${linked?'on':'off'}">${linked?"✓ Bog'langan":"Kutilmoqda"}</span></td>
+      <td data-label="Bog'langan">${linked
+        ? `<span class="link-badge on">✓ ${esc(p.clientLabel || "Bog'langan")}</span> <button class="unlink-btn" data-id="${p.id}">Uzish</button>`
+        : '<span class="link-badge off">Kutilmoqda</span>'}</td>
       <td data-label=""><button class="del-btn" data-id="${p.id}" title="O'chirish">×</button></td>
     </tr>`;
   }).join('');
@@ -234,7 +244,7 @@ document.getElementById('project-form').addEventListener('submit', (ev)=>{
   if(!name || !fbAccountId || !kpiLeadPrice) return;
   PROJECTS.push({
     id: genId(), name, fbAccountId, historyKey, kpiLeadPrice, currency,
-    clientCode: genClientCode(), clientChatId: null,
+    clientCode: codeFromName(historyKey, name), clientChatId: null,
   });
   document.getElementById('project-form').reset();
   renderTable();
@@ -242,6 +252,15 @@ document.getElementById('project-form').addEventListener('submit', (ev)=>{
 });
 
 document.getElementById('projects-tbody').addEventListener('click', (ev)=>{
+  const unlink = ev.target.closest('.unlink-btn');
+  if(unlink){
+    if(!confirm("Klient bog'lanishini uzasizmi? U kodni qaytadan yuborib bog'lanishi kerak bo'ladi.")) return;
+    const p = PROJECTS.find(x=>x.id === unlink.dataset.id);
+    if(p){ p.clientChatId = null; p.clientLabel = null; }
+    renderTable();
+    saveProjects();
+    return;
+  }
   const btn = ev.target.closest('.del-btn');
   if(!btn) return;
   if(!confirm("Bu loyihani o'chirishga aminmisiz?")) return;

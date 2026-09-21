@@ -1,315 +1,302 @@
 {
-  "date": "2026-09-20",
-  "generatedAt": "2026-09-20T23:25:56+05:00",
+  "date": "2026-09-21",
+  "generatedAt": "2026-09-21T23:27:53+05:00",
   "ads": {
     "adpulce": [],
     "access": [
       {
         "name": "E viza 1",
         "campaign": "BT | Lead | ABO  | 10$ | 15.09.2026",
-        "spend": 10.46,
-        "leads": 4
+        "spend": 10.68,
+        "leads": 1
       },
       {
         "name": "Kasbiy ta'lim",
         "campaign": "BT | Lead | ABO  | 10$ | 15.09.2026",
-        "spend": 2.38,
+        "spend": 0.07,
         "leads": 0
       },
       {
         "name": "Kasbiy ta'lim — 2",
         "campaign": "BT | Lead | ABO  | 10$ | 15.09.2026",
-        "spend": 0.38,
-        "leads": 0
-      },
-      {
-        "name": "E viza  2",
-        "campaign": "BT | Lead | ABO  | 10$ | 15.09.2026",
-        "spend": 0.33,
+        "spend": 0.03,
         "leads": 0
       }
     ],
-    "booking": [
-      {
-        "name": "11 - Xitoyga indidual 1250$",
-        "campaign": "TB | AdPulce | Lead | ABO 20$ | 15.09.2026",
-        "spend": 10.86,
-        "leads": 1
-      },
-      {
-        "name": "10 - Shirilanka  yangi yil",
-        "campaign": "TB | AdPulce | Lead | ABO 20$ | 15.09.2026",
-        "spend": 10.44,
-        "leads": 10
-      },
-      {
-        "name": "9",
-        "campaign": "TB | AdPulce | Lead | ABO 20$ | 15.09.2026",
-        "spend": 2.55,
-        "leads": 0
-      },
-      {
-        "name": "2",
-        "campaign": "TB | AdPulce | Lead | ABO 20$ | 15.09.2026",
-        "spend": 2.54,
-        "leads": 2
-      },
-      {
-        "name": "3",
-        "campaign": "TB | AdPulce | Lead | ABO 20$ | 15.09.2026",
-        "spend": 0.34,
-        "leads": 0
-      },
-      {
-        "name": "8",
-        "campaign": "TB | AdPulce | Lead | ABO 20$ | 15.09.2026",
-        "spend": 0.1,
-        "leads": 0
-      }
-    ],
+    "booking": [],
     "intouch": [
       {
         "name": "4",
         "campaign": "KN  | Lead | CBO | 35$ | 13.09.2026",
-        "spend": 38.77,
-        "leads": 8
-      },
-      {
-        "name": "Reels - 11",
-        "campaign": "KN  | Lead | CBO | 45$ | 13.09.2026",
-        "spend": 28.41,
+        "spend": 36.42,
         "leads": 7
       },
       {
         "name": "Reels - 11",
         "campaign": "KN  | Lead | CBO | 45$ | 13.09.2026",
-        "spend": 17.33,
-        "leads": 4
+        "spend": 11.93,
+        "leads": 1
       },
       {
         "name": "ustoz",
         "campaign": "JS | Traffic | CBO | 10$ | 13.08.2026",
-        "spend": 12.08,
-        "leads": 0
-      },
-      {
-        "name": "3",
-        "campaign": "KN  | Lead | CBO | 35$ | 13.09.2026",
-        "spend": 4.63,
-        "leads": 0
-      },
-      {
-        "name": "Reels - 13",
-        "campaign": "KN  | Lead | CBO | 45$ | 13.09.2026",
-        "spend": 0.43,
-        "leads": 0
-      },
-      {
-        "name": "Reels -12",
-        "campaign": "KN  | Lead | CBO | 45$ | 13.09.2026",
-        "spend": 0.33,
-        "leads": 0
-      },
-      {
-        "name": "Reels -12",
-        "campaign": "KN  | Lead | CBO | 45$ | 13.09.2026",
-        "spend": 0.33,
-        "leads": 0
-      },
-      {
-        "name": "Reels - 15",
-        "campaign": "KN  | Lead | CBO | 45$ | 13.09.2026",
-        "spend": 0.21,
+        "spend": 10.4,
         "leads": 0
       },
       {
         "name": "2",
         "campaign": "KN  | Lead | CBO | 35$ | 13.09.2026",
-        "spend": 0.04,
+        "spend": 10.04,
+        "leads": 4
+      },
+      {
+        "name": "11 - Xitoyga indidual 1250$",
+        "campaign": "TB | AdPulce | Lead | ABO 20$ | 15.09.2026",
+        "spend": 9.35,
+        "leads": 6
+      },
+      {
+        "name": "10 - Shirilanka  yangi yil",
+        "campaign": "TB | AdPulce | Lead | ABO 20$ | 15.09.2026",
+        "spend": 6.16,
+        "leads": 2
+      },
+      {
+        "name": "Reels - 11",
+        "campaign": "KN  | Lead | CBO | 45$ | 13.09.2026",
+        "spend": 6.11,
+        "leads": 1
+      },
+      {
+        "name": "Reels -12",
+        "campaign": "KN  | Lead | CBO | 45$ | 13.09.2026",
+        "spend": 5.52,
         "leads": 0
       },
       {
+        "name": "2",
+        "campaign": "TB | AdPulce | Lead | ABO 20$ | 15.09.2026",
+        "spend": 1.46,
+        "leads": 0
+      },
+      {
+        "name": "9",
+        "campaign": "TB | AdPulce | Lead | ABO 20$ | 15.09.2026",
+        "spend": 1.17,
+        "leads": 1
+      },
+      {
         "name": "1",
-        "campaign": "JS | Traffic | CBO | 10$ | 13.08.2026",
-        "spend": 0.02,
+        "campaign": "KN  | Lead | CBO | 35$ | 13.09.2026",
+        "spend": 1.01,
+        "leads": 0
+      },
+      {
+        "name": "8",
+        "campaign": "TB | AdPulce | Lead | ABO 20$ | 15.09.2026",
+        "spend": 0.48,
+        "leads": 0
+      },
+      {
+        "name": "3",
+        "campaign": "TB | AdPulce | Lead | ABO 20$ | 15.09.2026",
+        "spend": 0.24,
+        "leads": 1
+      },
+      {
+        "name": "Reels - 14",
+        "campaign": "KN  | Lead | CBO | 45$ | 13.09.2026",
+        "spend": 0.09,
+        "leads": 0
+      },
+      {
+        "name": "Reels - 13",
+        "campaign": "KN  | Lead | CBO | 45$ | 13.09.2026",
+        "spend": 0.01,
         "leads": 0
       }
     ],
     "mastermock": [],
     "maydon": [
       {
-        "name": "8",
-        "campaign": "JS | Offline | CBO |  20$ | 26.08.2026",
-        "spend": 16.11,
-        "leads": 4
-      },
-      {
-        "name": "1",
-        "campaign": "JS | Offline | Ingiliz tili | CBO | 10$ | 10.08.2026",
-        "spend": 10.07,
-        "leads": 2
-      },
-      {
-        "name": "1",
-        "campaign": "JS | Online | ABO |  7$ | 08.08.2026",
-        "spend": 9.08,
-        "leads": 18
-      },
-      {
-        "name": "Ayollar",
-        "campaign": "JS | Offline | CBO |  15$ | 14.09.2026",
-        "spend": 8.02,
-        "leads": 1
-      },
-      {
-        "name": "5",
-        "campaign": "JS | Offline | CBO |  20$ | 26.08.2026",
-        "spend": 3.97,
-        "leads": 0
-      },
-      {
-        "name": "Oila",
-        "campaign": "JS | Offline | CBO |  15$ | 14.09.2026",
-        "spend": 3.87,
-        "leads": 1
-      },
-      {
-        "name": "Ayollar",
-        "campaign": "JS | Offline | CBO |  15$ | 14.09.2026",
-        "spend": 3.46,
-        "leads": 1
-      },
-      {
-        "name": "4",
-        "campaign": "JS | Offline | CBO |  20$ | 26.08.2026",
-        "spend": 3.34,
-        "leads": 2
-      },
-      {
-        "name": "6",
-        "campaign": "JS | Offline | CBO |  20$ | 26.08.2026",
-        "spend": 3.02,
-        "leads": 3
-      },
-      {
-        "name": "Bitiruvchimizdan samimiy fikr 💙",
-        "campaign": "JS | Traffic | ABO| $5 | 27.08.2026",
-        "spend": 1.13,
-        "leads": 0
-      },
-      {
-        "name": "Buvijonimizning samimiy fikrlari ❤️",
-        "campaign": "JS | Traffic | ABO| $5 | 27.08.2026",
-        "spend": 1.1,
-        "leads": 0
-      },
-      {
-        "name": "📖 Arab tilini o‘rganayotgan o‘quvchimizning fikrlari.",
-        "campaign": "JS | Traffic | ABO| $5 | 27.08.2026",
-        "spend": 1.1,
-        "leads": 0
-      },
-      {
-        "name": "IELTS olish qiyin deb o‘ylaysizmi? 🤔",
-        "campaign": "JS | Traffic | ABO| $5 | 27.08.2026",
-        "spend": 1.09,
-        "leads": 0
-      },
-      {
-        "name": "6",
-        "campaign": "JS | Offline | Ingiliz tili | CBO | 10$ | 10.08.2026",
-        "spend": 0.61,
-        "leads": 0
-      },
-      {
-        "name": "4",
-        "campaign": "JS | Offline | Ingiliz tili | CBO | 10$ | 10.08.2026",
-        "spend": 0.07,
-        "leads": 0
-      },
-      {
-        "name": "2",
-        "campaign": "JS | Offline | CBO |  20$ | 26.08.2026",
-        "spend": 0.06,
-        "leads": 0
-      },
-      {
-        "name": "Ayollar",
-        "campaign": "JS | Offline | CBO |  15$ | 14.09.2026",
-        "spend": 0.06,
-        "leads": 0
-      },
-      {
-        "name": "Bolalar",
-        "campaign": "JS | Offline | CBO |  15$ | 14.09.2026",
-        "spend": 0.05,
-        "leads": 0
-      },
-      {
-        "name": "Bolalar",
-        "campaign": "JS | Offline | CBO |  15$ | 14.09.2026",
-        "spend": 0.02,
-        "leads": 0
+        "name": "41davlat",
+        "campaign": "BR - LEAD -VISA - CBO - 6.6$ - 17.07.2026",
+        "spend": 6.17,
+        "leads": 14
       }
     ],
     "mercury": [
       {
-        "name": "41davlat",
-        "campaign": "BR - LEAD -VISA - CBO - 6.6$ - 17.07.2026",
-        "spend": 7.96,
-        "leads": 22
+        "name": "5 yillik viza",
+        "campaign": "BT   | CBO  $10 | Leads  | 07.08.2026",
+        "spend": 1.85,
+        "leads": 7
+      },
+      {
+        "name": "Oila azolarni chaqrish",
+        "campaign": "BT   | CBO  $10 | Leads  | 07.08.2026",
+        "spend": 0.01,
+        "leads": 0
       }
     ],
     "sayyohvisa": [
       {
-        "name": "5 yillik viza",
-        "campaign": "BT   | CBO  $10 | Leads  | 07.08.2026",
-        "spend": 2.25,
-        "leads": 6
+        "name": "2",
+        "campaign": "JS | Lead | CBO 5$ | 09.09.2026",
+        "spend": 1.36,
+        "leads": 1
       },
       {
-        "name": "Elchixona",
-        "campaign": "BT   | CBO  $10 | Leads  | 07.08.2026",
-        "spend": 0.03,
+        "name": "1",
+        "campaign": "JS | Lead | CBO 5$ | 09.09.2026",
+        "spend": 0.29,
         "leads": 0
       },
       {
-        "name": "Biznes uchrashuv",
-        "campaign": "BT   | CBO  $10 | Leads  | 07.08.2026",
-        "spend": 0.01,
+        "name": "2",
+        "campaign": "JS | Lead | CBO 5$ | 09.09.2026",
+        "spend": 0.24,
         "leads": 0
       }
     ],
     "superkit": null,
     "sweetkids": [
       {
-        "name": "2",
-        "campaign": "JS | Lead | CBO 10$ | 09.09.2026",
-        "spend": 7.48,
-        "leads": 5
-      },
-      {
-        "name": "2",
-        "campaign": "JS | Lead | CBO 10$ | 09.09.2026",
-        "spend": 1.7,
-        "leads": 0
+        "name": "6",
+        "campaign": "JS | Offline | CBO |  20$ | 26.08.2026",
+        "spend": 16.07,
+        "leads": 4
       },
       {
         "name": "1",
-        "campaign": "JS | Lead | CBO 10$ | 09.09.2026",
-        "spend": 0.11,
+        "campaign": "JS | Online | ABO |  7$ | 08.08.2026",
+        "spend": 10.54,
+        "leads": 15
+      },
+      {
+        "name": "1",
+        "campaign": "JS | Offline | Ingiliz tili | CBO | 10$ | 10.08.2026",
+        "spend": 7.25,
+        "leads": 2
+      },
+      {
+        "name": "Ayollar",
+        "campaign": "JS | Offline | CBO |  15$ | 14.09.2026",
+        "spend": 6.9,
+        "leads": 1
+      },
+      {
+        "name": "Ayollar",
+        "campaign": "JS | Offline | CBO |  15$ | 14.09.2026",
+        "spend": 5.69,
+        "leads": 0
+      },
+      {
+        "name": "Oila",
+        "campaign": "JS | Offline | CBO |  15$ | 14.09.2026",
+        "spend": 5.61,
+        "leads": 2
+      },
+      {
+        "name": "4",
+        "campaign": "JS | Offline | CBO |  20$ | 26.08.2026",
+        "spend": 5.49,
+        "leads": 0
+      },
+      {
+        "name": "8",
+        "campaign": "JS | Offline | CBO |  20$ | 26.08.2026",
+        "spend": 4.53,
+        "leads": 0
+      },
+      {
+        "name": "2",
+        "campaign": "JS | Offline | Ingiliz tili | CBO | 10$ | 10.08.2026",
+        "spend": 3.65,
+        "leads": 0
+      },
+      {
+        "name": "Ayollar",
+        "campaign": "JS | Offline | CBO |  15$ | 14.09.2026",
+        "spend": 1.16,
+        "leads": 1
+      },
+      {
+        "name": "Bitiruvchimizdan samimiy fikr 💙",
+        "campaign": "JS | Traffic | ABO| $5 | 27.08.2026",
+        "spend": 1.07,
+        "leads": 0
+      },
+      {
+        "name": "IELTS olish qiyin deb o‘ylaysizmi? 🤔",
+        "campaign": "JS | Traffic | ABO| $5 | 27.08.2026",
+        "spend": 0.97,
+        "leads": 0
+      },
+      {
+        "name": "9",
+        "campaign": "JS | Offline | CBO |  20$ | 26.08.2026",
+        "spend": 0.97,
+        "leads": 1
+      },
+      {
+        "name": "Buvijonimizning samimiy fikrlari ❤️",
+        "campaign": "JS | Traffic | ABO| $5 | 27.08.2026",
+        "spend": 0.92,
+        "leads": 0
+      },
+      {
+        "name": "📖 Arab tilini o‘rganayotgan o‘quvchimizning fikrlari.",
+        "campaign": "JS | Traffic | ABO| $5 | 27.08.2026",
+        "spend": 0.88,
+        "leads": 0
+      },
+      {
+        "name": "2",
+        "campaign": "JS | Offline | CBO |  20$ | 26.08.2026",
+        "spend": 0.52,
+        "leads": 0
+      },
+      {
+        "name": "6",
+        "campaign": "JS | Offline | Ingiliz tili | CBO | 10$ | 10.08.2026",
+        "spend": 0.47,
+        "leads": 0
+      },
+      {
+        "name": "3",
+        "campaign": "JS | Offline | Ingiliz tili | CBO | 10$ | 10.08.2026",
+        "spend": 0.22,
+        "leads": 0
+      },
+      {
+        "name": "Bolalar",
+        "campaign": "JS | Offline | CBO |  15$ | 14.09.2026",
+        "spend": 0.1,
         "leads": 0
       },
       {
         "name": "4",
-        "campaign": "JS | Lead | CBO 10$ | 09.09.2026",
-        "spend": 0.05,
-        "leads": 1
+        "campaign": "JS | Offline | Ingiliz tili | CBO | 10$ | 10.08.2026",
+        "spend": 0.09,
+        "leads": 0
       },
       {
-        "name": "1",
-        "campaign": "JS | Lead | CBO 10$ | 09.09.2026",
-        "spend": 0.01,
+        "name": "4",
+        "campaign": "JS | Offline | Ingiliz tili | CBO | 10$ | 10.08.2026",
+        "spend": 0.08,
+        "leads": 0
+      },
+      {
+        "name": "3",
+        "campaign": "JS | Offline | Ingiliz tili | CBO | 10$ | 10.08.2026",
+        "spend": 0.05,
+        "leads": 0
+      },
+      {
+        "name": "5",
+        "campaign": "JS | Offline | CBO |  20$ | 26.08.2026",
+        "spend": 0.03,
         "leads": 0
       }
     ],
@@ -320,6 +307,6 @@
     "sweetkids2": []
   },
   "errors": {
-    "superkit": "Ads MCP ushbu akkaunt uchun hali yoqilmagan (bosqichma-bosqich joriy etilmoqda), ma'lumot olinmadi."
+    "superkit": "Ads MCP bu akkaunt uchun hali yoqilmagan (is_ads_mcp_enabled=false): 'Ads MCP is gradually being rolled out. Please check back at a later date to use Ads MCP with this Ad Account.'"
   }
 }

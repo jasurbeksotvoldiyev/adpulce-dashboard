@@ -104,7 +104,33 @@ def load_history():
     return {"days": {}}
 
 
+def _guard_transient_zeros(history):
+    """Kun ichida sarf kamaymaydi. MCP vaqtinchalik xato qilib ba'zi mijozni 0 qaytarsa
+    (masalan Booking 13:12 da), oldingi soatdagi qiymatni saqlab qolamiz."""
+    if not HISTORY_PATH.exists():
+        return
+    try:
+        old = json.loads(HISTORY_PATH.read_text(encoding="utf-8"))
+    except json.JSONDecodeError:
+        return
+    for section in ("days", "campaigns"):
+        for day, by_key in (old.get(section) or {}).items():
+            new_day = (history.get(section) or {}).get(day)
+            if new_day is None:
+                continue
+            for key, old_val in by_key.items():
+                if section == "days":
+                    was = float((old_val or {}).get("spend") or 0)
+                    now = float((new_day.get(key) or {}).get("spend") or 0)
+                else:
+                    was = sum(float(c.get("spend") or 0) for c in (old_val or []))
+                    now = sum(float(c.get("spend") or 0) for c in (new_day.get(key) or []))
+                if was > 0 and now == 0:
+                    new_day[key] = old_val
+
+
 def save_history(history):
+    _guard_transient_zeros(history)
     HISTORY_PATH.write_text(json.dumps(history, indent=2, ensure_ascii=False), encoding="utf-8")
 
 

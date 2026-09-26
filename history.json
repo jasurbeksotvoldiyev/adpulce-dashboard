@@ -538,59 +538,59 @@
         "leads": 0
       },
       "access": {
-        "spend": 2.53,
+        "spend": 2.77,
         "leads": 1
       },
       "booking": {
-        "spend": 4.44,
-        "leads": 2
+        "spend": 5.23,
+        "leads": 3
       },
       "intouch": {
-        "spend": 23.48,
-        "leads": 5
+        "spend": 27.03,
+        "leads": 7
       },
       "mastermock": {
-        "spend": 0.0,
+        "spend": 0,
         "leads": 0
       },
       "maydon": {
-        "spend": 0.0,
+        "spend": 0,
         "leads": 0
       },
       "mercury": {
-        "spend": 2.18,
-        "leads": 6
+        "spend": 2.58,
+        "leads": 7
       },
       "sayyohvisa": {
-        "spend": 0.39,
+        "spend": 0.53,
         "leads": 1
       },
       "superkit": {
-        "spend": 0.0,
+        "spend": 0,
         "leads": 0
       },
       "sweetkids": {
-        "spend": 1.81,
+        "spend": 1.99,
         "leads": 1
       },
       "zimzimuz": {
-        "spend": 0.0,
+        "spend": 0,
         "leads": 0
       },
       "zimzimtr": {
-        "spend": 0.0,
+        "spend": 0,
         "leads": 0
       },
       "madaniy": {
-        "spend": 0.0,
+        "spend": 0,
         "leads": 0
       },
       "azizbek": {
-        "spend": 0.0,
+        "spend": 0,
         "leads": 0
       },
       "sweetkids2": {
-        "spend": 0.0,
+        "spend": 0,
         "leads": 0
       }
     }
@@ -1692,46 +1692,46 @@
       "access": [
         {
           "name": "BT | Lead | ABO  | 10$ | 15.09.2026",
-          "spend": 2.53,
+          "spend": 2.77,
           "leads": 1,
-          "impressions": 1523,
-          "reach": 1260,
+          "impressions": 1688,
+          "reach": 1364,
           "budget": 0
         }
       ],
       "booking": [
         {
           "name": "TB | AdPulce | Lead | ABO 20$ | 15.09.2026",
-          "spend": 4.44,
-          "leads": 2,
-          "impressions": 853,
-          "reach": 671,
+          "spend": 5.23,
+          "leads": 3,
+          "impressions": 1025,
+          "reach": 795,
           "budget": 0
         }
       ],
       "intouch": [
         {
           "name": "KN  | Lead | CBO | 35$ | 13.09.2026",
-          "spend": 14.55,
-          "leads": 3,
-          "impressions": 4024,
-          "reach": 3601,
+          "spend": 15.51,
+          "leads": 4,
+          "impressions": 4498,
+          "reach": 4058,
           "budget": 50
         },
         {
           "name": "KN  | Lead | ABO | 15$ | 24.09.2026",
-          "spend": 6.06,
-          "leads": 2,
-          "impressions": 1933,
-          "reach": 1760,
+          "spend": 8.33,
+          "leads": 3,
+          "impressions": 2849,
+          "reach": 2550,
           "budget": 0
         },
         {
           "name": "JS | Traffic | CBO | 10$ | 13.08.2026",
-          "spend": 2.87,
+          "spend": 3.19,
           "leads": 0,
-          "impressions": 4219,
-          "reach": 4091,
+          "impressions": 4749,
+          "reach": 4641,
           "budget": 10
         }
       ],
@@ -1740,20 +1740,20 @@
       "mercury": [
         {
           "name": "BR - LEAD -VISA - CBO - 6.6$ - 17.07.2026",
-          "spend": 2.18,
-          "leads": 6,
-          "impressions": 964,
-          "reach": 858,
+          "spend": 2.58,
+          "leads": 7,
+          "impressions": 1126,
+          "reach": 993,
           "budget": 6.6
         }
       ],
       "sayyohvisa": [
         {
           "name": "BT   | CBO  $10 | Leads  | 07.08.2026",
-          "spend": 0.39,
+          "spend": 0.53,
           "leads": 1,
-          "impressions": 256,
-          "reach": 242,
+          "impressions": 338,
+          "reach": 313,
           "budget": 2
         }
       ],
@@ -1761,10 +1761,10 @@
       "sweetkids": [
         {
           "name": "JS | Lead | CBO 5$ | 09.09.2026",
-          "spend": 1.81,
+          "spend": 1.99,
           "leads": 1,
-          "impressions": 405,
-          "reach": 357,
+          "impressions": 460,
+          "reach": 395,
           "budget": 5
         }
       ],

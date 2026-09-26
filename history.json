@@ -538,59 +538,59 @@
         "leads": 0
       },
       "access": {
-        "spend": 4.05,
-        "leads": 1
+        "spend": 4.24,
+        "leads": 2
       },
       "booking": {
-        "spend": 6.57,
+        "spend": 7.98,
         "leads": 4
       },
       "intouch": {
-        "spend": 33.5,
+        "spend": 35.75,
         "leads": 8
       },
       "mastermock": {
-        "spend": 4.84,
+        "spend": 9.15,
         "leads": 0
       },
       "maydon": {
-        "spend": 0.0,
+        "spend": 0,
         "leads": 0
       },
       "mercury": {
-        "spend": 3.16,
-        "leads": 9
+        "spend": 3.86,
+        "leads": 10
       },
       "sayyohvisa": {
-        "spend": 0.78,
-        "leads": 2
+        "spend": 0.91,
+        "leads": 3
       },
       "superkit": {
-        "spend": 0.0,
+        "spend": 0,
         "leads": 0
       },
       "sweetkids": {
-        "spend": 2.43,
+        "spend": 2.64,
         "leads": 1
       },
       "zimzimuz": {
-        "spend": 0.0,
+        "spend": 0,
         "leads": 0
       },
       "zimzimtr": {
-        "spend": 0.0,
+        "spend": 0,
         "leads": 0
       },
       "madaniy": {
-        "spend": 0.0,
+        "spend": 0,
         "leads": 0
       },
       "azizbek": {
-        "spend": 0.0,
+        "spend": 0,
         "leads": 0
       },
       "sweetkids2": {
-        "spend": 0.0,
+        "spend": 0,
         "leads": 0
       }
     }
@@ -1691,65 +1691,65 @@
       ],
       "access": [
         {
-          "name": "BT | Lead | ABO  | 10$ | 15.09.2026",
-          "spend": 4.05,
-          "leads": 1,
-          "impressions": 2757,
-          "reach": 2226,
+          "name": "BT | Lead | ABO | 10$ | 15.09.2026",
+          "spend": 4.24,
+          "leads": 2,
+          "impressions": 2877,
+          "reach": 2363,
           "budget": 0
         }
       ],
       "booking": [
         {
           "name": "TB | AdPulce | Lead | ABO 20$ | 15.09.2026",
-          "spend": 6.57,
+          "spend": 7.98,
           "leads": 4,
-          "impressions": 1405,
-          "reach": 1093,
+          "impressions": 1708,
+          "reach": 1273,
           "budget": 0
         }
       ],
       "intouch": [
         {
-          "name": "KN  | Lead | CBO | 35$ | 13.09.2026",
-          "spend": 19.93,
+          "name": "KN | Lead | CBO | 35$ | 13.09.2026",
+          "spend": 21.1,
           "leads": 4,
-          "impressions": 5622,
-          "reach": 5056,
+          "impressions": 6103,
+          "reach": 5482,
           "budget": 50
         },
         {
-          "name": "KN  | Lead | ABO | 15$ | 24.09.2026",
-          "spend": 9.51,
+          "name": "KN | Lead | ABO | 15$ | 24.09.2026",
+          "spend": 10.07,
           "leads": 4,
-          "impressions": 3277,
-          "reach": 2919,
+          "impressions": 3561,
+          "reach": 3156,
           "budget": 0
         },
         {
           "name": "JS | Traffic | CBO | 10$ | 13.08.2026",
-          "spend": 4.06,
+          "spend": 4.58,
           "leads": 0,
-          "impressions": 6024,
-          "reach": 5890,
+          "impressions": 6771,
+          "reach": 6560,
           "budget": 10
         }
       ],
       "mastermock": [
         {
           "name": "JS | Trafik landing page | CBO | 15$ | 25.09.2026",
-          "spend": 4.82,
+          "spend": 8.89,
           "leads": 0,
-          "impressions": 10084,
-          "reach": 2526,
+          "impressions": 16211,
+          "reach": 14120,
           "budget": 30
         },
         {
           "name": "KN | SMS | ABO | 15$ | 22.09.2026",
-          "spend": 0.02,
+          "spend": 0.26,
           "leads": 0,
-          "impressions": 7,
-          "reach": 1,
+          "impressions": 122,
+          "reach": 100,
           "budget": 0
         }
       ],
@@ -1757,20 +1757,20 @@
       "mercury": [
         {
           "name": "BR - LEAD -VISA - CBO - 6.6$ - 17.07.2026",
-          "spend": 3.16,
-          "leads": 9,
-          "impressions": 1355,
-          "reach": 1169,
+          "spend": 3.86,
+          "leads": 10,
+          "impressions": 1549,
+          "reach": 1316,
           "budget": 6.6
         }
       ],
       "sayyohvisa": [
         {
-          "name": "BT   | CBO  $10 | Leads  | 07.08.2026",
-          "spend": 0.78,
-          "leads": 2,
-          "impressions": 495,
-          "reach": 474,
+          "name": "BT | CBO $10 | Leads | 07.08.2026",
+          "spend": 0.91,
+          "leads": 3,
+          "impressions": 577,
+          "reach": 544,
           "budget": 2
         }
       ],
@@ -1778,10 +1778,10 @@
       "sweetkids": [
         {
           "name": "JS | Lead | CBO 5$ | 09.09.2026",
-          "spend": 2.43,
+          "spend": 2.64,
           "leads": 1,
-          "impressions": 565,
-          "reach": 490,
+          "impressions": 612,
+          "reach": 522,
           "budget": 5
         }
       ],

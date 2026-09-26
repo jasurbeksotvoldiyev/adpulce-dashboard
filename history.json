@@ -542,15 +542,15 @@
         "leads": 2
       },
       "booking": {
-        "spend": 12.55,
+        "spend": 13.24,
         "leads": 6
       },
       "intouch": {
-        "spend": 49.93,
-        "leads": 12
+        "spend": 52.71,
+        "leads": 13
       },
       "mastermock": {
-        "spend": 29.73,
+        "spend": 37.16,
         "leads": 0
       },
       "maydon": {
@@ -558,19 +558,19 @@
         "leads": 0
       },
       "mercury": {
-        "spend": 5.43,
-        "leads": 12
+        "spend": 5.7,
+        "leads": 13
       },
       "sayyohvisa": {
-        "spend": 1.47,
-        "leads": 3
+        "spend": 1.54,
+        "leads": 4
       },
       "superkit": {
         "spend": 0,
         "leads": 0
       },
       "sweetkids": {
-        "spend": 4.1,
+        "spend": 4.42,
         "leads": 1
       },
       "zimzimuz": {
@@ -1694,7 +1694,7 @@
           "name": "BT | Lead | ABO  | 10$ | 15.09.2026",
           "spend": 6.03,
           "leads": 2,
-          "impressions": 3712,
+          "impressions": 3714,
           "reach": 2859,
           "budget": 0
         }
@@ -1702,54 +1702,54 @@
       "booking": [
         {
           "name": "TB | AdPulce | Lead | ABO 20$ | 15.09.2026",
-          "spend": 12.55,
+          "spend": 13.24,
           "leads": 6,
-          "impressions": 2686,
-          "reach": 1924,
+          "impressions": 2880,
+          "reach": 2063,
           "budget": 0
         }
       ],
       "intouch": [
         {
           "name": "KN  | Lead | CBO | 35$ | 13.09.2026",
-          "spend": 27.75,
-          "leads": 6,
-          "impressions": 8400,
-          "reach": 7222,
+          "spend": 29.02,
+          "leads": 7,
+          "impressions": 8990,
+          "reach": 7630,
           "budget": 50
         },
         {
           "name": "KN  | Lead | ABO | 15$ | 24.09.2026",
-          "spend": 14.26,
+          "spend": 15.06,
           "leads": 6,
-          "impressions": 5267,
-          "reach": 4452,
+          "impressions": 5648,
+          "reach": 4803,
           "budget": 0
         },
         {
           "name": "JS | Traffic | CBO | 10$ | 13.08.2026",
-          "spend": 7.92,
+          "spend": 8.63,
           "leads": 0,
-          "impressions": 12533,
-          "reach": 11797,
+          "impressions": 13920,
+          "reach": 13130,
           "budget": 10
         }
       ],
       "mastermock": [
         {
           "name": "JS | Trafik landing page | CBO | 15$ | 25.09.2026",
-          "spend": 22.33,
+          "spend": 25.63,
           "leads": 0,
-          "impressions": 33685,
-          "reach": 27621,
+          "impressions": 38123,
+          "reach": 31266,
           "budget": 30
         },
         {
           "name": "KN | SMS | ABO | 15$ | 22.09.2026",
-          "spend": 7.4,
+          "spend": 11.53,
           "leads": 0,
-          "impressions": 5387,
-          "reach": 4299,
+          "impressions": 8457,
+          "reach": 6436,
           "budget": 0
         }
       ],
@@ -1757,20 +1757,20 @@
       "mercury": [
         {
           "name": "BR - LEAD -VISA - CBO - 6.6$ - 17.07.2026",
-          "spend": 5.43,
-          "leads": 12,
-          "impressions": 2368,
-          "reach": 1872,
+          "spend": 5.7,
+          "leads": 13,
+          "impressions": 2659,
+          "reach": 2093,
           "budget": 6.6
         }
       ],
       "sayyohvisa": [
         {
           "name": "BT   | CBO  $10 | Leads  | 07.08.2026",
-          "spend": 1.47,
-          "leads": 3,
-          "impressions": 940,
-          "reach": 893,
+          "spend": 1.54,
+          "leads": 4,
+          "impressions": 988,
+          "reach": 936,
           "budget": 2
         }
       ],
@@ -1778,10 +1778,10 @@
       "sweetkids": [
         {
           "name": "JS | Lead | CBO 5$ | 09.09.2026",
-          "spend": 4.1,
+          "spend": 4.42,
           "leads": 1,
-          "impressions": 1101,
-          "reach": 878,
+          "impressions": 1249,
+          "reach": 1028,
           "budget": 5
         }
       ],

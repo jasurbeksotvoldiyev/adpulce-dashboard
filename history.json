@@ -596,35 +596,35 @@
     },
     "2026-09-27": {
       "adpulce": {
-        "spend": 0,
+        "spend": 0.0,
         "leads": 0
       },
       "access": {
-        "spend": 0,
+        "spend": 0.0,
         "leads": 0
       },
       "booking": {
-        "spend": 1.73,
+        "spend": 1.97,
         "leads": 0
       },
       "intouch": {
-        "spend": 7.87,
-        "leads": 2
+        "spend": 10.44,
+        "leads": 3
       },
       "mastermock": {
         "spend": 0.79,
         "leads": 0
       },
       "maydon": {
-        "spend": 0,
+        "spend": 0.0,
         "leads": 0
       },
       "mercury": {
-        "spend": 1.12,
+        "spend": 1.2,
         "leads": 5
       },
       "sayyohvisa": {
-        "spend": 0.25,
+        "spend": 0.26,
         "leads": 1
       },
       "superkit": {
@@ -632,27 +632,27 @@
         "leads": 0
       },
       "sweetkids": {
-        "spend": 0.52,
+        "spend": 0.61,
         "leads": 0
       },
       "zimzimuz": {
-        "spend": 0,
+        "spend": 0.0,
         "leads": 0
       },
       "zimzimtr": {
-        "spend": 0,
+        "spend": 0.0,
         "leads": 0
       },
       "madaniy": {
-        "spend": 0,
+        "spend": 0.0,
         "leads": 0
       },
       "azizbek": {
-        "spend": 0,
+        "spend": 0.0,
         "leads": 0
       },
       "sweetkids2": {
-        "spend": 0,
+        "spend": 0.0,
         "leads": 0
       }
     }
@@ -1859,37 +1859,37 @@
       "booking": [
         {
           "name": "TB | AdPulce | Lead | ABO 20$ | 15.09.2026",
-          "spend": 1.73,
+          "spend": 1.97,
           "leads": 0,
-          "impressions": 436,
-          "reach": 386,
-          "budget": 0
+          "impressions": 502,
+          "reach": 423,
+          "budget": 0.0
         }
       ],
       "intouch": [
         {
           "name": "KN  | Lead | CBO | 35$ | 13.09.2026",
-          "spend": 3.87,
-          "leads": 2,
-          "impressions": 1348,
-          "reach": 1292,
-          "budget": 50
+          "spend": 5.31,
+          "leads": 3,
+          "impressions": 1806,
+          "reach": 1675,
+          "budget": 50.0
         },
         {
           "name": "KN  | Lead | ABO | 15$ | 24.09.2026",
-          "spend": 2.51,
+          "spend": 3.0,
           "leads": 0,
-          "impressions": 575,
-          "reach": 550,
-          "budget": 0
+          "impressions": 666,
+          "reach": 620,
+          "budget": 0.0
         },
         {
           "name": "JS | Traffic | CBO | 10$ | 13.08.2026",
-          "spend": 1.49,
+          "spend": 2.13,
           "leads": 0,
-          "impressions": 2407,
-          "reach": 2306,
-          "budget": 10
+          "impressions": 3504,
+          "reach": 3272,
+          "budget": 10.0
         }
       ],
       "mastermock": [
@@ -1899,7 +1899,7 @@
           "leads": 0,
           "impressions": 1094,
           "reach": 1003,
-          "budget": 30
+          "budget": 30.0
         },
         {
           "name": "KN | SMS | ABO | 15$ | 22.09.2026",
@@ -1907,39 +1907,39 @@
           "leads": 0,
           "impressions": 6,
           "reach": 6,
-          "budget": 0
+          "budget": 0.0
         }
       ],
       "maydon": [],
       "mercury": [
         {
           "name": "BR - LEAD -VISA - CBO - 6.6$ - 17.07.2026",
-          "spend": 1.12,
+          "spend": 1.2,
           "leads": 5,
-          "impressions": 478,
-          "reach": 449,
+          "impressions": 521,
+          "reach": 479,
           "budget": 6.6
         }
       ],
       "sayyohvisa": [
         {
           "name": "BT   | CBO  $10 | Leads  | 07.08.2026",
-          "spend": 0.25,
+          "spend": 0.26,
           "leads": 1,
-          "impressions": 211,
-          "reach": 206,
-          "budget": 2
+          "impressions": 234,
+          "reach": 224,
+          "budget": 2.0
         }
       ],
       "superkit": [],
       "sweetkids": [
         {
           "name": "JS | Lead | CBO 5$ | 09.09.2026",
-          "spend": 0.52,
+          "spend": 0.61,
           "leads": 0,
-          "impressions": 129,
-          "reach": 118,
-          "budget": 5
+          "impressions": 145,
+          "reach": 130,
+          "budget": 5.0
         }
       ],
       "zimzimuz": [],

@@ -666,12 +666,12 @@
         "leads": 0
       },
       "booking": {
-        "spend": 13.36,
+        "spend": 14.32,
         "leads": 3
       },
       "intouch": {
-        "spend": 84.33,
-        "leads": 10
+        "spend": 90.25,
+        "leads": 13
       },
       "mastermock": {
         "spend": 0,
@@ -682,11 +682,11 @@
         "leads": 0
       },
       "mercury": {
-        "spend": 5.03,
-        "leads": 10
+        "spend": 5.28,
+        "leads": 11
       },
       "sayyohvisa": {
-        "spend": 1.27,
+        "spend": 1.33,
         "leads": 3
       },
       "superkit": {
@@ -694,7 +694,7 @@
         "leads": 0
       },
       "sweetkids": {
-        "spend": 6.16,
+        "spend": 6.31,
         "leads": 4
       },
       "zimzimuz": {
@@ -2016,53 +2016,59 @@
       "booking": [
         {
           "name": "TB | AdPulce | Lead | ABO 20$ | 15.09.2026",
-          "spend": 13.36,
+          "spend": 14.32,
           "leads": 3,
-          "impressions": 2653,
-          "reach": 2031,
-          "budget": 0
+          "impressions": 2934,
+          "reach": 2247,
+          "budget": 0.0,
+          "clicks": 69
         }
       ],
       "intouch": [
         {
           "name": "KN  | Lead | CBO | 35$ | 13.09.2026",
-          "spend": 39.02,
+          "spend": 41.18,
           "leads": 5,
-          "impressions": 6910,
-          "reach": 5857,
-          "budget": 50
+          "impressions": 7708,
+          "reach": 6513,
+          "budget": 50.0,
+          "clicks": 66
         },
         {
           "name": "IK - LAAL -OKTABR - SALE - 28.09",
-          "spend": 14.4,
-          "leads": 1,
-          "impressions": 6971,
-          "reach": 6040,
-          "budget": 25
+          "spend": 15.96,
+          "leads": 2,
+          "impressions": 8264,
+          "reach": 7040,
+          "budget": 25.0,
+          "clicks": 101
         },
         {
           "name": "KN  | Lead | ABO | 15$ | 24.09.2026",
-          "spend": 12.38,
+          "spend": 13.17,
           "leads": 1,
-          "impressions": 3033,
-          "reach": 2695,
-          "budget": 0
+          "impressions": 3211,
+          "reach": 2839,
+          "budget": 0.0,
+          "clicks": 15
         },
         {
           "name": "IK - RETARGET -OKTABR - SALE - 28.09",
-          "spend": 10.45,
-          "leads": 3,
-          "impressions": 4597,
-          "reach": 2837,
-          "budget": 25
+          "spend": 11.14,
+          "leads": 5,
+          "impressions": 4970,
+          "reach": 3037,
+          "budget": 25.0,
+          "clicks": 96
         },
         {
           "name": "JS | Traffic | CBO | 10$ | 13.08.2026",
-          "spend": 8.08,
+          "spend": 8.8,
           "leads": 0,
-          "impressions": 14073,
-          "reach": 13467,
-          "budget": 10
+          "impressions": 15473,
+          "reach": 14589,
+          "budget": 10.0,
+          "clicks": 685
         }
       ],
       "mastermock": [],
@@ -2070,31 +2076,34 @@
       "mercury": [
         {
           "name": "BR - LEAD -VISA - CBO - 6.6$ - 17.07.2026",
-          "spend": 5.03,
-          "leads": 10,
-          "impressions": 3588,
-          "reach": 2860,
-          "budget": 6.6
+          "spend": 5.28,
+          "leads": 11,
+          "impressions": 3816,
+          "reach": 3005,
+          "budget": 6.6,
+          "clicks": 43
         }
       ],
       "sayyohvisa": [
         {
           "name": "BT   | CBO  $10 | Leads  | 07.08.2026",
-          "spend": 1.27,
+          "spend": 1.33,
           "leads": 3,
-          "impressions": 805,
-          "reach": 769,
-          "budget": 2
+          "impressions": 851,
+          "reach": 800,
+          "budget": 2.0,
+          "clicks": 6
         }
       ],
       "sweetkids": [
         {
           "name": "JS | Lead | CBO 5$ | 09.09.2026",
-          "spend": 6.16,
+          "spend": 6.31,
           "leads": 4,
-          "impressions": 1879,
-          "reach": 1426,
-          "budget": 5
+          "impressions": 1958,
+          "reach": 1472,
+          "budget": 5.0,
+          "clicks": 32
         }
       ],
       "zimzimuz": [

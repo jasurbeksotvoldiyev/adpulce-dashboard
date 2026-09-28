@@ -666,12 +666,12 @@
         "leads": 0
       },
       "booking": {
-        "spend": 1.86,
+        "spend": 5.22,
         "leads": 0
       },
       "intouch": {
-        "spend": 23.76,
-        "leads": 2
+        "spend": 23.95,
+        "leads": 3
       },
       "mastermock": {
         "spend": 0,
@@ -686,19 +686,19 @@
         "leads": 4
       },
       "sayyohvisa": {
-        "spend": 0.75,
-        "leads": 1
+        "spend": 2.47,
+        "leads": 4
       },
       "superkit": {
         "spend": 0,
         "leads": 0
       },
       "sweetkids": {
-        "spend": 1.62,
-        "leads": 0
+        "spend": 0.9,
+        "leads": 1
       },
       "zimzimuz": {
-        "spend": 0,
+        "spend": 1.79,
         "leads": 0
       },
       "zimzimtr": {
@@ -2016,45 +2016,37 @@
       "booking": [
         {
           "name": "TB | AdPulce | Lead | ABO 20$ | 15.09.2026",
-          "spend": 1.86,
+          "spend": 5.22,
           "leads": 0,
-          "impressions": 435,
-          "reach": 402,
-          "budget": 0.0
+          "impressions": 1092,
+          "reach": 896,
+          "budget": 0
         }
       ],
       "intouch": [
         {
           "name": "KN  | Lead | CBO | 35$ | 13.09.2026",
-          "spend": 11.66,
-          "leads": 2,
-          "impressions": 3098,
-          "reach": 2856,
-          "budget": 50.0
+          "spend": 14.54,
+          "leads": 3,
+          "impressions": 3807,
+          "reach": 3490,
+          "budget": 50
         },
         {
           "name": "KN  | Lead | ABO | 15$ | 24.09.2026",
-          "spend": 4.44,
+          "spend": 5.25,
           "leads": 0,
-          "impressions": 1144,
-          "reach": 1061,
-          "budget": 0
-        },
-        {
-          "name": "TB | AdPulce | Lead | ABO 20$ | 15.09.2026",
-          "spend": 4.42,
-          "leads": 0,
-          "impressions": 874,
-          "reach": 727,
+          "impressions": 1454,
+          "reach": 1324,
           "budget": 0
         },
         {
           "name": "JS | Traffic | CBO | 10$ | 13.08.2026",
-          "spend": 3.24,
+          "spend": 4.16,
           "leads": 0,
-          "impressions": 5132,
-          "reach": 4790,
-          "budget": 10.0
+          "impressions": 6753,
+          "reach": 6508,
+          "budget": 10
         }
       ],
       "mastermock": [],
@@ -2071,25 +2063,34 @@
       ],
       "sayyohvisa": [
         {
-          "name": "BT   | CBO  $10 | Leads  | 07.08.2026",
-          "spend": 0.75,
-          "leads": 1,
-          "impressions": 525,
-          "reach": 503,
-          "budget": 2.0
+          "name": "BR - LEAD -VISA - CBO - 6.6$ - 17.07.2026",
+          "spend": 2.47,
+          "leads": 4,
+          "impressions": 1484,
+          "reach": 1238,
+          "budget": 6.6
         }
       ],
       "sweetkids": [
         {
-          "name": "JS | Lead | CBO 5$ | 09.09.2026",
-          "spend": 1.62,
-          "leads": 0,
-          "impressions": 277,
-          "reach": 247,
-          "budget": 5.0
+          "name": "BT   | CBO  $10 | Leads  | 07.08.2026",
+          "spend": 0.9,
+          "leads": 1,
+          "impressions": 591,
+          "reach": 564,
+          "budget": 2
         }
       ],
-      "zimzimuz": [],
+      "zimzimuz": [
+        {
+          "name": "JS | Lead | CBO 5$ | 09.09.2026",
+          "spend": 1.79,
+          "leads": 0,
+          "impressions": 326,
+          "reach": 292,
+          "budget": 5
+        }
+      ],
       "zimzimtr": [],
       "madaniy": [],
       "azizbek": [],

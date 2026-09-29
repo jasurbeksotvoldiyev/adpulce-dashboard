@@ -1,6 +1,6 @@
 {
-  "date": "2026-09-28",
-  "generatedAt": "2026-09-28T23:27:47+05:00",
+  "date": "2026-09-29",
+  "generatedAt": "2026-09-29T23:26:56+05:00",
   "ads": {
     "adpulce": [],
     "access": [],
@@ -8,49 +8,55 @@
       {
         "name": "11 - Xitoyga indidual 1250$",
         "campaign": "TB | AdPulce | Lead | ABO 20$ | 15.09.2026",
-        "spend": 8.18,
-        "leads": 3
+        "spend": 9.71,
+        "leads": 2
       },
       {
         "name": "5 ta davlat $1950 - 2 kishilik",
         "campaign": "TB | AdPulce | Lead | ABO 20$ | 15.09.2026",
-        "spend": 7.8,
-        "leads": 2
+        "spend": 8.86,
+        "leads": 3
       },
       {
         "name": "Avatar tog'lari guruhli  $1350",
         "campaign": "TB | AdPulce | Lead | ABO 20$ | 15.09.2026",
-        "spend": 1.09,
-        "leads": 0
+        "spend": 0.86,
+        "leads": 1
       },
       {
         "name": "1 tada borganda 9 ta shaxar Xitoyga  $2200",
         "campaign": "TB | AdPulce | Lead | ABO 20$ | 15.09.2026",
-        "spend": 1.06,
-        "leads": 0
-      },
-      {
-        "name": "22 kunlik viza istoriya uchun $3500",
-        "campaign": "TB | AdPulce | Lead | ABO 20$ | 15.09.2026",
-        "spend": 0.89,
+        "spend": 0.22,
         "leads": 0
       },
       {
         "name": "Filiping 3 ta shahri $1900",
         "campaign": "TB | AdPulce | Lead | ABO 20$ | 15.09.2026",
-        "spend": 0.1,
+        "spend": 0.21,
+        "leads": 0
+      },
+      {
+        "name": "22 kunlik viza istoriya uchun $3500",
+        "campaign": "TB | AdPulce | Lead | ABO 20$ | 15.09.2026",
+        "spend": 0.2,
         "leads": 0
       },
       {
         "name": "Xitoyni 9 ta shaxri $2400",
         "campaign": "TB | AdPulce | Lead | ABO 20$ | 15.09.2026",
-        "spend": 0.02,
+        "spend": 0.09,
         "leads": 0
       },
       {
-        "name": "Filiping  Manila , Sebu,Barakay  $2200",
+        "name": "10 - Shirilanka  yangi yil",
         "campaign": "TB | AdPulce | Lead | ABO 20$ | 15.09.2026",
-        "spend": 0.01,
+        "spend": 0.05,
+        "leads": 0
+      },
+      {
+        "name": "yangi yil Taylandi $1300",
+        "campaign": "TB | AdPulce | Lead | ABO 20$ | 15.09.2026",
+        "spend": 0.05,
         "leads": 0
       }
     ],
@@ -58,209 +64,210 @@
       {
         "name": "4",
         "campaign": "KN  | Lead | CBO | 35$ | 13.09.2026",
-        "spend": 35.13,
-        "leads": 5
+        "spend": 37.78,
+        "leads": 8
       },
       {
-        "name": "3",
-        "campaign": "KN  | Lead | CBO | 35$ | 13.09.2026",
-        "spend": 14.57,
-        "leads": 2
+        "name": "Gul",
+        "campaign": "IK - RETARGET -OKTABR - SALE - 28.09",
+        "spend": 9.55,
+        "leads": 7
       },
       {
         "name": "5",
         "campaign": "JS | Traffic | CBO | 10$ | 13.08.2026",
-        "spend": 11.11,
+        "spend": 8.1,
         "leads": 0
-      },
-      {
-        "name": "Shokolad",
-        "campaign": "IK - RETARGET -OKTABR - SALE - 28.09",
-        "spend": 8.76,
-        "leads": 5
-      },
-      {
-        "name": "Tefal",
-        "campaign": "IK - LAAL -OKTABR - SALE - 28.09",
-        "spend": 8.16,
-        "leads": 2
       },
       {
         "name": "Gul",
         "campaign": "IK - LAAL -OKTABR - SALE - 28.09",
-        "spend": 6.83,
+        "spend": 8.03,
+        "leads": 2
+      },
+      {
+        "name": "Tefal",
+        "campaign": "IK - LAAL -OKTABR - SALE - 28.09",
+        "spend": 7.5,
         "leads": 0
       },
       {
         "name": "Shokolad",
         "campaign": "IK - LAAL -OKTABR - SALE - 28.09",
-        "spend": 6.54,
-        "leads": 1
-      },
-      {
-        "name": "Gul",
-        "campaign": "IK - RETARGET -OKTABR - SALE - 28.09",
-        "spend": 4.0,
-        "leads": 2
-      },
-      {
-        "name": "1",
-        "campaign": "KN  | Lead | ABO | 15$ | 24.09.2026",
-        "spend": 3.69,
-        "leads": 0
-      },
-      {
-        "name": "Banket",
-        "campaign": "IK - RETARGET -OKTABR - SALE - 28.09",
-        "spend": 3.15,
-        "leads": 1
-      },
-      {
-        "name": "4",
-        "campaign": "KN  | Lead | ABO | 15$ | 24.09.2026",
-        "spend": 2.92,
-        "leads": 0
-      },
-      {
-        "name": "4",
-        "campaign": "KN  | Lead | ABO | 15$ | 24.09.2026",
-        "spend": 2.78,
-        "leads": 1
-      },
-      {
-        "name": "4",
-        "campaign": "KN  | Lead | ABO | 15$ | 24.09.2026",
-        "spend": 2.78,
-        "leads": 0
-      },
-      {
-        "name": "4",
-        "campaign": "KN  | Lead | ABO | 15$ | 24.09.2026",
-        "spend": 2.3,
+        "spend": 7.02,
         "leads": 0
       },
       {
         "name": "Tefal",
         "campaign": "IK - RETARGET -OKTABR - SALE - 28.09",
-        "spend": 1.03,
-        "leads": 1
+        "spend": 5.63,
+        "leads": 0
       },
       {
         "name": "Tashakurnoma",
         "campaign": "IK - RETARGET -OKTABR - SALE - 28.09",
-        "spend": 0.96,
-        "leads": 1
-      },
-      {
-        "name": "Banket",
-        "campaign": "IK - LAAL -OKTABR - SALE - 28.09",
-        "spend": 0.27,
-        "leads": 0
-      },
-      {
-        "name": "3",
-        "campaign": "KN  | Lead | ABO | 15$ | 24.09.2026",
-        "spend": 0.11,
-        "leads": 0
+        "spend": 4.92,
+        "leads": 3
       },
       {
         "name": "2",
-        "campaign": "KN  | Lead | ABO | 15$ | 24.09.2026",
-        "spend": 0.1,
-        "leads": 0
-      },
-      {
-        "name": "3",
-        "campaign": "KN  | Lead | ABO | 15$ | 24.09.2026",
-        "spend": 0.1,
-        "leads": 0
-      },
-      {
-        "name": "Tashakurnoma",
-        "campaign": "IK - LAAL -OKTABR - SALE - 28.09",
-        "spend": 0.06,
-        "leads": 0
-      },
-      {
-        "name": "ustoz",
-        "campaign": "JS | Traffic | CBO | 10$ | 13.08.2026",
-        "spend": 0.05,
-        "leads": 0
-      },
-      {
-        "name": "3",
-        "campaign": "KN  | Lead | ABO | 15$ | 24.09.2026",
-        "spend": 0.04,
-        "leads": 0
-      },
-      {
-        "name": "1",
-        "campaign": "KN  | Lead | ABO | 15$ | 24.09.2026",
-        "spend": 0.02,
-        "leads": 0
-      },
-      {
-        "name": "1",
         "campaign": "KN  | Lead | CBO | 35$ | 13.09.2026",
-        "spend": 0.02,
+        "spend": 4.75,
+        "leads": 0
+      },
+      {
+        "name": "4",
+        "campaign": "KN  | Lead | ABO | 15$ | 24.09.2026",
+        "spend": 3.01,
+        "leads": 1
+      },
+      {
+        "name": "4",
+        "campaign": "KN  | Lead | ABO | 15$ | 24.09.2026",
+        "spend": 2.89,
+        "leads": 1
+      },
+      {
+        "name": "4",
+        "campaign": "KN  | Lead | ABO | 15$ | 24.09.2026",
+        "spend": 2.87,
+        "leads": 1
+      },
+      {
+        "name": "4",
+        "campaign": "KN  | Lead | ABO | 15$ | 24.09.2026",
+        "spend": 2.87,
+        "leads": 0
+      },
+      {
+        "name": "Tashakurnoma",
+        "campaign": "IK - LAAL -OKTABR - SALE - 28.09",
+        "spend": 2.74,
+        "leads": 0
+      },
+      {
+        "name": "1",
+        "campaign": "KN  | Lead | ABO | 15$ | 24.09.2026",
+        "spend": 2.46,
+        "leads": 0
+      },
+      {
+        "name": "3",
+        "campaign": "KN  | Lead | CBO | 35$ | 13.09.2026",
+        "spend": 1.98,
+        "leads": 1
+      },
+      {
+        "name": "Shokolad",
+        "campaign": "IK - RETARGET -OKTABR - SALE - 28.09",
+        "spend": 1.61,
+        "leads": 0
+      },
+      {
+        "name": "Banket",
+        "campaign": "IK - RETARGET -OKTABR - SALE - 28.09",
+        "spend": 0.49,
         "leads": 0
       },
       {
         "name": "3",
         "campaign": "KN  | Lead | ABO | 15$ | 24.09.2026",
-        "spend": 0.01,
+        "spend": 0.28,
         "leads": 0
       },
       {
-        "name": "2",
+        "name": "Banket",
+        "campaign": "IK - LAAL -OKTABR - SALE - 28.09",
+        "spend": 0.07,
+        "leads": 0
+      },
+      {
+        "name": "3",
         "campaign": "KN  | Lead | ABO | 15$ | 24.09.2026",
-        "spend": 0.01,
+        "spend": 0.07,
         "leads": 0
       },
       {
-        "name": "4",
-        "campaign": "JS | Traffic | CBO | 10$ | 13.08.2026",
+        "name": "3",
+        "campaign": "KN  | Lead | ABO | 15$ | 24.09.2026",
         "spend": 0.01,
         "leads": 0
       }
     ],
-    "mastermock": [],
+    "mastermock": [
+      {
+        "name": "C1 daraja",
+        "campaign": "KN | SMS | ABO | 15$ | 22.09.2026",
+        "spend": 1.36,
+        "leads": 0
+      },
+      {
+        "name": "Mustaqil o'rganayotgan bo'lsangiz",
+        "campaign": "KN | SMS | ABO | 15$ | 22.09.2026",
+        "spend": 1.17,
+        "leads": 0
+      },
+      {
+        "name": "Mustaqil o'rganayotgan bo'lsangiz",
+        "campaign": "KN | SMS | ABO | 15$ | 22.09.2026",
+        "spend": 0.95,
+        "leads": 0
+      },
+      {
+        "name": "C1 daraja",
+        "campaign": "KN | SMS | ABO | 15$ | 22.09.2026",
+        "spend": 0.08,
+        "leads": 0
+      },
+      {
+        "name": "C1 daraja",
+        "campaign": "KN | SMS | ABO | 15$ | 22.09.2026",
+        "spend": 0.06,
+        "leads": 0
+      }
+    ],
     "maydon": [],
     "mercury": [
       {
         "name": "41davlat",
         "campaign": "BR - LEAD -VISA - CBO - 6.6$ - 17.07.2026",
-        "spend": 4.41,
-        "leads": 10
+        "spend": 4.24,
+        "leads": 12
       },
       {
         "name": "Bo'sh passport",
         "campaign": "BR - LEAD -VISA - CBO - 6.6$ - 17.07.2026",
-        "spend": 2.46,
-        "leads": 5
+        "spend": 1.62,
+        "leads": 0
       }
     ],
     "sayyohvisa": [
       {
         "name": "5 yillik viza",
         "campaign": "BT   | CBO  $10 | Leads  | 07.08.2026",
-        "spend": 1.31,
-        "leads": 3
-      },
-      {
-        "name": "Elchixona",
-        "campaign": "BT   | CBO  $10 | Leads  | 07.08.2026",
-        "spend": 0.17,
-        "leads": 0
+        "spend": 2.1,
+        "leads": 8
       },
       {
         "name": "Angilya 6 oylik viza",
         "campaign": "BT   | CBO  $10 | Leads  | 07.08.2026",
-        "spend": 0.02,
+        "spend": 0.33,
         "leads": 0
       },
       {
-        "name": "KUZGI",
+        "name": "Biznes uchrashuv",
+        "campaign": "BT   | CBO  $10 | Leads  | 07.08.2026",
+        "spend": 0.05,
+        "leads": 0
+      },
+      {
+        "name": "Oila azolarni chaqrish",
+        "campaign": "BT   | CBO  $10 | Leads  | 07.08.2026",
+        "spend": 0.03,
+        "leads": 0
+      },
+      {
+        "name": "Elchixona",
         "campaign": "BT   | CBO  $10 | Leads  | 07.08.2026",
         "spend": 0.02,
         "leads": 0
@@ -269,61 +276,67 @@
     "superkit": null,
     "sweetkids": [
       {
-        "name": "2",
+        "name": "7",
         "campaign": "JS | Lead | CBO 5$ | 09.09.2026",
-        "spend": 2.33,
-        "leads": 1
+        "spend": 3.71,
+        "leads": 8
       },
       {
         "name": "7",
         "campaign": "JS | Lead | CBO 5$ | 09.09.2026",
-        "spend": 2.23,
-        "leads": 1
+        "spend": 2.6,
+        "leads": 5
       },
       {
-        "name": "7",
-        "campaign": "JS | Lead | CBO 5$ | 09.09.2026",
-        "spend": 2.08,
-        "leads": 4
-      },
-      {
-        "name": "2",
-        "campaign": "JS | Lead | CBO 5$ | 09.09.2026",
-        "spend": 0.66,
-        "leads": 0
-      },
-      {
-        "name": "6",
-        "campaign": "JS | Lead | CBO 5$ | 09.09.2026",
-        "spend": 0.12,
-        "leads": 0
-      },
-      {
-        "name": "4",
-        "campaign": "JS | Lead | CBO 5$ | 09.09.2026",
-        "spend": 0.09,
-        "leads": 0
-      },
-      {
-        "name": "6",
+        "name": "1",
         "campaign": "JS | Lead | CBO 5$ | 09.09.2026",
         "spend": 0.08,
         "leads": 0
       },
       {
+        "name": "6",
+        "campaign": "JS | Lead | CBO 5$ | 09.09.2026",
+        "spend": 0.07,
+        "leads": 1
+      },
+      {
+        "name": "6",
+        "campaign": "JS | Lead | CBO 5$ | 09.09.2026",
+        "spend": 0.04,
+        "leads": 0
+      },
+      {
         "name": "4",
         "campaign": "JS | Lead | CBO 5$ | 09.09.2026",
-        "spend": 0.06,
+        "spend": 0.04,
+        "leads": 0
+      },
+      {
+        "name": "2",
+        "campaign": "JS | Lead | CBO 5$ | 09.09.2026",
+        "spend": 0.03,
+        "leads": 0
+      },
+      {
+        "name": "1",
+        "campaign": "JS | Lead | CBO 5$ | 09.09.2026",
+        "spend": 0.03,
+        "leads": 0
+      },
+      {
+        "name": "3",
+        "campaign": "JS | Lead | CBO 5$ | 09.09.2026",
+        "spend": 0.02,
         "leads": 0
       }
     ],
+    "sweetkids2": [],
     "zimzimuz": [],
     "zimzimtr": [],
     "madaniy": [],
-    "azizbek": [],
-    "sweetkids2": []
+    "azizbek": []
   },
   "errors": {
-    "superkit": "Ads MCP ushbu akkaunt uchun hali yoqilmagan (is_ads_mcp_enabled=false, bosqichma-bosqich joriy etilmoqda)."
+    "superkit": "Ads MCP is gradually being rolled out. Please check back at a later date to use Ads MCP with this Ad Account. (is_ads_mcp_enabled=false)"
   }
 }

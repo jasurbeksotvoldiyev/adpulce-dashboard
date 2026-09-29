@@ -728,15 +728,15 @@
         "leads": 0
       },
       "booking": {
-        "spend": 17.3,
-        "leads": 5
+        "spend": 18.63,
+        "leads": 6
       },
       "intouch": {
-        "spend": 102.85,
-        "leads": 21
+        "spend": 108.2,
+        "leads": 23
       },
       "mastermock": {
-        "spend": 0,
+        "spend": 1.89,
         "leads": 0
       },
       "maydon": {
@@ -744,19 +744,19 @@
         "leads": 0
       },
       "mercury": {
-        "spend": 4.68,
-        "leads": 9
+        "spend": 5.38,
+        "leads": 11
       },
       "sayyohvisa": {
-        "spend": 2.07,
-        "leads": 4
+        "spend": 2.27,
+        "leads": 6
       },
       "superkit": {
         "spend": 0,
         "leads": 0
       },
       "sweetkids": {
-        "spend": 5.92,
+        "spend": 6.1,
         "leads": 13
       },
       "zimzimuz": {
@@ -2181,84 +2181,93 @@
       "booking": [
         {
           "name": "TB | AdPulce | Lead | ABO 20$ | 15.09.2026",
-          "spend": 17.3,
-          "leads": 5,
-          "impressions": 3896,
-          "reach": 2984,
+          "spend": 18.63,
+          "leads": 6,
+          "impressions": 4259,
+          "reach": 3214,
           "budget": 0
         }
       ],
       "intouch": [
         {
           "name": "KN  | Lead | CBO | 35$ | 13.09.2026",
-          "spend": 37.65,
-          "leads": 7,
-          "impressions": 9569,
-          "reach": 7928,
+          "spend": 40.65,
+          "leads": 8,
+          "impressions": 11228,
+          "reach": 8992,
           "budget": 50
         },
         {
           "name": "IK - LAAL -OKTABR - SALE - 28.09",
           "spend": 25.35,
           "leads": 2,
-          "impressions": 20606,
+          "impressions": 20610,
           "reach": 16171,
           "budget": 25
         },
         {
           "name": "IK - RETARGET -OKTABR - SALE - 28.09",
-          "spend": 19.95,
-          "leads": 9,
-          "impressions": 11417,
-          "reach": 6668,
+          "spend": 20.96,
+          "leads": 10,
+          "impressions": 12095,
+          "reach": 6913,
           "budget": 25
         },
         {
           "name": "KN  | Lead | ABO | 15$ | 24.09.2026",
-          "spend": 12.88,
+          "spend": 13.66,
           "leads": 3,
-          "impressions": 4008,
-          "reach": 3362,
+          "impressions": 4461,
+          "reach": 3783,
           "budget": 0
         },
         {
           "name": "JS | Traffic | CBO | 10$ | 13.08.2026",
-          "spend": 7.02,
+          "spend": 7.58,
           "leads": 0,
-          "impressions": 10205,
-          "reach": 10011,
+          "impressions": 11117,
+          "reach": 10849,
           "budget": 10
         }
       ],
-      "mastermock": [],
+      "mastermock": [
+        {
+          "name": "KN | SMS | ABO | 15$ | 22.09.2026",
+          "spend": 1.89,
+          "leads": 0,
+          "impressions": 1496,
+          "reach": 1229,
+          "budget": 0
+        }
+      ],
       "maydon": [],
       "mercury": [
         {
           "name": "BR - LEAD -VISA - CBO - 6.6$ - 17.07.2026",
-          "spend": 4.68,
-          "leads": 9,
-          "impressions": 3129,
-          "reach": 2420,
+          "spend": 5.38,
+          "leads": 11,
+          "impressions": 3574,
+          "reach": 2792,
           "budget": 6.6
         }
       ],
       "sayyohvisa": [
         {
           "name": "BT   | CBO  $10 | Leads  | 07.08.2026",
-          "spend": 2.07,
-          "leads": 4,
-          "impressions": 1080,
-          "reach": 956,
+          "spend": 2.27,
+          "leads": 6,
+          "impressions": 1219,
+          "reach": 1093,
           "budget": 2
         }
       ],
       "sweetkids": [
         {
           "name": "JS | Lead | CBO 5$ | 09.09.2026",
-          "spend": 5.92,
+          "spend": 6.1,
           "leads": 13,
-          "impressions": 3174,
-          "reach": 2469,
+          "impressions": 3312,
+          "reach": 2545,
           "budget": 5
         }
       ],

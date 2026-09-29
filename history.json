@@ -728,11 +728,11 @@
         "leads": 0
       },
       "booking": {
-        "spend": 1.61,
+        "spend": 1.74,
         "leads": 1
       },
       "intouch": {
-        "spend": 14.66,
+        "spend": 16.04,
         "leads": 2
       },
       "mastermock": {
@@ -744,11 +744,11 @@
         "leads": 0
       },
       "mercury": {
-        "spend": 0.64,
+        "spend": 0.78,
         "leads": 2
       },
       "sayyohvisa": {
-        "spend": 0.24,
+        "spend": 0.31,
         "leads": 1
       },
       "superkit": {
@@ -756,7 +756,7 @@
         "leads": 0
       },
       "sweetkids": {
-        "spend": 1.6,
+        "spend": 1.63,
         "leads": 4
       },
       "zimzimuz": {
@@ -2181,52 +2181,52 @@
       "booking": [
         {
           "name": "TB | AdPulce | Lead | ABO 20$ | 15.09.2026",
-          "spend": 1.61,
+          "spend": 1.74,
           "leads": 1,
-          "impressions": 433,
-          "reach": 433,
+          "impressions": 482,
+          "reach": 471,
           "budget": 0
         }
       ],
       "intouch": [
         {
           "name": "IK - LAAL -OKTABR - SALE - 28.09",
-          "spend": 10.49,
+          "spend": 10.75,
           "leads": 0,
-          "impressions": 6494,
-          "reach": 5915,
+          "impressions": 6661,
+          "reach": 6028,
           "budget": 25
         },
         {
           "name": "KN  | Lead | ABO | 15$ | 24.09.2026",
-          "spend": 1.64,
+          "spend": 1.77,
           "leads": 0,
-          "impressions": 451,
-          "reach": 438,
+          "impressions": 486,
+          "reach": 468,
           "budget": 0
         },
         {
-          "name": "IK - RETARGET -OKTABR - SALE - 28.09",
-          "spend": 1.04,
-          "leads": 1,
-          "impressions": 535,
-          "reach": 495,
-          "budget": 25
-        },
-        {
           "name": "KN  | Lead | CBO | 35$ | 13.09.2026",
-          "spend": 0.83,
+          "spend": 1.56,
           "leads": 1,
-          "impressions": 353,
-          "reach": 353,
+          "impressions": 418,
+          "reach": 418,
           "budget": 50
         },
         {
+          "name": "IK - RETARGET -OKTABR - SALE - 28.09",
+          "spend": 1.16,
+          "leads": 1,
+          "impressions": 577,
+          "reach": 517,
+          "budget": 25
+        },
+        {
           "name": "JS | Traffic | CBO | 10$ | 13.08.2026",
-          "spend": 0.66,
+          "spend": 0.8,
           "leads": 0,
-          "impressions": 1102,
-          "reach": 1102,
+          "impressions": 1262,
+          "reach": 1262,
           "budget": 10
         }
       ],
@@ -2235,30 +2235,30 @@
       "mercury": [
         {
           "name": "BR - LEAD -VISA - CBO - 6.6$ - 17.07.2026",
-          "spend": 0.64,
+          "spend": 0.78,
           "leads": 2,
-          "impressions": 271,
-          "reach": 271,
+          "impressions": 306,
+          "reach": 294,
           "budget": 6.6
         }
       ],
       "sayyohvisa": [
         {
           "name": "BT   | CBO  $10 | Leads  | 07.08.2026",
-          "spend": 0.24,
+          "spend": 0.31,
           "leads": 1,
-          "impressions": 178,
-          "reach": 174,
+          "impressions": 183,
+          "reach": 179,
           "budget": 2
         }
       ],
       "sweetkids": [
         {
           "name": "JS | Lead | CBO 5$ | 09.09.2026",
-          "spend": 1.6,
+          "spend": 1.63,
           "leads": 4,
-          "impressions": 798,
-          "reach": 728,
+          "impressions": 829,
+          "reach": 746,
           "budget": 5
         }
       ],

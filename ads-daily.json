@@ -1,342 +1,38 @@
 {
-  "date": "2026-09-29",
-  "generatedAt": "2026-09-29T23:26:56+05:00",
+  "date": "2026-09-30",
+  "generatedAt": "2026-09-30T23:26:38+05:00",
   "ads": {
-    "adpulce": [],
-    "access": [],
-    "booking": [
-      {
-        "name": "11 - Xitoyga indidual 1250$",
-        "campaign": "TB | AdPulce | Lead | ABO 20$ | 15.09.2026",
-        "spend": 9.71,
-        "leads": 2
-      },
-      {
-        "name": "5 ta davlat $1950 - 2 kishilik",
-        "campaign": "TB | AdPulce | Lead | ABO 20$ | 15.09.2026",
-        "spend": 8.86,
-        "leads": 3
-      },
-      {
-        "name": "Avatar tog'lari guruhli  $1350",
-        "campaign": "TB | AdPulce | Lead | ABO 20$ | 15.09.2026",
-        "spend": 0.86,
-        "leads": 1
-      },
-      {
-        "name": "1 tada borganda 9 ta shaxar Xitoyga  $2200",
-        "campaign": "TB | AdPulce | Lead | ABO 20$ | 15.09.2026",
-        "spend": 0.22,
-        "leads": 0
-      },
-      {
-        "name": "Filiping 3 ta shahri $1900",
-        "campaign": "TB | AdPulce | Lead | ABO 20$ | 15.09.2026",
-        "spend": 0.21,
-        "leads": 0
-      },
-      {
-        "name": "22 kunlik viza istoriya uchun $3500",
-        "campaign": "TB | AdPulce | Lead | ABO 20$ | 15.09.2026",
-        "spend": 0.2,
-        "leads": 0
-      },
-      {
-        "name": "Xitoyni 9 ta shaxri $2400",
-        "campaign": "TB | AdPulce | Lead | ABO 20$ | 15.09.2026",
-        "spend": 0.09,
-        "leads": 0
-      },
-      {
-        "name": "10 - Shirilanka  yangi yil",
-        "campaign": "TB | AdPulce | Lead | ABO 20$ | 15.09.2026",
-        "spend": 0.05,
-        "leads": 0
-      },
-      {
-        "name": "yangi yil Taylandi $1300",
-        "campaign": "TB | AdPulce | Lead | ABO 20$ | 15.09.2026",
-        "spend": 0.05,
-        "leads": 0
-      }
-    ],
-    "intouch": [
-      {
-        "name": "4",
-        "campaign": "KN  | Lead | CBO | 35$ | 13.09.2026",
-        "spend": 37.78,
-        "leads": 8
-      },
-      {
-        "name": "Gul",
-        "campaign": "IK - RETARGET -OKTABR - SALE - 28.09",
-        "spend": 9.55,
-        "leads": 7
-      },
-      {
-        "name": "5",
-        "campaign": "JS | Traffic | CBO | 10$ | 13.08.2026",
-        "spend": 8.1,
-        "leads": 0
-      },
-      {
-        "name": "Gul",
-        "campaign": "IK - LAAL -OKTABR - SALE - 28.09",
-        "spend": 8.03,
-        "leads": 2
-      },
-      {
-        "name": "Tefal",
-        "campaign": "IK - LAAL -OKTABR - SALE - 28.09",
-        "spend": 7.5,
-        "leads": 0
-      },
-      {
-        "name": "Shokolad",
-        "campaign": "IK - LAAL -OKTABR - SALE - 28.09",
-        "spend": 7.02,
-        "leads": 0
-      },
-      {
-        "name": "Tefal",
-        "campaign": "IK - RETARGET -OKTABR - SALE - 28.09",
-        "spend": 5.63,
-        "leads": 0
-      },
-      {
-        "name": "Tashakurnoma",
-        "campaign": "IK - RETARGET -OKTABR - SALE - 28.09",
-        "spend": 4.92,
-        "leads": 3
-      },
-      {
-        "name": "2",
-        "campaign": "KN  | Lead | CBO | 35$ | 13.09.2026",
-        "spend": 4.75,
-        "leads": 0
-      },
-      {
-        "name": "4",
-        "campaign": "KN  | Lead | ABO | 15$ | 24.09.2026",
-        "spend": 3.01,
-        "leads": 1
-      },
-      {
-        "name": "4",
-        "campaign": "KN  | Lead | ABO | 15$ | 24.09.2026",
-        "spend": 2.89,
-        "leads": 1
-      },
-      {
-        "name": "4",
-        "campaign": "KN  | Lead | ABO | 15$ | 24.09.2026",
-        "spend": 2.87,
-        "leads": 1
-      },
-      {
-        "name": "4",
-        "campaign": "KN  | Lead | ABO | 15$ | 24.09.2026",
-        "spend": 2.87,
-        "leads": 0
-      },
-      {
-        "name": "Tashakurnoma",
-        "campaign": "IK - LAAL -OKTABR - SALE - 28.09",
-        "spend": 2.74,
-        "leads": 0
-      },
-      {
-        "name": "1",
-        "campaign": "KN  | Lead | ABO | 15$ | 24.09.2026",
-        "spend": 2.46,
-        "leads": 0
-      },
-      {
-        "name": "3",
-        "campaign": "KN  | Lead | CBO | 35$ | 13.09.2026",
-        "spend": 1.98,
-        "leads": 1
-      },
-      {
-        "name": "Shokolad",
-        "campaign": "IK - RETARGET -OKTABR - SALE - 28.09",
-        "spend": 1.61,
-        "leads": 0
-      },
-      {
-        "name": "Banket",
-        "campaign": "IK - RETARGET -OKTABR - SALE - 28.09",
-        "spend": 0.49,
-        "leads": 0
-      },
-      {
-        "name": "3",
-        "campaign": "KN  | Lead | ABO | 15$ | 24.09.2026",
-        "spend": 0.28,
-        "leads": 0
-      },
-      {
-        "name": "Banket",
-        "campaign": "IK - LAAL -OKTABR - SALE - 28.09",
-        "spend": 0.07,
-        "leads": 0
-      },
-      {
-        "name": "3",
-        "campaign": "KN  | Lead | ABO | 15$ | 24.09.2026",
-        "spend": 0.07,
-        "leads": 0
-      },
-      {
-        "name": "3",
-        "campaign": "KN  | Lead | ABO | 15$ | 24.09.2026",
-        "spend": 0.01,
-        "leads": 0
-      }
-    ],
-    "mastermock": [
-      {
-        "name": "C1 daraja",
-        "campaign": "KN | SMS | ABO | 15$ | 22.09.2026",
-        "spend": 1.36,
-        "leads": 0
-      },
-      {
-        "name": "Mustaqil o'rganayotgan bo'lsangiz",
-        "campaign": "KN | SMS | ABO | 15$ | 22.09.2026",
-        "spend": 1.17,
-        "leads": 0
-      },
-      {
-        "name": "Mustaqil o'rganayotgan bo'lsangiz",
-        "campaign": "KN | SMS | ABO | 15$ | 22.09.2026",
-        "spend": 0.95,
-        "leads": 0
-      },
-      {
-        "name": "C1 daraja",
-        "campaign": "KN | SMS | ABO | 15$ | 22.09.2026",
-        "spend": 0.08,
-        "leads": 0
-      },
-      {
-        "name": "C1 daraja",
-        "campaign": "KN | SMS | ABO | 15$ | 22.09.2026",
-        "spend": 0.06,
-        "leads": 0
-      }
-    ],
-    "maydon": [],
-    "mercury": [
-      {
-        "name": "41davlat",
-        "campaign": "BR - LEAD -VISA - CBO - 6.6$ - 17.07.2026",
-        "spend": 4.24,
-        "leads": 12
-      },
-      {
-        "name": "Bo'sh passport",
-        "campaign": "BR - LEAD -VISA - CBO - 6.6$ - 17.07.2026",
-        "spend": 1.62,
-        "leads": 0
-      }
-    ],
-    "sayyohvisa": [
-      {
-        "name": "5 yillik viza",
-        "campaign": "BT   | CBO  $10 | Leads  | 07.08.2026",
-        "spend": 2.1,
-        "leads": 8
-      },
-      {
-        "name": "Angilya 6 oylik viza",
-        "campaign": "BT   | CBO  $10 | Leads  | 07.08.2026",
-        "spend": 0.33,
-        "leads": 0
-      },
-      {
-        "name": "Biznes uchrashuv",
-        "campaign": "BT   | CBO  $10 | Leads  | 07.08.2026",
-        "spend": 0.05,
-        "leads": 0
-      },
-      {
-        "name": "Oila azolarni chaqrish",
-        "campaign": "BT   | CBO  $10 | Leads  | 07.08.2026",
-        "spend": 0.03,
-        "leads": 0
-      },
-      {
-        "name": "Elchixona",
-        "campaign": "BT   | CBO  $10 | Leads  | 07.08.2026",
-        "spend": 0.02,
-        "leads": 0
-      }
-    ],
+    "adpulce": null,
+    "access": null,
+    "booking": null,
+    "intouch": null,
+    "mastermock": null,
+    "maydon": null,
+    "mercury": null,
+    "sayyohvisa": null,
     "superkit": null,
-    "sweetkids": [
-      {
-        "name": "7",
-        "campaign": "JS | Lead | CBO 5$ | 09.09.2026",
-        "spend": 3.71,
-        "leads": 8
-      },
-      {
-        "name": "7",
-        "campaign": "JS | Lead | CBO 5$ | 09.09.2026",
-        "spend": 2.6,
-        "leads": 5
-      },
-      {
-        "name": "1",
-        "campaign": "JS | Lead | CBO 5$ | 09.09.2026",
-        "spend": 0.08,
-        "leads": 0
-      },
-      {
-        "name": "6",
-        "campaign": "JS | Lead | CBO 5$ | 09.09.2026",
-        "spend": 0.07,
-        "leads": 1
-      },
-      {
-        "name": "6",
-        "campaign": "JS | Lead | CBO 5$ | 09.09.2026",
-        "spend": 0.04,
-        "leads": 0
-      },
-      {
-        "name": "4",
-        "campaign": "JS | Lead | CBO 5$ | 09.09.2026",
-        "spend": 0.04,
-        "leads": 0
-      },
-      {
-        "name": "2",
-        "campaign": "JS | Lead | CBO 5$ | 09.09.2026",
-        "spend": 0.03,
-        "leads": 0
-      },
-      {
-        "name": "1",
-        "campaign": "JS | Lead | CBO 5$ | 09.09.2026",
-        "spend": 0.03,
-        "leads": 0
-      },
-      {
-        "name": "3",
-        "campaign": "JS | Lead | CBO 5$ | 09.09.2026",
-        "spend": 0.02,
-        "leads": 0
-      }
-    ],
-    "sweetkids2": [],
-    "zimzimuz": [],
-    "zimzimtr": [],
-    "madaniy": [],
-    "azizbek": []
+    "sweetkids": null,
+    "zimzimuz": null,
+    "zimzimtr": null,
+    "madaniy": null,
+    "azizbek": null,
+    "sweetkids2": null
   },
   "errors": {
-    "superkit": "Ads MCP is gradually being rolled out. Please check back at a later date to use Ads MCP with this Ad Account. (is_ads_mcp_enabled=false)"
+    "adpulce": "Facebook Ads MCP ulanishi avtorizatsiyadan o'tmagan (OAuth talab qilinadi) — bu skript avtomatik/interaktivsiz muhitda ishlayotgani uchun ulanib bo'lmadi.",
+    "access": "Facebook Ads MCP ulanishi avtorizatsiyadan o'tmagan (OAuth talab qilinadi) — bu skript avtomatik/interaktivsiz muhitda ishlayotgani uchun ulanib bo'lmadi.",
+    "booking": "Facebook Ads MCP ulanishi avtorizatsiyadan o'tmagan (OAuth talab qilinadi) — bu skript avtomatik/interaktivsiz muhitda ishlayotgani uchun ulanib bo'lmadi.",
+    "intouch": "Facebook Ads MCP ulanishi avtorizatsiyadan o'tmagan (OAuth talab qilinadi) — bu skript avtomatik/interaktivsiz muhitda ishlayotgani uchun ulanib bo'lmadi.",
+    "mastermock": "Facebook Ads MCP ulanishi avtorizatsiyadan o'tmagan (OAuth talab qilinadi) — bu skript avtomatik/interaktivsiz muhitda ishlayotgani uchun ulanib bo'lmadi.",
+    "maydon": "Facebook Ads MCP ulanishi avtorizatsiyadan o'tmagan (OAuth talab qilinadi) — bu skript avtomatik/interaktivsiz muhitda ishlayotgani uchun ulanib bo'lmadi.",
+    "mercury": "Facebook Ads MCP ulanishi avtorizatsiyadan o'tmagan (OAuth talab qilinadi) — bu skript avtomatik/interaktivsiz muhitda ishlayotgani uchun ulanib bo'lmadi.",
+    "sayyohvisa": "Facebook Ads MCP ulanishi avtorizatsiyadan o'tmagan (OAuth talab qilinadi) — bu skript avtomatik/interaktivsiz muhitda ishlayotgani uchun ulanib bo'lmadi.",
+    "superkit": "Facebook Ads MCP ulanishi avtorizatsiyadan o'tmagan (OAuth talab qilinadi) — bu skript avtomatik/interaktivsiz muhitda ishlayotgani uchun ulanib bo'lmadi.",
+    "sweetkids": "Facebook Ads MCP ulanishi avtorizatsiyadan o'tmagan (OAuth talab qilinadi) — bu skript avtomatik/interaktivsiz muhitda ishlayotgani uchun ulanib bo'lmadi.",
+    "zimzimuz": "Facebook Ads MCP ulanishi avtorizatsiyadan o'tmagan (OAuth talab qilinadi) — bu skript avtomatik/interaktivsiz muhitda ishlayotgani uchun ulanib bo'lmadi.",
+    "zimzimtr": "Facebook Ads MCP ulanishi avtorizatsiyadan o'tmagan (OAuth talab qilinadi) — bu skript avtomatik/interaktivsiz muhitda ishlayotgani uchun ulanib bo'lmadi.",
+    "madaniy": "Facebook Ads MCP ulanishi avtorizatsiyadan o'tmagan (OAuth talab qilinadi) — bu skript avtomatik/interaktivsiz muhitda ishlayotgani uchun ulanib bo'lmadi.",
+    "azizbek": "Facebook Ads MCP ulanishi avtorizatsiyadan o'tmagan (OAuth talab qilinadi) — bu skript avtomatik/interaktivsiz muhitda ishlayotgani uchun ulanib bo'lmadi.",
+    "sweetkids2": "Facebook Ads MCP ulanishi avtorizatsiyadan o'tmagan (OAuth talab qilinadi) — bu skript avtomatik/interaktivsiz muhitda ishlayotgani uchun ulanib bo'lmadi."
   }
 }

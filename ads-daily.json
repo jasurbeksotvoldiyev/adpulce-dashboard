@@ -1,6 +1,6 @@
 {
-  "date": "2026-09-30",
-  "generatedAt": "2026-09-30T23:26:38+05:00",
+  "date": "2026-10-01",
+  "generatedAt": "2026-10-01T23:26:39+05:00",
   "ads": {
     "adpulce": null,
     "access": null,
@@ -19,20 +19,20 @@
     "sweetkids2": null
   },
   "errors": {
-    "adpulce": "Facebook Ads MCP ulanishi avtorizatsiyadan o'tmagan (OAuth talab qilinadi) — bu skript avtomatik/interaktivsiz muhitda ishlayotgani uchun ulanib bo'lmadi.",
-    "access": "Facebook Ads MCP ulanishi avtorizatsiyadan o'tmagan (OAuth talab qilinadi) — bu skript avtomatik/interaktivsiz muhitda ishlayotgani uchun ulanib bo'lmadi.",
-    "booking": "Facebook Ads MCP ulanishi avtorizatsiyadan o'tmagan (OAuth talab qilinadi) — bu skript avtomatik/interaktivsiz muhitda ishlayotgani uchun ulanib bo'lmadi.",
-    "intouch": "Facebook Ads MCP ulanishi avtorizatsiyadan o'tmagan (OAuth talab qilinadi) — bu skript avtomatik/interaktivsiz muhitda ishlayotgani uchun ulanib bo'lmadi.",
-    "mastermock": "Facebook Ads MCP ulanishi avtorizatsiyadan o'tmagan (OAuth talab qilinadi) — bu skript avtomatik/interaktivsiz muhitda ishlayotgani uchun ulanib bo'lmadi.",
-    "maydon": "Facebook Ads MCP ulanishi avtorizatsiyadan o'tmagan (OAuth talab qilinadi) — bu skript avtomatik/interaktivsiz muhitda ishlayotgani uchun ulanib bo'lmadi.",
-    "mercury": "Facebook Ads MCP ulanishi avtorizatsiyadan o'tmagan (OAuth talab qilinadi) — bu skript avtomatik/interaktivsiz muhitda ishlayotgani uchun ulanib bo'lmadi.",
-    "sayyohvisa": "Facebook Ads MCP ulanishi avtorizatsiyadan o'tmagan (OAuth talab qilinadi) — bu skript avtomatik/interaktivsiz muhitda ishlayotgani uchun ulanib bo'lmadi.",
-    "superkit": "Facebook Ads MCP ulanishi avtorizatsiyadan o'tmagan (OAuth talab qilinadi) — bu skript avtomatik/interaktivsiz muhitda ishlayotgani uchun ulanib bo'lmadi.",
-    "sweetkids": "Facebook Ads MCP ulanishi avtorizatsiyadan o'tmagan (OAuth talab qilinadi) — bu skript avtomatik/interaktivsiz muhitda ishlayotgani uchun ulanib bo'lmadi.",
-    "zimzimuz": "Facebook Ads MCP ulanishi avtorizatsiyadan o'tmagan (OAuth talab qilinadi) — bu skript avtomatik/interaktivsiz muhitda ishlayotgani uchun ulanib bo'lmadi.",
-    "zimzimtr": "Facebook Ads MCP ulanishi avtorizatsiyadan o'tmagan (OAuth talab qilinadi) — bu skript avtomatik/interaktivsiz muhitda ishlayotgani uchun ulanib bo'lmadi.",
-    "madaniy": "Facebook Ads MCP ulanishi avtorizatsiyadan o'tmagan (OAuth talab qilinadi) — bu skript avtomatik/interaktivsiz muhitda ishlayotgani uchun ulanib bo'lmadi.",
-    "azizbek": "Facebook Ads MCP ulanishi avtorizatsiyadan o'tmagan (OAuth talab qilinadi) — bu skript avtomatik/interaktivsiz muhitda ishlayotgani uchun ulanib bo'lmadi.",
-    "sweetkids2": "Facebook Ads MCP ulanishi avtorizatsiyadan o'tmagan (OAuth talab qilinadi) — bu skript avtomatik/interaktivsiz muhitda ishlayotgani uchun ulanib bo'lmadi."
+    "adpulce": "Facebook Ads MCP ulanishi avtorizatsiyadan o'tmagan (OAuth talab qilinadi) — avtomatik, unattended seansda bu amalga oshirilmaydi. Reklama/kreativ darajasidagi ma'lumot olinmadi.",
+    "access": "Facebook Ads MCP ulanishi avtorizatsiyadan o'tmagan (OAuth talab qilinadi) — avtomatik, unattended seansda bu amalga oshirilmaydi. Reklama/kreativ darajasidagi ma'lumot olinmadi.",
+    "booking": "Facebook Ads MCP ulanishi avtorizatsiyadan o'tmagan (OAuth talab qilinadi) — avtomatik, unattended seansda bu amalga oshirilmaydi. Reklama/kreativ darajasidagi ma'lumot olinmadi.",
+    "intouch": "Facebook Ads MCP ulanishi avtorizatsiyadan o'tmagan (OAuth talab qilinadi) — avtomatik, unattended seansda bu amalga oshirilmaydi. Reklama/kreativ darajasidagi ma'lumot olinmadi.",
+    "mastermock": "Facebook Ads MCP ulanishi avtorizatsiyadan o'tmagan (OAuth talab qilinadi) — avtomatik, unattended seansda bu amalga oshirilmaydi. Reklama/kreativ darajasidagi ma'lumot olinmadi.",
+    "maydon": "Facebook Ads MCP ulanishi avtorizatsiyadan o'tmagan (OAuth talab qilinadi) — avtomatik, unattended seansda bu amalga oshirilmaydi. Reklama/kreativ darajasidagi ma'lumot olinmadi.",
+    "mercury": "Facebook Ads MCP ulanishi avtorizatsiyadan o'tmagan (OAuth talab qilinadi) — avtomatik, unattended seansda bu amalga oshirilmaydi. Reklama/kreativ darajasidagi ma'lumot olinmadi.",
+    "sayyohvisa": "Facebook Ads MCP ulanishi avtorizatsiyadan o'tmagan (OAuth talab qilinadi) — avtomatik, unattended seansda bu amalga oshirilmaydi. Reklama/kreativ darajasidagi ma'lumot olinmadi.",
+    "superkit": "Facebook Ads MCP ulanishi avtorizatsiyadan o'tmagan (OAuth talab qilinadi) — avtomatik, unattended seansda bu amalga oshirilmaydi. Reklama/kreativ darajasidagi ma'lumot olinmadi.",
+    "sweetkids": "Facebook Ads MCP ulanishi avtorizatsiyadan o'tmagan (OAuth talab qilinadi) — avtomatik, unattended seansda bu amalga oshirilmaydi. Reklama/kreativ darajasidagi ma'lumot olinmadi.",
+    "zimzimuz": "Facebook Ads MCP ulanishi avtorizatsiyadan o'tmagan (OAuth talab qilinadi) — avtomatik, unattended seansda bu amalga oshirilmaydi. Reklama/kreativ darajasidagi ma'lumot olinmadi.",
+    "zimzimtr": "Facebook Ads MCP ulanishi avtorizatsiyadan o'tmagan (OAuth talab qilinadi) — avtomatik, unattended seansda bu amalga oshirilmaydi. Reklama/kreativ darajasidagi ma'lumot olinmadi.",
+    "madaniy": "Facebook Ads MCP ulanishi avtorizatsiyadan o'tmagan (OAuth talab qilinadi) — avtomatik, unattended seansda bu amalga oshirilmaydi. Reklama/kreativ darajasidagi ma'lumot olinmadi.",
+    "azizbek": "Facebook Ads MCP ulanishi avtorizatsiyadan o'tmagan (OAuth talab qilinadi) — avtomatik, unattended seansda bu amalga oshirilmaydi. Reklama/kreativ darajasidagi ma'lumot olinmadi.",
+    "sweetkids2": "Facebook Ads MCP ulanishi avtorizatsiyadan o'tmagan (OAuth talab qilinadi) — avtomatik, unattended seansda bu amalga oshirilmaydi. Reklama/kreativ darajasidagi ma'lumot olinmadi."
   }
 }

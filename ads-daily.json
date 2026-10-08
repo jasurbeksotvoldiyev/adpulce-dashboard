@@ -1,6 +1,6 @@
 {
-  "date": "2026-10-07",
-  "generatedAt": "2026-10-07T23:25:41+05:00",
+  "date": "2026-10-08",
+  "generatedAt": "2026-10-08T23:25:58+05:00",
   "ads": {
     "adpulce": null,
     "access": null,
@@ -19,20 +19,20 @@
     "sweetkids2": null
   },
   "errors": {
-    "adpulce": "Facebook Ads MCP ulanishi avtorizatsiyadan o'tmagan (OAuth talab qilinadi) — avtomatik, unattended seansda bu amalga oshirilmaydi. Reklama/kreativ darajasidagi ma'lumot olinmadi.",
-    "access": "Facebook Ads MCP ulanishi avtorizatsiyadan o'tmagan (OAuth talab qilinadi) — avtomatik, unattended seansda bu amalga oshirilmaydi. Reklama/kreativ darajasidagi ma'lumot olinmadi.",
-    "booking": "Facebook Ads MCP ulanishi avtorizatsiyadan o'tmagan (OAuth talab qilinadi) — avtomatik, unattended seansda bu amalga oshirilmaydi. Reklama/kreativ darajasidagi ma'lumot olinmadi.",
-    "intouch": "Facebook Ads MCP ulanishi avtorizatsiyadan o'tmagan (OAuth talab qilinadi) — avtomatik, unattended seansda bu amalga oshirilmaydi. Reklama/kreativ darajasidagi ma'lumot olinmadi.",
-    "mastermock": "Facebook Ads MCP ulanishi avtorizatsiyadan o'tmagan (OAuth talab qilinadi) — avtomatik, unattended seansda bu amalga oshirilmaydi. Reklama/kreativ darajasidagi ma'lumot olinmadi.",
-    "maydon": "Facebook Ads MCP ulanishi avtorizatsiyadan o'tmagan (OAuth talab qilinadi) — avtomatik, unattended seansda bu amalga oshirilmaydi. Reklama/kreativ darajasidagi ma'lumot olinmadi.",
-    "mercury": "Facebook Ads MCP ulanishi avtorizatsiyadan o'tmagan (OAuth talab qilinadi) — avtomatik, unattended seansda bu amalga oshirilmaydi. Reklama/kreativ darajasidagi ma'lumot olinmadi.",
-    "sayyohvisa": "Facebook Ads MCP ulanishi avtorizatsiyadan o'tmagan (OAuth talab qilinadi) — avtomatik, unattended seansda bu amalga oshirilmaydi. Reklama/kreativ darajasidagi ma'lumot olinmadi.",
-    "superkit": "Facebook Ads MCP ulanishi avtorizatsiyadan o'tmagan (OAuth talab qilinadi) — avtomatik, unattended seansda bu amalga oshirilmaydi. Reklama/kreativ darajasidagi ma'lumot olinmadi.",
-    "sweetkids": "Facebook Ads MCP ulanishi avtorizatsiyadan o'tmagan (OAuth talab qilinadi) — avtomatik, unattended seansda bu amalga oshirilmaydi. Reklama/kreativ darajasidagi ma'lumot olinmadi.",
-    "zimzimuz": "Facebook Ads MCP ulanishi avtorizatsiyadan o'tmagan (OAuth talab qilinadi) — avtomatik, unattended seansda bu amalga oshirilmaydi. Reklama/kreativ darajasidagi ma'lumot olinmadi.",
-    "zimzimtr": "Facebook Ads MCP ulanishi avtorizatsiyadan o'tmagan (OAuth talab qilinadi) — avtomatik, unattended seansda bu amalga oshirilmaydi. Reklama/kreativ darajasidagi ma'lumot olinmadi.",
-    "madaniy": "Facebook Ads MCP ulanishi avtorizatsiyadan o'tmagan (OAuth talab qilinadi) — avtomatik, unattended seansda bu amalga oshirilmaydi. Reklama/kreativ darajasidagi ma'lumot olinmadi.",
-    "azizbek": "Facebook Ads MCP ulanishi avtorizatsiyadan o'tmagan (OAuth talab qilinadi) — avtomatik, unattended seansda bu amalga oshirilmaydi. Reklama/kreativ darajasidagi ma'lumot olinmadi.",
-    "sweetkids2": "Facebook Ads MCP ulanishi avtorizatsiyadan o'tmagan (OAuth talab qilinadi) — avtomatik, unattended seansda bu amalga oshirilmaydi. Reklama/kreativ darajasidagi ma'lumot olinmadi."
+    "adpulce": "Facebook Ads MCP ulanishi avtorizatsiyadan o'tmagan (OAuth talab qilinadi) — bu avtomatik seansda qayta ulanish imkonsiz, shuning uchun bugungi reklama ma'lumoti olinmadi.",
+    "access": "Facebook Ads MCP ulanishi avtorizatsiyadan o'tmagan (OAuth talab qilinadi) — bu avtomatik seansda qayta ulanish imkonsiz, shuning uchun bugungi reklama ma'lumoti olinmadi.",
+    "booking": "Facebook Ads MCP ulanishi avtorizatsiyadan o'tmagan (OAuth talab qilinadi) — bu avtomatik seansda qayta ulanish imkonsiz, shuning uchun bugungi reklama ma'lumoti olinmadi.",
+    "intouch": "Facebook Ads MCP ulanishi avtorizatsiyadan o'tmagan (OAuth talab qilinadi) — bu avtomatik seansda qayta ulanish imkonsiz, shuning uchun bugungi reklama ma'lumoti olinmadi.",
+    "mastermock": "Facebook Ads MCP ulanishi avtorizatsiyadan o'tmagan (OAuth talab qilinadi) — bu avtomatik seansda qayta ulanish imkonsiz, shuning uchun bugungi reklama ma'lumoti olinmadi.",
+    "maydon": "Facebook Ads MCP ulanishi avtorizatsiyadan o'tmagan (OAuth talab qilinadi) — bu avtomatik seansda qayta ulanish imkonsiz, shuning uchun bugungi reklama ma'lumoti olinmadi.",
+    "mercury": "Facebook Ads MCP ulanishi avtorizatsiyadan o'tmagan (OAuth talab qilinadi) — bu avtomatik seansda qayta ulanish imkonsiz, shuning uchun bugungi reklama ma'lumoti olinmadi.",
+    "sayyohvisa": "Facebook Ads MCP ulanishi avtorizatsiyadan o'tmagan (OAuth talab qilinadi) — bu avtomatik seansda qayta ulanish imkonsiz, shuning uchun bugungi reklama ma'lumoti olinmadi.",
+    "superkit": "Facebook Ads MCP ulanishi avtorizatsiyadan o'tmagan (OAuth talab qilinadi) — bu avtomatik seansda qayta ulanish imkonsiz, shuning uchun bugungi reklama ma'lumoti olinmadi.",
+    "sweetkids": "Facebook Ads MCP ulanishi avtorizatsiyadan o'tmagan (OAuth talab qilinadi) — bu avtomatik seansda qayta ulanish imkonsiz, shuning uchun bugungi reklama ma'lumoti olinmadi.",
+    "zimzimuz": "Facebook Ads MCP ulanishi avtorizatsiyadan o'tmagan (OAuth talab qilinadi) — bu avtomatik seansda qayta ulanish imkonsiz, shuning uchun bugungi reklama ma'lumoti olinmadi.",
+    "zimzimtr": "Facebook Ads MCP ulanishi avtorizatsiyadan o'tmagan (OAuth talab qilinadi) — bu avtomatik seansda qayta ulanish imkonsiz, shuning uchun bugungi reklama ma'lumoti olinmadi.",
+    "madaniy": "Facebook Ads MCP ulanishi avtorizatsiyadan o'tmagan (OAuth talab qilinadi) — bu avtomatik seansda qayta ulanish imkonsiz, shuning uchun bugungi reklama ma'lumoti olinmadi.",
+    "azizbek": "Facebook Ads MCP ulanishi avtorizatsiyadan o'tmagan (OAuth talab qilinadi) — bu avtomatik seansda qayta ulanish imkonsiz, shuning uchun bugungi reklama ma'lumoti olinmadi.",
+    "sweetkids2": "Facebook Ads MCP ulanishi avtorizatsiyadan o'tmagan (OAuth talab qilinadi) — bu avtomatik seansda qayta ulanish imkonsiz, shuning uchun bugungi reklama ma'lumoti olinmadi."
   }
 }

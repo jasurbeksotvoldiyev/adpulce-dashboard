@@ -1,6 +1,6 @@
 {
-  "date": "2026-10-17",
-  "generatedAt": "2026-10-17T23:25:44+05:00",
+  "date": "2026-10-22",
+  "generatedAt": "2026-10-22T23:26:12+05:00",
   "ads": {
     "adpulce": null,
     "access": null,
@@ -19,20 +19,6 @@
     "sweetkids2": null
   },
   "errors": {
-    "adpulce": "Facebook Ads MCP ulanmagan/avtorizatsiyadan o'tmagan (tool mavjud emas) - ma'lumot olinmadi",
-    "access": "Facebook Ads MCP ulanmagan/avtorizatsiyadan o'tmagan (tool mavjud emas) - ma'lumot olinmadi",
-    "booking": "Facebook Ads MCP ulanmagan/avtorizatsiyadan o'tmagan (tool mavjud emas) - ma'lumot olinmadi",
-    "intouch": "Facebook Ads MCP ulanmagan/avtorizatsiyadan o'tmagan (tool mavjud emas) - ma'lumot olinmadi",
-    "mastermock": "Facebook Ads MCP ulanmagan/avtorizatsiyadan o'tmagan (tool mavjud emas) - ma'lumot olinmadi",
-    "maydon": "Facebook Ads MCP ulanmagan/avtorizatsiyadan o'tmagan (tool mavjud emas) - ma'lumot olinmadi",
-    "mercury": "Facebook Ads MCP ulanmagan/avtorizatsiyadan o'tmagan (tool mavjud emas) - ma'lumot olinmadi",
-    "sayyohvisa": "Facebook Ads MCP ulanmagan/avtorizatsiyadan o'tmagan (tool mavjud emas) - ma'lumot olinmadi",
-    "superkit": "Facebook Ads MCP ulanmagan/avtorizatsiyadan o'tmagan (tool mavjud emas) - ma'lumot olinmadi",
-    "sweetkids": "Facebook Ads MCP ulanmagan/avtorizatsiyadan o'tmagan (tool mavjud emas) - ma'lumot olinmadi",
-    "zimzimuz": "Facebook Ads MCP ulanmagan/avtorizatsiyadan o'tmagan (tool mavjud emas) - ma'lumot olinmadi",
-    "zimzimtr": "Facebook Ads MCP ulanmagan/avtorizatsiyadan o'tmagan (tool mavjud emas) - ma'lumot olinmadi",
-    "madaniy": "Facebook Ads MCP ulanmagan/avtorizatsiyadan o'tmagan (tool mavjud emas) - ma'lumot olinmadi",
-    "azizbek": "Facebook Ads MCP ulanmagan/avtorizatsiyadan o'tmagan (tool mavjud emas) - ma'lumot olinmadi",
-    "sweetkids2": "Facebook Ads MCP ulanmagan/avtorizatsiyadan o'tmagan (tool mavjud emas) - ma'lumot olinmadi"
+    "_all": "Facebook Ads MCP ulanishi avtorizatsiya talab qildi va bu seansda ulanmadi (OAuth avtomatik boshlanmaydi) — barcha mijozlar uchun bugungi reklama ma'lumotini olish imkonsiz bo'ldi."
   }
 }

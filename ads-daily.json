@@ -1,6 +1,6 @@
 {
-  "date": "2026-10-24",
-  "generatedAt": "2026-10-24T23:26:13+05:00",
+  "date": "2026-10-27",
+  "generatedAt": "2026-10-27T23:26:02+05:00",
   "ads": {
     "adpulce": null,
     "access": null,
@@ -19,20 +19,20 @@
     "sweetkids2": null
   },
   "errors": {
-    "adpulce": "Facebook Ads MCP ulanmagan/avtorizatsiyadan o'tmagan (OAuth kerak) - ma'lumot yig'ilmadi",
-    "access": "Facebook Ads MCP ulanmagan/avtorizatsiyadan o'tmagan (OAuth kerak) - ma'lumot yig'ilmadi",
-    "booking": "Facebook Ads MCP ulanmagan/avtorizatsiyadan o'tmagan (OAuth kerak) - ma'lumot yig'ilmadi",
-    "intouch": "Facebook Ads MCP ulanmagan/avtorizatsiyadan o'tmagan (OAuth kerak) - ma'lumot yig'ilmadi",
-    "mastermock": "Facebook Ads MCP ulanmagan/avtorizatsiyadan o'tmagan (OAuth kerak) - ma'lumot yig'ilmadi",
-    "maydon": "Facebook Ads MCP ulanmagan/avtorizatsiyadan o'tmagan (OAuth kerak) - ma'lumot yig'ilmadi",
-    "mercury": "Facebook Ads MCP ulanmagan/avtorizatsiyadan o'tmagan (OAuth kerak) - ma'lumot yig'ilmadi",
-    "sayyohvisa": "Facebook Ads MCP ulanmagan/avtorizatsiyadan o'tmagan (OAuth kerak) - ma'lumot yig'ilmadi",
-    "superkit": "Facebook Ads MCP ulanmagan/avtorizatsiyadan o'tmagan (OAuth kerak) - ma'lumot yig'ilmadi",
-    "sweetkids": "Facebook Ads MCP ulanmagan/avtorizatsiyadan o'tmagan (OAuth kerak) - ma'lumot yig'ilmadi",
-    "zimzimuz": "Facebook Ads MCP ulanmagan/avtorizatsiyadan o'tmagan (OAuth kerak) - ma'lumot yig'ilmadi",
-    "zimzimtr": "Facebook Ads MCP ulanmagan/avtorizatsiyadan o'tmagan (OAuth kerak) - ma'lumot yig'ilmadi",
-    "madaniy": "Facebook Ads MCP ulanmagan/avtorizatsiyadan o'tmagan (OAuth kerak) - ma'lumot yig'ilmadi",
-    "azizbek": "Facebook Ads MCP ulanmagan/avtorizatsiyadan o'tmagan (OAuth kerak) - ma'lumot yig'ilmadi",
-    "sweetkids2": "Facebook Ads MCP ulanmagan/avtorizatsiyadan o'tmagan (OAuth kerak) - ma'lumot yig'ilmadi"
+    "adpulce": "Facebook Ads MCP ulanishi autentifikatsiya talab qiladi va avtomatik (unattended) sessiyada mavjud emas edi, shu sababli ma'lumot olinmadi.",
+    "access": "Facebook Ads MCP ulanishi autentifikatsiya talab qiladi va avtomatik (unattended) sessiyada mavjud emas edi, shu sababli ma'lumot olinmadi.",
+    "booking": "Facebook Ads MCP ulanishi autentifikatsiya talab qiladi va avtomatik (unattended) sessiyada mavjud emas edi, shu sababli ma'lumot olinmadi.",
+    "intouch": "Facebook Ads MCP ulanishi autentifikatsiya talab qiladi va avtomatik (unattended) sessiyada mavjud emas edi, shu sababli ma'lumot olinmadi.",
+    "mastermock": "Facebook Ads MCP ulanishi autentifikatsiya talab qiladi va avtomatik (unattended) sessiyada mavjud emas edi, shu sababli ma'lumot olinmadi.",
+    "maydon": "Facebook Ads MCP ulanishi autentifikatsiya talab qiladi va avtomatik (unattended) sessiyada mavjud emas edi, shu sababli ma'lumot olinmadi.",
+    "mercury": "Facebook Ads MCP ulanishi autentifikatsiya talab qiladi va avtomatik (unattended) sessiyada mavjud emas edi, shu sababli ma'lumot olinmadi.",
+    "sayyohvisa": "Facebook Ads MCP ulanishi autentifikatsiya talab qiladi va avtomatik (unattended) sessiyada mavjud emas edi, shu sababli ma'lumot olinmadi.",
+    "superkit": "Facebook Ads MCP ulanishi autentifikatsiya talab qiladi va avtomatik (unattended) sessiyada mavjud emas edi, shu sababli ma'lumot olinmadi.",
+    "sweetkids": "Facebook Ads MCP ulanishi autentifikatsiya talab qiladi va avtomatik (unattended) sessiyada mavjud emas edi, shu sababli ma'lumot olinmadi.",
+    "zimzimuz": "Facebook Ads MCP ulanishi autentifikatsiya talab qiladi va avtomatik (unattended) sessiyada mavjud emas edi, shu sababli ma'lumot olinmadi.",
+    "zimzimtr": "Facebook Ads MCP ulanishi autentifikatsiya talab qiladi va avtomatik (unattended) sessiyada mavjud emas edi, shu sababli ma'lumot olinmadi.",
+    "madaniy": "Facebook Ads MCP ulanishi autentifikatsiya talab qiladi va avtomatik (unattended) sessiyada mavjud emas edi, shu sababli ma'lumot olinmadi.",
+    "azizbek": "Facebook Ads MCP ulanishi autentifikatsiya talab qiladi va avtomatik (unattended) sessiyada mavjud emas edi, shu sababli ma'lumot olinmadi.",
+    "sweetkids2": "Facebook Ads MCP ulanishi autentifikatsiya talab qiladi va avtomatik (unattended) sessiyada mavjud emas edi, shu sababli ma'lumot olinmadi."
   }
 }
